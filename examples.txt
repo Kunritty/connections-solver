@@ -1,0 +1,14 @@
+[
+  {"answerDescription": "REMOVE, AS BODY HAIR", "words": ["LASER", "PLUCK", "THREAD", "WAX"]},
+  {"answerDescription": "TWIST AROUND", "words": ["COIL", "SPOOL", "WIND", "WRAP"]},
+  {"answerDescription": "THINGS MADE OF CELLS", "words": ["HONEYCOMB", "ORGANISM", "SOLAR PANEL", "SPREADSHEET"]},
+  {"answerDescription": "B-___", "words": ["BALL", "MOVIE", "SCHOOL", "VITAMIN"]},
+  {"answerDescription": "CONFORMISTS", "words": ["FOLLOWERS", "LEMMINGS", "PUPPETS", "SHEEP"]},
+  {"answerDescription": "COMPANY OWNERSHIP OFFERS", "words": ["EQUITY", "OPTIONS", "SHARES", "STOCKS"]},
+  {"answerDescription": "U.S. CITIES", "words": ["BILLINGS", "BUFFALO", "MOBILE", "PHOENIX"]},
+  {"answerDescription": "WHAT \"DIGS\" MIGHT MEAN", "words": ["APARTMENT", "INSULTS", "LIKES", "SHOVELS"]},
+  {"answerDescription": "\"DON'T DELAY!\"", "words": ["HURRY", "NOW", "PRONTO", "STAT"]},
+  {"answerDescription": "OCEAN PHENOMENA", "words": ["CURRENT", "DRIFT", "TIDE", "WAVE"]},
+  {"answerDescription": "DUMBBELL EXERCISES", "words": ["CURL", "FLY", "PRESS", "ROW"]},
+  {"answerDescription": "PHILOSOPHER HOMOPHONES", "words": ["LOCK", "MARKS", "PANE", "RUSTLE"]}
+]
