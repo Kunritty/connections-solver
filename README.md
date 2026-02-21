@@ -32,7 +32,7 @@ Once you're in the env install all the required libraries:
 pip install -r requirements.txt
 ```
 
-Your environment should be set up, and you can run the .ipynb files without any problems.
+Your environment should be set up, now ensure the Python kernel for the notebook files is set to this new Conda environment, and you should be able to run them with no issues.
 
 ## File structure
 
