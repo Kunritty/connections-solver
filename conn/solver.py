@@ -1,4 +1,5 @@
 from itertools import combinations
+import random
 
 import torch
 from torch.nn.functional import normalize
@@ -79,3 +80,18 @@ def solve_puzzle_few_shot(
         remaining = [i for i in remaining if i not in best_combo]
     groups_idx.append(remaining)
     return [[words16[i] for i in idxs] for idxs in groups_idx]
+
+
+def solve_puzzle_random_grouping(words16: list[str]) -> list[list[str]]:
+    """Randomly form 4 groups of 4"""
+    if len(words16) != 16:
+        raise ValueError(f"Expected 16 words, got {len(words16)}")
+    
+    shuffled = words16[:]        
+    random.shuffle(shuffled)       
+    return [
+        shuffled[0:4],
+        shuffled[4:8],
+        shuffled[8:12],
+        shuffled[12:16],
+    ]
