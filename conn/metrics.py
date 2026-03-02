@@ -36,6 +36,7 @@ def evaluate(
     solver_fn=None,
     max_samples=None,
     gold_from_row=None,
+    verbose=False
 ):
     if metric_fn is None:
         metric_fn = accuracy_zero_one
@@ -55,4 +56,7 @@ def evaluate(
             continue
         pred = solver_fn(words16)
         scores.append(metric_fn(pred, gold))
+
+        if verbose and (i + 1) % 5 == 0:
+            print(f"Processed {i + 1}/{n} samples")
     return (sum(scores) / len(scores) if scores else 0.0, len(scores))
