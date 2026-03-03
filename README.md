@@ -42,7 +42,7 @@ connections-solver/
 │   ├── __init__.py               # Re-exports public API
 │   ├── data.py                   # load_connections_from_hf(), gold_groups_from_row()
 │   ├── encoder.py                # DeBERTaEncoder (embed_phrase, group_similarity)
-│   ├── solver.py                 # solve_puzzle_zero_shot(), solve_puzzle_few_shot()
+│   ├── solver.py                 # solve_baseline_greedy(), solve_baseline_centroid(), solve_zero_shot(), solve_few_shot()
 │   └── metrics.py                # accuracy_zero_one, accuracy_min_swaps, evaluate()
 ├── DeBERTA-model-zero-shot.ipynb # DeBERTa embedding-based solver (no examples)
 ├── DeBERTa-few-shot.ipynb        # DeBERTa solver with example groups from train

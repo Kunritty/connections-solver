@@ -1,15 +1,34 @@
-from conn.data import gold_groups_from_row, load_connections_from_hf
+from conn.data import (
+    ExampleGroup,
+    gold_example_groups_from_row,
+    gold_groups_from_row,
+    load_connections_from_hf,
+    load_example_groups_from_csv,
+)
 from conn.encoder import DeBERTaEncoder
 from conn.metrics import accuracy_min_swaps, accuracy_zero_one, evaluate
-from conn.solver import solve_puzzle_few_shot, solve_puzzle_zero_shot, solve_puzzle_random_grouping
+from conn.search import greedy_group_search
+from conn.solver import (
+    solve_baseline_centroid,
+    solve_baseline_greedy,
+    solve_few_shot,
+    solve_puzzle_random_grouping,
+    solve_zero_shot,
+)
 
 __all__ = [
+    "ExampleGroup",
     "load_connections_from_hf",
     "gold_groups_from_row",
+    "gold_example_groups_from_row",
+    "load_example_groups_from_csv",
     "DeBERTaEncoder",
-    "solve_puzzle_zero_shot",
-    "solve_puzzle_few_shot",
-    "solve_puzzle_random_grouping"
+    "greedy_group_search",
+    "solve_baseline_greedy",
+    "solve_baseline_centroid",
+    "solve_zero_shot",
+    "solve_few_shot",
+    "solve_puzzle_random_grouping",
     "accuracy_zero_one",
     "accuracy_min_swaps",
     "evaluate",
