@@ -1,5 +1,7 @@
-# Python environments
+# Python environment and cache
 envs/
 .venv/
-
 **/__pycache__/
+
+# Model run outputs
+adapters/
