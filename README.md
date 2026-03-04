@@ -42,6 +42,15 @@ $ conda activate connections
 
 Your environment should be set up, now ensure the Python kernel for the notebook files is set to this new Conda environment, and you should be able to run them with no issues.
 
+### LLM Notebooks Setup
+
+To make your own calls to the Llama LLM, go to [Cerebras](https://www.cerebras.ai/) and make a free account. Then with your free api key, save it to your conda environment using the following:
+
+```
+conda env config vars set CEREBRAS_API_KEY="your_api_key_here"
+```
+After restarting your environment, you should be all set to run the LLM notebooks.
+
 ## File structure
 
 ```
