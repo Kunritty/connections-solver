@@ -36,7 +36,8 @@ def evaluate(
     solver_fn=None,
     max_samples=None,
     gold_from_row=None,
-    verbose=False
+    verbose=False,
+    verbose_every=10
 ):
     if metric_fns is None:
         metric_fns = {"accuracy_zero_one": accuracy_zero_one}
@@ -59,11 +60,18 @@ def evaluate(
         if len(gold) != 4:
             continue
         pred = solver_fn(words16)
+
+        #Skip if invalid predictions format (stems from LLM hallucinations)
+        all_words = set(word for group in pred for word in group)
+        if len(pred) != 4 or any(len(g) != 4 for g in pred) or all_words != set(words16):
+            if verbose:
+                print(f"WARNING: Invalid or hallucinated output for puzzle {i+1}: {pred}")
+            continue
         
         for name, fn in metric_fns.items():
             scores[name].append(fn(pred, gold))
 
-        if verbose and (i + 1) % 5 == 0:
+        if verbose and verbose_every > 0 and (i + 1) % verbose_every == 0:
             print(f"Processed {i + 1}/{n} samples")
 
     results = {
