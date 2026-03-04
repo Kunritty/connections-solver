@@ -1,3 +1,5 @@
 # Python environments
 envs/
 .venv/
+
+**/__pycache__/
