@@ -32,19 +32,23 @@ def accuracy_min_swaps(pred_groups: list[list[str]], gold_groups: list[list[str]
 
 def evaluate(
     split,
-    metric_fn=None,
+    metric_fns=None,
     solver_fn=None,
     max_samples=None,
     gold_from_row=None,
     verbose=False
 ):
-    if metric_fn is None:
-        metric_fn = accuracy_zero_one
+    if metric_fns is None:
+        metric_fns = {"accuracy_zero_one": accuracy_zero_one}
     if solver_fn is None:
         raise ValueError("solver_fn is required")
+    if callable(metric_fns):
+        metric_fns = {metric_fns.__name__: metric_fns}
+    if isinstance(metric_fns, list):
+        metric_fns = {fn.__name__: fn for fn in metric_fns}
     if gold_from_row is None:
         gold_from_row = gold_groups_from_row
-    scores = []
+    scores = {name: [] for name in metric_fns.keys()}
     n = len(split) if max_samples is None else min(max_samples, len(split))
     for i in range(n):
         row = split[i]
@@ -55,8 +59,15 @@ def evaluate(
         if len(gold) != 4:
             continue
         pred = solver_fn(words16)
-        scores.append(metric_fn(pred, gold))
+        
+        for name, fn in metric_fns.items():
+            scores[name].append(fn(pred, gold))
 
         if verbose and (i + 1) % 5 == 0:
             print(f"Processed {i + 1}/{n} samples")
-    return (sum(scores) / len(scores) if scores else 0.0, len(scores))
+
+    results = {
+        name: (sum(vals) / len(vals) if vals else 0.0, len(vals))
+        for name, vals in scores.items()
+    }
+    return results
