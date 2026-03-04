@@ -4,3 +4,7 @@ transformers
 numpy
 datasets
 matplotlib
+protobuf
+sentencepiece
+peft
+matplotlib
