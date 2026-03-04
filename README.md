@@ -51,6 +51,10 @@ conda env config vars set CEREBRAS_API_KEY="your_api_key_here"
 ```
 After restarting your environment, you should be all set to run the LLM notebooks.
 
+### LLM .py file Setup
+
+Make an account at either https://platform.openai.com/ or https://aistudio.google.com/ and obtain an API key to use. Dependencies: install google-genai and openai using pip install.
+
 ## File structure
 
 ```
@@ -70,6 +74,7 @@ connections-solver/
 ├── bert-model-zero-shot.ipynb    # BERT-based puzzle solving
 ├── generation-BERT-few-shot.ipynb# BERT MLM pipeline for generating false categories
 ├── LLM-model-zero-shot.ipynb     # LLM-based puzzle solving
+├── LLMprompter-zero-shot.py      # API key based puzzle solving
 ├── random_grouping_baseline.ipynb# Random grouping baseline
 ├── Visualizations.ipynb          # Visualizations and statistics
 ├── requirements.txt
