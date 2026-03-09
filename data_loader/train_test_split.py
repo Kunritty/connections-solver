@@ -1,10 +1,11 @@
-from conn import load_connections_from_hf
+from data_loader import load_huggingface_dataset
+
 
 def train_test_split(test_size=0.2,seed=175):
     """
     Returns ds_train, ds_test splits from Hugging Face
     """
-    ds = load_connections_from_hf()
+    ds = load_huggingface_dataset()
     split = ds.train_test_split(test_size=test_size, seed=seed)
     ds_train = split["train"]
     ds_test = split["test"]
