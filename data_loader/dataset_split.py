@@ -1,7 +1,7 @@
 from data_loader.loader import load_huggingface_dataset
 
 
-def train_test_split(test_size=0.2,seed=175):
+def get_train_test_split(test_size=0.2, seed=175):
     """
     Returns ds_train, ds_test splits from Hugging Face
     """
