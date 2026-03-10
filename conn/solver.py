@@ -172,13 +172,14 @@ def solve_few_shot(
     return [[words16[i] for i in idxs] for idxs in groups_idx]
 
 
-def solve_puzzle_random_grouping(words16: list[str]) -> list[list[str]]:
+def solve_puzzle_random_grouping(words16: list[str], seed: int | None = None) -> list[list[str]]:
     """Randomly form 4 groups of 4"""
     if len(words16) != 16:
         raise ValueError(f"Expected 16 words, got {len(words16)}")
-    
-    shuffled = words16[:]        
-    random.shuffle(shuffled)       
+
+    shuffled = words16[:]
+    random.Random(seed).shuffle(shuffled)
+
     return [
         shuffled[0:4],
         shuffled[4:8],
