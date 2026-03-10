@@ -6,6 +6,8 @@ from itertools import permutations
 TARGET_FILE_1 = "./data/train_split_data.csv"
 TARGET_FILE_2 = "./data/test_split_data.csv"
 
+OUTPUT_FILE = "./data/human_measurement.csv"
+
 # _norm and accuracy_min_swaps from conn/metrics.py
 
 def _norm(g: list) -> frozenset:
@@ -95,6 +97,22 @@ def get_predictions(words: list[list[str]], time_list: list) -> list[list[str]]:
     # return user groups
     return user_results
 
+def write_predictions(pred_words: list[list[str]], true_words: list[list[str]], time: float, swaps: float) -> None:
+    '''Writes to the output csv file with a format: Time, Min Swaps, True Answer Groups, User Answer Groups'''
+    '''write to file function bc kyle said so'''
+    target_file = OUTPUT_FILE
+    with open(target_file, mode='a', newline='', encoding='utf-8') as file:
+        try:
+            writer = csv.writer(file)
+            
+            true_str = ", ".join([str(group) for group in true_words])
+            pred_str = ", ".join([str(group) for group in pred_words])
+            
+            writer.writerow([time, swaps, true_str, pred_str])
+        except Exception as e:
+            print(str(e))
+    
+
 def main():
     print("This program is used to test a human in the same way our model is tested.")
     
@@ -110,6 +128,7 @@ def main():
     
     print(f"Puzzle finished in {total_time:.3f} seconds with an accuracy of {swaps:.3f} min swaps.")
     print("Answers were: " + str(words))
+    write_predictions(pred_words, words, total_time, swaps)
 
 if __name__ == "__main__":
   main()
