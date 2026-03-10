@@ -55,6 +55,13 @@ After restarting your environment, you should be all set to run the LLM notebook
 
 Make an account at either https://platform.openai.com/ or https://aistudio.google.com/ and obtain an API key to use. Dependencies: install google-genai and openai using pip install.
 
+### Instructions for use of the human_test.py
+
+Run the file by doing:
+python human_test.py
+in a terminal or by running the py file. Run from root directory so files can be read.
+Results will be logged to data/human_measurement.csv
+
 ## File structure
 
 ```
