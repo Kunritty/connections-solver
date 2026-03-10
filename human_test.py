@@ -3,9 +3,8 @@ import random
 import csv
 from itertools import permutations
 
-TARGET_FILE_1 = "./data/puzzle_data1.csv"
-TARGET_FILE_2 = "./data/puzzle_data2.csv"
-TARGET_FILE_3 = "./data/puzzle_data3.csv"
+TARGET_FILE_1 = "./data/train_split_data.csv"
+TARGET_FILE_2 = "./data/test_split_data.csv"
 
 # _norm and accuracy_min_swaps from conn/metrics.py
 
@@ -98,13 +97,8 @@ def get_predictions(words: list[list[str]], time_list: list) -> list[list[str]]:
 
 def main():
     print("This program is used to test a human in the same way our model is tested.")
-    target = random.randint(1,3)
-    if(target == 1):
-        words = select_words(TARGET_FILE_1, "random")
-    elif(target == 2):
-        words = select_words(TARGET_FILE_2, "random")
-    else:
-        words = select_words(TARGET_FILE_3, "random")
+    
+    words = select_words(TARGET_FILE_2, "random")
         
     t_list = []
     
