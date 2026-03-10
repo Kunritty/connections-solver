@@ -5,9 +5,8 @@ import random
 
 EXAMPLE_WORDS = ['COWARD', 'LASER', 'SCOTTIE', 'BONES', 'JIM', 'CORAL', 'BALANCE', 'CHEKHOV', 'THISTLE', 'SHAW', 'SHELLS', 'TRACTOR', 'TARTAN', 'BAGPIPES', 'MILLER', 'TEETH']
 
-TARGET_FILE = "./data/puzzle_data1.csv"
-TARGET_FILE_2 = "./data/puzzle_data2.csv"
-TARGET_FILE_3 = "./data/puzzle_data3.csv"
+TARGET_FILE_2 = "./data/train_split_data.csv"
+TARGET_FILE_3 = "./data/test_split_data.csv"
 
 def get_params_multiple() -> list:
   '''Returns a list in the form [C or G for ChatGPT or Gemini, path to words csv, api key, difficulty from 0-3 or "rand", number of puzzles (as an int)]'''
@@ -29,7 +28,7 @@ def get_params_multiple() -> list:
     if(temp.lower() == "q"):
       return []
     elif(temp.lower() == "default"):
-      return_list.append(TARGET_FILE)
+      return_list.append(TARGET_FILE_3)
       break
     else:
       return_list.append(temp)
@@ -90,7 +89,7 @@ def get_params_single() -> list:
     if(temp.lower() == "q"):
       return []
     elif(temp.lower() == "default"):
-      return_list.append(TARGET_FILE)
+      return_list.append(TARGET_FILE_3)
       break
     else:
       return_list.append(temp)
