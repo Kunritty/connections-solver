@@ -1,6 +1,6 @@
 from itertools import permutations
 
-from conn.data import gold_groups_from_row
+from data_loader import gold_groups_from_row
 
 
 def _norm(g: list) -> frozenset:

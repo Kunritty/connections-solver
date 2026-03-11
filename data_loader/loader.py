@@ -1,8 +1,23 @@
 from datasets import load_dataset
 
+DATASET_ID = "tm21cy/NYT-Connections"
+
+
 def load_huggingface_dataset():
-    dataset = load_dataset("tm21cy/NYT-Connections")
-    return dataset
+    return load_dataset(DATASET_ID)
+
+
+def load_connections_from_hf(split: str = "train"):
+    """Load NYT Connections from Hugging Face and return a single split.
+
+    The split has columns: date, contest, words (16),
+    answers (4 groups with description + words).
+    """
+    ds = load_dataset(DATASET_ID)
+    if split not in ds:
+        split = list(ds.keys())[0]
+    return ds[split]
+
 
 def load_csv_dataset():
     data_files = {

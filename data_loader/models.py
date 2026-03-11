@@ -1,9 +1,8 @@
 from __future__ import annotations
 
+import csv
 from dataclasses import dataclass
 from pathlib import Path
-
-from datasets import load_dataset
 
 
 @dataclass
@@ -11,17 +10,6 @@ class ExampleGroup:
     words: list[str]
     label: str = ""
     level: int | None = None
-
-
-def load_connections_from_hf(split: str = "train"):
-    """Load NYT Connections from Hugging Face (tm21cy/NYT-Connections) and return a split.
-
-    The split has columns like: date, contest, words (16), answers (4 groups with description + words).
-    """
-    ds = load_dataset("tm21cy/NYT-Connections")
-    if split not in ds:
-        split = list(ds.keys())[0]
-    return ds[split]
 
 
 def gold_groups_from_row(row) -> list[list[str]]:
@@ -49,7 +37,6 @@ def gold_example_groups_from_row(row) -> list[ExampleGroup]:
 
 def load_example_groups_from_csv(path: str | Path) -> list[ExampleGroup]:
     """Load example groups from a CSV with columns groupName, level, members."""
-    import csv
     path = Path(path)
     out: list[ExampleGroup] = []
     with path.open(encoding="utf-8") as f:

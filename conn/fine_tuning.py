@@ -11,9 +11,8 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader, Dataset
 from transformers import AutoModel, AutoTokenizer
 
-from conn.data import ExampleGroup
+from data_loader import ExampleGroup
 from conn.encoder import DeBERTaEncoder
-from conn.solver import solve_few_shot
 
 try:
     from peft import LoraConfig, TaskType, PeftModel, get_peft_model
@@ -274,4 +273,5 @@ def solve_fine_tuned(
     encoder: DeBERTaEncoder,
     example_groups: GroupedExamplesLike | None = None,
 ) -> list[list[str]]:
-    return solve_few_shot(words16=words16, encoder=encoder, example_groups=example_groups)
+    from conn.solvers import FewShotSolver
+    return FewShotSolver(encoder, example_groups=example_groups).solve(words16)
