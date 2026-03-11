@@ -1,6 +1,6 @@
 from conn.encoder import DeBERTaEncoder
 from conn.fine_tuning import (
-    ConnectionsPairDataset,
+    ConnectionsBoardDataset,
     FineTuneStats,
     finetune_deberta_lora,
     load_lora_encoder,
@@ -13,7 +13,6 @@ from conn.solvers import (
     BaselineGreedySolver,
     ExampleGroupsLike,
     FewShotSolver,
-    FineTunedSolver,
     RandomSolver,
     ZeroShotSolver,
 )
@@ -28,10 +27,9 @@ __all__ = [
     "BaselineCentroidSolver",
     "ZeroShotSolver",
     "FewShotSolver",
-    "FineTunedSolver",
     "finetune_deberta_lora",
     "load_lora_encoder",
-    "ConnectionsPairDataset",
+    "ConnectionsBoardDataset",
     "FineTuneStats",
     "accuracy_zero_one",
     "accuracy_min_swaps",

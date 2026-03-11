@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import random
 from dataclasses import dataclass
-from itertools import combinations
 from pathlib import Path
 from typing import Any
 
@@ -16,7 +15,7 @@ from conn.encoder import DeBERTaEncoder
 
 try:
     from peft import LoraConfig, TaskType, PeftModel, get_peft_model
-except ImportError:  # pragma: no cover - handled by runtime check
+except ImportError:  # pragma: no cover
     LoraConfig = None
     TaskType = None
     PeftModel = None
@@ -33,17 +32,64 @@ class FineTuneStats:
     average_losses: list[float]
 
 
-class ConnectionsPairDataset(Dataset):
-    def __init__(
-        self,
-        puzzles: list[Any],
-        negatives_per_positive: int = 2,
-        seed: int = 42,
-    ) -> None:
+# ---------------------------------------------------------------------------
+# Supervised Contrastive Loss (SupCon)
+# ---------------------------------------------------------------------------
+
+class SupConLoss(torch.nn.Module):
+    """Supervised Contrastive Loss over L2-normalized embeddings.
+
+    Pulls embeddings that share the same label together and pushes
+    apart embeddings with different labels.
+    """
+
+    def __init__(self, temperature: float = 0.07):
+        super().__init__()
+        self.temperature = temperature
+
+    def forward(self, features: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Args:
+            features: [N, D] L2-normalized embeddings.
+            labels:   [N] integer group labels (globally unique across boards in the batch).
+        """
+        device = features.device
+        n = features.size(0)
+
+        sim_matrix = features @ features.T / self.temperature
+
+        # Mask: same label = positive pair (excluding self)
+        label_eq = labels.unsqueeze(0) == labels.unsqueeze(1)
+        self_mask = ~torch.eye(n, dtype=torch.bool, device=device)
+        pos_mask = label_eq & self_mask
+
+        # For numerical stability, subtract row-wise max before exp
+        logits_max, _ = sim_matrix.max(dim=1, keepdim=True)
+        logits = sim_matrix - logits_max.detach()
+
+        exp_logits = torch.exp(logits) * self_mask.float()
+        log_prob = logits - torch.log(exp_logits.sum(dim=1, keepdim=True).clamp_min(1e-12))
+
+        # Mean of log-prob over positive pairs per anchor
+        pos_counts = pos_mask.float().sum(dim=1).clamp_min(1.0)
+        mean_log_prob_pos = (pos_mask.float() * log_prob).sum(dim=1) / pos_counts
+
+        loss = -mean_log_prob_pos.mean()
+        return loss
+
+
+# ---------------------------------------------------------------------------
+# Board Dataset — yields (words16, group_labels) for full-board training
+# ---------------------------------------------------------------------------
+
+class ConnectionsBoardDataset(Dataset):
+    """Yields shuffled 16-word boards with integer group labels (0-3)."""
+
+    def __init__(self, puzzles: list[Any], seed: int = 42) -> None:
         self._rng = random.Random(seed)
-        self._pairs = self._build_pairs(puzzles, negatives_per_positive)
-        if not self._pairs:
-            raise ValueError("No training pairs were built from the provided examples.")
+        self._boards = self._build_boards(puzzles)
+        if not self._boards:
+            raise ValueError("No valid boards built from the provided puzzles.")
 
     @staticmethod
     def _group_words(group: Any) -> list[str]:
@@ -72,52 +118,104 @@ class ConnectionsPairDataset(Dataset):
                 out.append(words)
         return out
 
-    def _build_pairs(
-        self,
-        puzzles: list[Any],
-        negatives_per_positive: int,
-    ) -> list[tuple[str, str, float]]:
-        pairs: list[tuple[str, str, float]] = []
+    def _build_boards(self, puzzles: list[Any]) -> list[tuple[list[str], list[int]]]:
+        boards: list[tuple[list[str], list[int]]] = []
         for puzzle in puzzles:
             groups = self._extract_groups(puzzle)
-            if len(groups) < 2:
+            if len(groups) != 4:
                 continue
-
-            positive_pairs: list[tuple[str, str, float]] = []
-            for group in groups:
-                for i, j in combinations(range(len(group)), 2):
-                    positive_pairs.append((group[i], group[j], 1.0))
-            pairs.extend(positive_pairs)
-
-            negative_candidates: list[tuple[str, str, float]] = []
-            for g1_idx, g2_idx in combinations(range(len(groups)), 2):
-                for w1 in groups[g1_idx]:
-                    for w2 in groups[g2_idx]:
-                        negative_candidates.append((w1, w2, -1.0))
-
-            if not negative_candidates:
-                continue
-
-            max_neg = max(1, len(positive_pairs) * max(1, negatives_per_positive))
-            if len(negative_candidates) > max_neg:
-                negative_candidates = self._rng.sample(negative_candidates, k=max_neg)
-            pairs.extend(negative_candidates)
-        self._rng.shuffle(pairs)
-        return pairs
+            words: list[str] = []
+            labels: list[int] = []
+            for group_idx, group in enumerate(groups):
+                words.extend(group)
+                labels.extend([group_idx] * len(group))
+            boards.append((words, labels))
+        return boards
 
     def __len__(self) -> int:
-        return len(self._pairs)
+        return len(self._boards)
 
-    def __getitem__(self, idx: int) -> tuple[str, str, float]:
-        return self._pairs[idx]
+    def __getitem__(self, idx: int) -> tuple[list[str], list[int]]:
+        words, labels = self._boards[idx]
+        combined = list(zip(words, labels))
+        self._rng.shuffle(combined)
+        shuffled_words, shuffled_labels = zip(*combined)
+        return list(shuffled_words), list(shuffled_labels)
 
 
-def _mean_pool_batch(last_hidden_state: torch.Tensor, attention_mask: torch.Tensor) -> torch.Tensor:
-    mask = attention_mask.unsqueeze(-1).to(last_hidden_state.dtype)
-    summed = (last_hidden_state * mask).sum(dim=1)
-    counts = mask.sum(dim=1).clamp_min(1e-6)
-    return summed / counts
+# ---------------------------------------------------------------------------
+# Batched word-embedding extraction (mirrors DeBERTaEncoder.embed_board)
+# ---------------------------------------------------------------------------
 
+def _extract_word_embeddings(
+    model,
+    tokenizer,
+    batch_words: list[list[str]],
+    device: torch.device,
+    max_length: int = 512,
+    prompt_prefix: str = "",
+) -> torch.Tensor:
+    """Extract contextualized, L2-normalized word embeddings for a batch of boards.
+
+    Returns: Tensor of shape [batch_size, 16, hidden_dim].
+    """
+    full_texts = [prompt_prefix + ", ".join(words) for words in batch_words]
+
+    inputs = tokenizer(
+        full_texts,
+        return_tensors="pt",
+        padding=True,
+        truncation=True,
+        max_length=max_length,
+        return_offsets_mapping=True,
+        add_special_tokens=True,
+    )
+    offsets = inputs.pop("offset_mapping")
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+
+    out = model(**inputs)
+    last_hidden = out.last_hidden_state
+    hidden_dim = last_hidden.size(-1)
+
+    batch_vecs: list[torch.Tensor] = []
+    prefix_len = len(prompt_prefix)
+
+    for b_idx, words in enumerate(batch_words):
+        word_vecs: list[torch.Tensor] = []
+        search_start = prefix_len
+        b_offsets = offsets[b_idx].tolist()
+
+        for w in words:
+            w_start = full_texts[b_idx].find(w, search_start)
+            if w_start == -1:
+                w_start = full_texts[b_idx].lower().find(w.lower(), search_start)
+
+            if w_start != -1:
+                w_end = w_start + len(w)
+                search_start = w_end
+                token_indices = [
+                    i for i, (ts, te) in enumerate(b_offsets)
+                    if ts < w_end and te > w_start
+                ]
+                if token_indices:
+                    word_emb = last_hidden[b_idx, token_indices].mean(dim=0)
+                else:
+                    word_emb = torch.zeros(hidden_dim, device=device)
+            else:
+                word_emb = torch.zeros(hidden_dim, device=device)
+
+            word_vecs.append(word_emb)
+
+        batch_vecs.append(torch.stack(word_vecs, dim=0))
+
+    vecs = torch.stack(batch_vecs, dim=0)
+    vecs = F.normalize(vecs, p=2, dim=-1)
+    return vecs
+
+
+# ---------------------------------------------------------------------------
+# LoRA model builder
+# ---------------------------------------------------------------------------
 
 def _build_lora_model(
     model_name: str,
@@ -127,7 +225,7 @@ def _build_lora_model(
     dropout: float,
 ):
     if get_peft_model is None or LoraConfig is None or TaskType is None:
-        raise ImportError("peft is required for LoRA fine-tuning. Install it with `pip install peft`.")
+        raise ImportError("peft is required for LoRA fine-tuning. Install with `pip install peft`.")
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     model = AutoModel.from_pretrained(model_name)
@@ -144,18 +242,21 @@ def _build_lora_model(
     return model, tokenizer
 
 
+# ---------------------------------------------------------------------------
+# Main fine-tuning entry point (contextual board-level SupCon)
+# ---------------------------------------------------------------------------
+
 def finetune_deberta_lora(
     puzzles: list[Any],
     model_name: str = "microsoft/deberta-v3-small",
     epochs: int = 3,
-    batch_size: int = 16,
+    batch_size: int = 4,
     learning_rate: float = 2e-4,
-    negatives_per_positive: int = 2,
+    temperature: float = 0.07,
     lora_r: int = 8,
     lora_alpha: int = 16,
     lora_dropout: float = 0.1,
-    margin: float = 0.2,
-    max_length: int = 16,
+    max_length: int = 512,
     seed: int = 42,
     adapter_output_dir: str | Path | None = None,
     verbose: bool = False,
@@ -166,10 +267,14 @@ def finetune_deberta_lora(
     random.seed(seed)
     torch.manual_seed(seed)
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
+    device = torch.device(
+        "cuda" if torch.cuda.is_available()
+        else "mps" if torch.backends.mps.is_available()
+        else "cpu"
+    )
     if verbose:
-        print(f"Starting LoRA fine-tuning on {device} for {epochs} epochs...")
-        
+        print(f"Starting contextual LoRA fine-tuning on {device} for {epochs} epochs...")
+
     model, tokenizer = _build_lora_model(
         model_name=model_name,
         device=device,
@@ -178,18 +283,14 @@ def finetune_deberta_lora(
         dropout=lora_dropout,
     )
 
-    dataset = ConnectionsPairDataset(
-        puzzles=puzzles,
-        negatives_per_positive=negatives_per_positive,
-        seed=seed,
-    )
+    dataset = ConnectionsBoardDataset(puzzles=puzzles, seed=seed)
     loader = DataLoader(dataset, batch_size=batch_size, shuffle=True, drop_last=False)
 
     optimizer = torch.optim.AdamW(
         (p for p in model.parameters() if p.requires_grad),
         lr=learning_rate,
     )
-    loss_fn = torch.nn.CosineEmbeddingLoss(margin=margin)
+    loss_fn = SupConLoss(temperature=temperature)
 
     model.train()
     step_count = 0
@@ -198,33 +299,25 @@ def finetune_deberta_lora(
     for epoch in range(epochs):
         running_loss = 0.0
         batch_count = 0
-        for a_words, b_words, labels in loader:
-            enc_a = tokenizer(
-                list(a_words),
-                return_tensors="pt",
-                padding=True,
-                truncation=True,
-                max_length=max_length,
-            )
-            enc_b = tokenizer(
-                list(b_words),
-                return_tensors="pt",
-                padding=True,
-                truncation=True,
-                max_length=max_length,
-            )
-            enc_a = {k: v.to(device) for k, v in enc_a.items()}
-            enc_b = {k: v.to(device) for k, v in enc_b.items()}
-            labels_t = labels.to(device=device, dtype=torch.float32)
 
-            out_a = model(**enc_a)
-            out_b = model(**enc_b)
-            emb_a = _mean_pool_batch(out_a.last_hidden_state, enc_a["attention_mask"])
-            emb_b = _mean_pool_batch(out_b.last_hidden_state, enc_b["attention_mask"])
-            emb_a = F.normalize(emb_a, p=2, dim=1)
-            emb_b = F.normalize(emb_b, p=2, dim=1)
+        for batch_words, batch_labels in loader:
+            # batch_words: list of 16-word lists
+            # batch_labels: list of 16-int label lists
+            vecs = _extract_word_embeddings(
+                model, tokenizer, batch_words, device, max_length=max_length,
+            )
 
-            loss = loss_fn(emb_a, emb_b, labels_t)
+            bs = vecs.size(0)
+            flat_vecs = vecs.view(bs * 16, -1)
+
+            # Offset labels so each board's groups are globally unique
+            global_labels: list[torch.Tensor] = []
+            for b_idx in range(bs):
+                board_labels = torch.tensor(batch_labels[b_idx], dtype=torch.long, device=device)
+                global_labels.append(board_labels + b_idx * 4)
+            flat_labels = torch.cat(global_labels, dim=0)
+
+            loss = loss_fn(flat_vecs, flat_labels)
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
@@ -235,7 +328,7 @@ def finetune_deberta_lora(
 
         epoch_avg_loss = running_loss / max(1, batch_count)
         average_losses.append(epoch_avg_loss)
-        
+
         if verbose:
             print(f"Epoch {epoch + 1}/{epochs} | Average Loss: {epoch_avg_loss:.4f}")
 
@@ -251,12 +344,16 @@ def finetune_deberta_lora(
     return encoder, stats
 
 
+# ---------------------------------------------------------------------------
+# Load a previously saved LoRA adapter
+# ---------------------------------------------------------------------------
+
 def load_lora_encoder(
     adapter_dir: str | Path,
     base_model_name: str = "microsoft/deberta-v3-small",
 ) -> DeBERTaEncoder:
     if PeftModel is None:
-        raise ImportError("peft is required to load LoRA adapters. Install it with `pip install peft`.")
+        raise ImportError("peft is required to load LoRA adapters. Install with `pip install peft`.")
 
     adapter_path = Path(adapter_dir)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -267,6 +364,10 @@ def load_lora_encoder(
     model.eval()
     return DeBERTaEncoder(model=model, tokenizer=tokenizer, device=device)
 
+
+# ---------------------------------------------------------------------------
+# Convenience: solve a board with a fine-tuned encoder + FewShotSolver
+# ---------------------------------------------------------------------------
 
 def solve_fine_tuned(
     words16: list[str],
