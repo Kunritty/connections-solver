@@ -13,6 +13,23 @@ OUTPUT_FILE = "./data/human_measurement.csv"
 def _norm(g: list) -> frozenset:
     return frozenset(w.strip() for w in g)
 
+def _print_board(words: list[str]) -> None:
+    print("-" * 30)
+    for i in range(0, len(words), 4):
+        row = words[i:i + 4]
+        padded = row + [""] * (4 - len(row))
+        print(
+            f"[{padded[0]:<12}] [{padded[1]:<12}] [{padded[2]:<12}] [{padded[3]:<12}]"
+        )
+    print("-" * 30)
+
+def _parse_group_input(user_input: str) -> list[str]:
+    parts = [w.strip().upper() for w in user_input.split(",")]
+    return [p for p in parts if p]
+
+def _remaining_words_in_order(board_words: list[str], chosen: set[str]) -> list[str]:
+    return [w for w in board_words if w not in chosen]
+
 def accuracy_min_swaps(pred_groups: list[list[str]], gold_groups: list[list[str]]) -> float:
     if len(pred_groups) != 4 or len(gold_groups) != 4:
         return float("inf")
@@ -67,14 +84,11 @@ def get_predictions(words: list[list[str]], time_list: list) -> list[list[str]]:
     # randomize list of input words
     flat_words = [word for group in words for word in group]
     random.shuffle(flat_words)
+    board_words = [w.strip().upper() for w in flat_words]
     
     # print to user
     print("\n--- Niche Connections Puzzle ---")
-    for i in range(0, 16, 4):
-        # pad the words
-        row = flat_words[i:i+4]
-        print(f"[{row[0]:<12}] [{row[1]:<12}] [{row[2]:<12}] [{row[3]:<12}]")
-    print("-" * 30)
+    _print_board(board_words)
     
     # record start time
     start = time.time()
@@ -83,12 +97,16 @@ def get_predictions(words: list[list[str]], time_list: list) -> list[list[str]]:
     # prompt user for groups
     user_results = []
     prompts = ["first", "second", "third", "fourth"]
+    chosen: set[str] = set()
     
     for p_name in prompts:
         user_input = input(f"Enter the {p_name} connection group 'word1, word2, word3, word4': ")
-        # convert the comma-separated string into a list of normal strings
-        group = [w.strip().upper() for w in user_input.split(',')]
+        group = _parse_group_input(user_input)
         user_results.append(group)
+        chosen.update(group)
+        remaining = _remaining_words_in_order(board_words, chosen)
+        print("\nRemaining board:")
+        _print_board(remaining)
     
     # record end time
     end = time.time()
