@@ -1,52 +1,157 @@
-from conn.solvers.base import BaseSolver
-from huggingface_hub import login
-import os
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from typing import TYPE_CHECKING
+from __future__ import annotations
+
+import random
+import re
+from typing import TYPE_CHECKING, Any
+
+from conn.solvers.base import BaseSolver, ExampleGroupsLike, example_words
+
 if TYPE_CHECKING:
-    from data_loader import ExampleGroup
+    from transformers import PreTrainedModel, PreTrainedTokenizerBase
 
-# Using same Llama 3.1 model as other notebooks
-# https://huggingface.co/meta-llama/Llama-3.1-8B?library=transformers
+DEFAULT_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 
-MODEL_NAME = "meta-llama/Llama-3.1-8B"
+SYSTEM_PROMPT = (
+    "Your task is to partition the 16 words into 4 groups of 4 words/phrases "
+    "based on shared connections.\n"
+    "Output requirements (STRICT):\n"
+    "OUTPUT ONLY the final groups of words/phrases.\n"
+    "Do NOT provide reasoning or explanations under any circumstances.\n"
+    "DO NOT output any text other than the 4 groups.\n"
+    "Use ONLY the EXACT words/phrases from the puzzle.\n"
+    "Make sure there are EXACTLY 4 groups of 4 words/phrases each with their "
+    "category names. NO EXCEPTIONS.\n"
+    "Return the answer exactly in this format:\n\n"
+    "GROUP 1: word1 || word2 || word3 || word4\n"
+    "GROUP 2: word1 || word2 || word3 || word4\n"
+    "GROUP 3: word1 || word2 || word3 || word4\n"
+    "GROUP 4: word1 || word2 || word3 || word4\n"
+)
 
-SYSTEM_PROMPT = """
-    Your task is to partition the 16 words into 4 groups of 4 words/phrases based on shared connections. 
-    Output requirements (STRICT): 
-    OUTPUT ONLY the final groups of words/phrases.
-    Do NOT provide reasoning or explanations under any circumstances.
-    DO NOT output any text other than the 4 groups.
-    Use ONLY the EXACT words/phrases from the puzzle.
-    Make sure there are EXACTLY 4 groups of 4 words/phrases each with their category names. NO EXCEPTIONS.
-    Return the answer exactly in this format:
+_GROUP_PATTERN = re.compile(r"GROUP \d+:\s*(.+)")
 
-    GROUP 1: word1 || word2 || word3 || word4
-    GROUP 2: word1 || word2 || word3 || word4
-    GROUP 3: word1 || word2 || word3 || word4
-    GROUP 4: word1 || word2 || word3 || word4
-"""
 
-# TODO: Add login to the notebook
-login(token=os.environ.get("HF_API_KEY"))
+def _parse_response(response: str) -> list[list[str]]:
+    groups = _GROUP_PATTERN.findall(response)
+    return [[w.strip() for w in group.split("||")] for group in groups]
+
+
+def _make_few_shot_section(
+    words16: list[str],
+    example_source: Any,
+    k: int,
+) -> str:
+    """Build the few-shot examples portion of the prompt.
+
+    ``example_source`` can be either:
+    * A HuggingFace dataset split (rows with "words" and "answers" keys) — the
+      same format used in LLM-model-few-shot.ipynb.
+    * An ``ExampleGroupsLike`` list (list[ExampleGroup] | list[list[str]]).
+      In this case the groups are formatted directly (no leakage check needed
+      because ExampleGroups don't carry the full 16-word board).
+    """
+    if not example_source or k <= 0:
+        return ""
+
+    lines: list[str] = ["Here are some previous examples:"]
+
+    if _is_hf_split(example_source):
+        sampled = random.sample(list(example_source), min(k + 5, len(example_source)))
+        count = 0
+        for row in sampled:
+            if count >= k:
+                break
+            fs_words: list[str] = row["words"]
+            if set(fs_words) == set(words16):
+                continue
+            fs_groups = [ans["words"] for ans in row["answers"]]
+            ex = f"Here are 16 words: {' || '.join(fs_words)}"
+            for i, group in enumerate(fs_groups, 1):
+                ex += f"\nGROUP {i}: {' || '.join(group)}"
+            lines.append(ex + "\n")
+            count += 1
+    else:
+        sampled_groups = random.sample(
+            list(example_source),
+            min(k * 4, len(example_source)),
+        )
+        chunk: list[list[str]] = []
+        for eg in sampled_groups:
+            chunk.append(example_words(eg))
+            if len(chunk) == 4:
+                all_words = [w for g in chunk for w in g]
+                ex = f"Here are 16 words: {' || '.join(all_words)}"
+                for i, g in enumerate(chunk, 1):
+                    ex += f"\nGROUP {i}: {' || '.join(g)}"
+                lines.append(ex + "\n")
+                chunk = []
+
+    return "\n".join(lines) + "\n"
+
+
+def _is_hf_split(obj: Any) -> bool:
+    first = obj[0] if len(obj) > 0 else None
+    return isinstance(first, dict) and "words" in first and "answers" in first
 
 
 class LlamaSolver(BaseSolver):
-    def __init__(self, encoder, example_groups: list[ExampleGroup] = []):
-        super().__init__(encoder)
-        self.system_prompt = SYSTEM_PROMPT
-        self.tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        self.model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)
-        self.example_groups = example_groups
+    """Generative LLaMA solver with optional few-shot prompting.
+
+    Works with both a vanilla HuggingFace model and a LoRA-adapted one.
+    Authentication (huggingface_hub.login) should be done externally
+    (e.g. in the notebook) before constructing this solver.
+    """
+
+    def __init__(
+        self,
+        model: PreTrainedModel,
+        tokenizer: PreTrainedTokenizerBase,
+        *,
+        example_source: Any = None,
+        k: int = 0,
+        max_new_tokens: int = 300,
+        temperature: float = 0.1,
+    ):
+        super().__init__(encoder=None)
+        self.model = model
+        self.tokenizer = tokenizer
+        self.example_source = example_source
+        self.k = k
+        self.max_new_tokens = max_new_tokens
+        self.temperature = temperature
+
+        if self.tokenizer.pad_token is None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
 
     def solve(self, words16: list[str]) -> list[list[str]]:
-        user_prompt = self._build_user_prompt(words16)
-        prompt = self.system_prompt + "\n\n" + user_prompt
-        inputs = self.tokenizer(prompt, return_tensors="pt")
-        outputs = self.model.generate(**inputs, max_new_tokens=100)
-        response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-        pred_groups = self._parse_response(response)
-        return []
+        self._validate_board(words16)
+        prompt = self._build_full_prompt(words16)
+        response = self._generate(prompt)
+        return _parse_response(response)
 
-    def _build_user_prompt(self, words16: list[str]) -> str:
-        return f"Here are the 16 words: {words16}"
+    def _build_full_prompt(self, words16: list[str]) -> str:
+        few_shot = _make_few_shot_section(words16, self.example_source, self.k)
+        user_body = (
+            f"NOW, solve this puzzle and only this one: "
+            f"Here are the 16 words: {' || '.join(words16)}"
+        )
+        user_prompt = few_shot + user_body
+        return SYSTEM_PROMPT + "\n" + user_prompt
+
+    def _generate(self, prompt: str) -> str:
+        device = next(self.model.parameters()).device
+        inputs = self.tokenizer(prompt, return_tensors="pt").to(device)
+        prompt_len = inputs["input_ids"].shape[-1]
+
+        gen_kwargs: dict[str, Any] = dict(
+            max_new_tokens=self.max_new_tokens,
+            do_sample=self.temperature > 0,
+            pad_token_id=self.tokenizer.pad_token_id,
+        )
+        if self.temperature > 0:
+            gen_kwargs["temperature"] = self.temperature
+            gen_kwargs["top_p"] = 0.9
+
+        output_ids = self.model.generate(**inputs, **gen_kwargs)
+        new_tokens = output_ids[0][prompt_len:]
+        return self.tokenizer.decode(new_tokens, skip_special_tokens=True)

@@ -13,6 +13,7 @@ from conn.solvers import (
     BaselineGreedySolver,
     ExampleGroupsLike,
     FewShotSolver,
+    LlamaSolver,
     RandomSolver,
     ZeroShotSolver,
 )
@@ -27,6 +28,7 @@ __all__ = [
     "BaselineCentroidSolver",
     "ZeroShotSolver",
     "FewShotSolver",
+    "LlamaSolver",
     "finetune_deberta_lora",
     "load_lora_encoder",
     "ConnectionsBoardDataset",

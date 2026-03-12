@@ -1,6 +1,7 @@
 from conn.solvers.base import BaseSolver, ExampleGroupsLike
 from conn.solvers.contextual import FewShotSolver, ZeroShotSolver
 from conn.solvers.isolated import BaselineCentroidSolver, BaselineGreedySolver
+from conn.solvers.llama import LlamaSolver
 from conn.solvers.random import RandomSolver
 
 __all__ = [
@@ -11,4 +12,5 @@ __all__ = [
     "BaselineCentroidSolver",
     "ZeroShotSolver",
     "FewShotSolver",
+    "LlamaSolver",
 ]
