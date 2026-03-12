@@ -19,7 +19,7 @@ except ImportError:  # pragma: no cover
     PeftModel = None  # type: ignore[assignment,misc]
     get_peft_model = None  # type: ignore[assignment,misc]
 
-DEFAULT_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
+DEFAULT_MODEL_NAME = "meta-llama/Llama-3.1-8B"
 
 
 @dataclass

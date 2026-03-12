@@ -9,7 +9,7 @@ from conn.solvers.base import BaseSolver, ExampleGroupsLike, example_words
 if TYPE_CHECKING:
     from transformers import PreTrainedModel, PreTrainedTokenizerBase
 
-DEFAULT_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
+DEFAULT_MODEL_NAME = "meta-llama/Llama-3.1-8B"
 
 SYSTEM_PROMPT = (
     "Your task is to partition the 16 words into 4 groups of 4 words/phrases "
