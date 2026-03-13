@@ -1,3 +1,4 @@
+import time
 from itertools import permutations
 
 from data_loader import gold_groups_from_row
@@ -90,11 +91,20 @@ def evaluate(
         gold = gold_from_row(row)
         if len(gold) != 4:
             continue
+        if verbose:
+            t0 = time.perf_counter()
+            ts = time.strftime("%H:%M:%S", time.localtime())
         pred = solver_fn(words16)
-
+        if verbose:
+            elapsed = time.perf_counter() - t0
+            ts_end = time.strftime("%H:%M:%S", time.localtime())
+            gen_part = ""
+            if hasattr(solver_fn, "__self__") and hasattr(solver_fn.__self__, "last_generate_seconds"):
+                gen_part = f" generate={solver_fn.__self__.last_generate_seconds:.1f}s"
+            print(f"[{ts} → {ts_end} | {elapsed:.1f}s{gen_part}] Puzzle {i+1} solved, min_swaps={accuracy_min_swaps(pred, gold)}")
         if not _is_valid_prediction(pred, gold):
             if verbose:
-                print(f"WARNING: Invalid or hallucinated output for puzzle {i+1}: {pred}")
+                print(f"[{time.strftime('%H:%M:%S', time.localtime())}] WARNING: Invalid or hallucinated output for puzzle {i+1}: {pred}")
                 print(f"EXPECTED: {gold}")
                 if hasattr(solver_fn, "__self__") and hasattr(solver_fn.__self__, "last_raw_response"):
                     print(f"--- RAW LLM OUTPUT ---\n{solver_fn.__self__.last_raw_response}\n----------------------")
@@ -103,7 +113,7 @@ def evaluate(
             scores[name].append(fn(pred, gold))
 
         if verbose and verbose_every > 0 and (i + 1) % verbose_every == 0:
-            print(f"Processed {i + 1}/{n} samples")
+            print(f"[{time.strftime('%H:%M:%S', time.localtime())}] Processed {i + 1}/{n} samples")
 
     results = {
         name: (sum(vals) / len(vals) if vals else 0.0, len(vals))

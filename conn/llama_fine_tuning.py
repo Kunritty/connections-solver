@@ -86,16 +86,18 @@ def _extract_words(puzzle: Any) -> list[str]:
 
 
 class ConnectionsSFTDataset(Dataset):
-    """Yields (prompt_text, target_text) pairs for causal-LM SFT."""
+    """Yields (prompt_text, target_text, words16, allowed_ids) for causal-LM SFT."""
 
-    def __init__(self, puzzles: list[Any], seed: int = 42) -> None:
+    def __init__(self, puzzles: list[Any], tokenizer: Any, seed: int = 42) -> None:
         self._rng = random.Random(seed)
+        self._tokenizer = tokenizer
         self._examples = self._build(puzzles)
         if not self._examples:
             raise ValueError("No valid SFT examples built from the provided puzzles.")
 
-    def _build(self, puzzles: list[Any]) -> list[tuple[str, str]]:
-        examples: list[tuple[str, str]] = []
+    def _build(self, puzzles: list[Any]) -> list[tuple[str, str, list[str], list[int]]]:
+        format_ids = _get_format_ids(self._tokenizer)
+        examples: list[tuple[str, str, list[str], list[int]]] = []
         for puzzle in puzzles:
             groups = _extract_groups(puzzle)
             if len(groups) != 4:
@@ -107,26 +109,29 @@ class ConnectionsSFTDataset(Dataset):
             self._rng.shuffle(shuffled)
             prompt = _format_prompt(shuffled)
             target = _format_target(groups)
-            examples.append((prompt, target))
+            allowed_ids = _get_allowed_ids(words16, self._tokenizer, format_ids)
+            examples.append((prompt, target, words16, allowed_ids))
         return examples
 
     def __len__(self) -> int:
         return len(self._examples)
 
-    def __getitem__(self, idx: int) -> tuple[str, str]:
+    def __getitem__(self, idx: int) -> tuple[str, str, list[str], list[int]]:
         return self._examples[idx]
 
 
 def _collate_sft(
-    batch: list[tuple[str, str]],
+    batch: list[tuple[str, str, list[str], list[int]]],
     tokenizer: Any,
     max_length: int,
-) -> dict[str, torch.Tensor]:
+) -> dict[str, Any]:
     """Tokenize prompt+target, masking prompt tokens in the labels."""
     input_ids_list: list[torch.Tensor] = []
     labels_list: list[torch.Tensor] = []
+    words16_batch: list[list[str]] = []
+    allowed_ids_batch: list[list[int]] = []
 
-    for prompt, target in batch:
+    for prompt, target, words16, allowed_ids in batch:
         full_text = prompt + "\n" + target + tokenizer.eos_token
         prompt_ids = tokenizer(prompt + "\n", add_special_tokens=False)["input_ids"]
         full_ids = tokenizer(full_text, add_special_tokens=False, truncation=True, max_length=max_length)["input_ids"]
@@ -138,12 +143,102 @@ def _collate_sft(
 
         input_ids_list.append(torch.tensor(full_ids, dtype=torch.long))
         labels_list.append(torch.tensor(labels, dtype=torch.long))
+        words16_batch.append(words16)
+        allowed_ids_batch.append(allowed_ids)
 
     input_ids = torch.nn.utils.rnn.pad_sequence(input_ids_list, batch_first=True, padding_value=tokenizer.pad_token_id)
     labels = torch.nn.utils.rnn.pad_sequence(labels_list, batch_first=True, padding_value=-100)
     attention_mask = (input_ids != tokenizer.pad_token_id).long()
 
-    return {"input_ids": input_ids, "attention_mask": attention_mask, "labels": labels}
+    return {
+        "input_ids": input_ids,
+        "attention_mask": attention_mask,
+        "labels": labels,
+        "_words16": words16_batch,
+        "_allowed_ids": allowed_ids_batch,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Logit masking: CE only over allowed tokens (strict, efficient)
+# ---------------------------------------------------------------------------
+
+_FORMAT_STRINGS = [
+    "GROUP", " GROUP", "1", "2", "3", "4", " 1", " 2", " 3", " 4",
+    ":", " :", ": ", ",", ", ", "\n", " ",
+]
+
+
+def _get_format_ids(tokenizer: Any) -> set[int]:
+    ids: set[int] = set()
+    for s in _FORMAT_STRINGS:
+        ids.update(tokenizer(s, add_special_tokens=False)["input_ids"])
+    if tokenizer.eos_token_id is not None:
+        ids.add(tokenizer.eos_token_id)
+    if tokenizer.pad_token_id is not None:
+        ids.add(tokenizer.pad_token_id)
+    return ids
+
+
+def _get_allowed_ids(words16: list[str], tokenizer: Any, format_ids: set[int] | None = None) -> list[int]:
+    if format_ids is None:
+        format_ids = _get_format_ids(tokenizer)
+    allowed = set(format_ids)
+    for word in words16:
+        allowed.update(tokenizer(word, add_special_tokens=False)["input_ids"])
+        allowed.update(tokenizer(" " + word, add_special_tokens=False)["input_ids"])
+    return [tid for tid in allowed if tid >= 0]
+
+
+def _causal_lm_loss_allowed_only(
+    logits: torch.Tensor,
+    labels: torch.Tensor,
+    allowed_ids_per_batch: list[list[int]],
+    device: torch.device,
+    ignore_index: int = -100,
+) -> torch.Tensor:
+    """CE over allowed tokens only (disallowed get 0 prob). logits [B,T,V], labels [B,T]."""
+    shift_logits = logits[:, :-1, :].contiguous()
+    shift_labels = labels[:, 1:].contiguous()
+    B, T, V = shift_logits.shape
+    max_A = max(len(a) for a in allowed_ids_per_batch)
+    if max_A == 0:
+        return torch.nn.functional.cross_entropy(
+            shift_logits.view(-1, V), shift_labels.view(-1), ignore_index=ignore_index
+        )
+
+    index_list: list[list[int]] = []
+    valid_list: list[list[bool]] = []
+    for allowed_ids in allowed_ids_per_batch:
+        pad_len = max_A - len(allowed_ids)
+        index_list.append(list(allowed_ids) + [0] * pad_len)
+        valid_list.append([True] * len(allowed_ids) + [False] * pad_len)
+
+    index_t = torch.tensor(index_list, dtype=torch.long, device=device)
+    valid_t = torch.tensor(valid_list, dtype=torch.bool, device=device)
+    id_to_idx_per_b: list[dict[int, int]] = [
+        {tid: i for i, tid in enumerate(allowed_ids_per_batch[b])} for b in range(B)
+    ]
+
+    index_exp = index_t.unsqueeze(1).expand(B, T, max_A)
+    gathered = torch.gather(shift_logits, 2, index_exp)
+    gathered = gathered.masked_fill(~valid_t.unsqueeze(1).expand(B, T, max_A), float("-inf"))
+
+    target_index = torch.full((B, T), ignore_index, dtype=torch.long, device=device)
+    for b in range(B):
+        id_to_idx = id_to_idx_per_b[b]
+        for t in range(T):
+            lbl = shift_labels[b, t].item()
+            if lbl == ignore_index:
+                continue
+            if lbl in id_to_idx:
+                target_index[b, t] = id_to_idx[lbl]
+
+    return torch.nn.functional.cross_entropy(
+        gathered.reshape(-1, max_A),
+        target_index.reshape(-1),
+        ignore_index=ignore_index,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -217,9 +312,13 @@ def finetune_llama_lora(
     seed: int = 42,
     use_4bit: bool = True,
     adapter_output_dir: str | Path | None = None,
+    use_logit_masking: bool = True,
     verbose: bool = False,
 ) -> tuple[Any, Any, LlamaFineTuneStats]:
     """Fine-tune LLaMA with LoRA (or QLoRA when use_4bit=True) on Connections puzzles.
+
+    When use_logit_masking is True, disallowed tokens (not in the 16 puzzle words
+    or format tokens) get logit -inf so the model cannot assign them probability.
 
     Returns (model, tokenizer, stats).
     """
@@ -247,7 +346,7 @@ def finetune_llama_lora(
         use_4bit=use_4bit,
     )
 
-    dataset = ConnectionsSFTDataset(puzzles=puzzles, seed=seed)
+    dataset = ConnectionsSFTDataset(puzzles=puzzles, tokenizer=tokenizer, seed=seed)
     loader = DataLoader(
         dataset,
         batch_size=batch_size,
@@ -283,9 +382,20 @@ def finetune_llama_lora(
         loop_iterable = tqdm(loader, desc=f"Epoch {epoch + 1}/{epochs}") if verbose and has_tqdm else loader
 
         for batch in loop_iterable:
+            allowed_ids_batch = batch.pop("_allowed_ids")
+            batch.pop("_words16")
             batch = {k: v.to(batch_device) for k, v in batch.items()}
             outputs = model(**batch)
-            loss = outputs.loss
+
+            if use_logit_masking:
+                loss = _causal_lm_loss_allowed_only(
+                    outputs.logits,
+                    batch["labels"],
+                    allowed_ids_batch,
+                    batch_device,
+                )
+            else:
+                loss = outputs.loss
 
             optimizer.zero_grad()
             loss.backward()

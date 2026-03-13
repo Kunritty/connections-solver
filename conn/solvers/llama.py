@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import random
 import re
+import time
 from typing import TYPE_CHECKING, Any
+import torch
 
 from conn.solvers.base import BaseSolver, ExampleGroupsLike, example_words
 
@@ -108,9 +110,6 @@ def _valid_prediction(pred_groups: list[list[str]], words16: list[str]) -> bool:
 class LlamaSolver(BaseSolver):
     """Generative LLaMA solver with optional few-shot prompting.
 
-    Works with both a vanilla HuggingFace model and a LoRA-adapted one.
-    Authentication (huggingface_hub.login) should be done externally
-    (e.g. in the notebook) before constructing this solver.
     """
 
     def __init__(
@@ -120,13 +119,20 @@ class LlamaSolver(BaseSolver):
         *,
         example_source: Any = None,
         k: int = 0,
-        max_new_tokens: int = 300,
+        max_new_tokens: int = 120,
         temperature: float = 0.1,
         max_retries: int = 0,
         retry_temperature_step: float = 0.1,
+        device: torch.device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"),
+        use_fp16: bool = True,
+        use_static_cache: bool = True,
+        use_compile: bool = False,
     ):
         super().__init__(encoder=None)
-        self.model = model
+        if getattr(model, "hf_device_map", None) is None:
+            self.model = model.to(device)
+        else:
+            self.model = model
         self.tokenizer = tokenizer
         self.example_source = example_source
         self.k = k
@@ -134,17 +140,29 @@ class LlamaSolver(BaseSolver):
         self.temperature = temperature
         self.max_retries = max_retries
         self.retry_temperature_step = retry_temperature_step
+        self.device = device
 
+        if use_fp16 and device.type == "cuda":
+            dtype = getattr(torch, "bfloat16", torch.float16)
+            self.model = self.model.to(dtype)
+        if use_compile:
+            self.model = torch.compile(self.model, mode="reduce-overhead")
+
+        print(f"LlamaSolver: Using device {self.device}")
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.last_generate_seconds: float = 0.0
+        self._use_static_cache = use_static_cache
 
     def solve(self, words16: list[str]) -> list[list[str]]:
         self._validate_board(words16)
         prompt = self._build_full_prompt(words16)
+        self.last_generate_seconds = 0.0
 
         for attempt in range(1 + self.max_retries):
             temp = self.temperature + self.retry_temperature_step * attempt
-            response = self._generate(prompt, temperature_override=temp)
+            response, gen_sec = self._generate(prompt, temperature_override=temp)
+            self.last_generate_seconds += gen_sec
             self.last_raw_response = response
             parsed = _parse_response(response)
 
@@ -167,11 +185,9 @@ class LlamaSolver(BaseSolver):
         user_prompt = few_shot + user_body
         return SYSTEM_PROMPT + "\n" + user_prompt
 
-    def _generate(self, prompt: str, temperature_override: float | None = None) -> str:
-        device = next(self.model.parameters()).device
-        
+    def _generate(self, prompt: str, temperature_override: float | None = None) -> tuple[str, float]:
         forced_prefix = "\nGROUP 1:"
-        inputs = self.tokenizer(prompt + forced_prefix, return_tensors="pt").to(device)
+        inputs = self.tokenizer(prompt + forced_prefix, return_tensors="pt").to(self.device)
         prompt_len = inputs["input_ids"].shape[-1]
 
         temp = temperature_override if temperature_override is not None else self.temperature
@@ -183,10 +199,15 @@ class LlamaSolver(BaseSolver):
         if temp > 0:
             gen_kwargs["temperature"] = temp
             gen_kwargs["top_p"] = 0.9
+        if self._use_static_cache:
+            gen_kwargs["cache_implementation"] = "static"
 
-        output_ids = self.model.generate(**inputs, **gen_kwargs)
+        t0 = time.perf_counter()
+        with torch.inference_mode():
+            output_ids = self.model.generate(**inputs, **gen_kwargs)
+        gen_seconds = time.perf_counter() - t0
+
         new_tokens = output_ids[0][prompt_len:]
-        
         raw_output = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
         response = "GROUP 1:" + raw_output
-        return response
+        return response, gen_seconds
