@@ -1,7 +1,8 @@
 from __future__ import annotations
 
+import json
 import random
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any
 
@@ -19,6 +20,14 @@ except ImportError:  # pragma: no cover
     PeftModel = None  # type: ignore[assignment,misc]
     get_peft_model = None  # type: ignore[assignment,misc]
 
+try:
+    from transformers import BitsAndBytesConfig
+    import bitsandbytes  # noqa: F401 – confirms the library is installed
+    _BNB_AVAILABLE = True
+except ImportError:  # pragma: no cover
+    BitsAndBytesConfig = None  # type: ignore[assignment,misc]
+    _BNB_AVAILABLE = False
+
 DEFAULT_MODEL_NAME = "meta-llama/Llama-3.1-8B"
 
 
@@ -27,6 +36,14 @@ class LlamaFineTuneStats:
     epochs: int
     steps: int
     average_losses: list[float]
+    batch_losses: list[float]
+
+    def save(self, path: str | Path) -> None:
+        Path(path).write_text(json.dumps(asdict(self), indent=2))
+
+    @classmethod
+    def load(cls, path: str | Path) -> LlamaFineTuneStats:
+        return cls(**json.loads(Path(path).read_text()))
 
 
 # ---------------------------------------------------------------------------
@@ -36,14 +53,14 @@ class LlamaFineTuneStats:
 def _format_target(groups: list[list[str]]) -> str:
     lines: list[str] = []
     for i, group in enumerate(groups, 1):
-        lines.append(f"GROUP {i}: {' || '.join(group)}")
+        lines.append(f"GROUP {i}: {', '.join(group)}")
     return "\n".join(lines)
 
 
 def _format_prompt(words16: list[str], few_shot_text: str = "") -> str:
     user_body = (
         f"NOW, solve this puzzle and only this one: "
-        f"Here are the 16 words: {' || '.join(words16)}"
+        f"Here are the 16 words: {', '.join(words16)}"
     )
     return SYSTEM_PROMPT + "\n" + few_shot_text + user_body
 
@@ -139,6 +156,7 @@ def _build_llama_lora_model(
     r: int,
     alpha: int,
     dropout: float,
+    use_4bit: bool = True,
 ):
     if get_peft_model is None or LoraConfig is None or TaskType is None:
         raise ImportError("peft is required for LoRA fine-tuning. Install with `pip install peft`.")
@@ -147,10 +165,29 @@ def _build_llama_lora_model(
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        torch_dtype=torch.float16 if device.type == "cuda" else torch.float32,
-    )
+    if use_4bit and device.type == "cuda":
+        if not _BNB_AVAILABLE or BitsAndBytesConfig is None:
+            raise ImportError(
+                "bitsandbytes is required for 4-bit QLoRA. Install with `pip install bitsandbytes`."
+            )
+        bnb_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.float16,
+        )
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            quantization_config=bnb_config,
+            device_map="auto",
+        )
+    else:
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            torch_dtype=torch.float16 if device.type == "cuda" else torch.float32,
+        )
+        model.to(device)
+
     config = LoraConfig(
         r=r,
         lora_alpha=alpha,
@@ -160,7 +197,6 @@ def _build_llama_lora_model(
         task_type=TaskType.CAUSAL_LM,
     )
     model = get_peft_model(model, config)
-    model.to(device)
     return model, tokenizer
 
 
@@ -172,17 +208,18 @@ def finetune_llama_lora(
     puzzles: list[Any],
     model_name: str = DEFAULT_MODEL_NAME,
     epochs: int = 3,
-    batch_size: int = 2,
+    batch_size: int = 1,
     learning_rate: float = 2e-4,
     lora_r: int = 8,
     lora_alpha: int = 16,
     lora_dropout: float = 0.1,
-    max_length: int = 1024,
+    max_length: int = 256,
     seed: int = 42,
+    use_4bit: bool = True,
     adapter_output_dir: str | Path | None = None,
     verbose: bool = False,
 ) -> tuple[Any, Any, LlamaFineTuneStats]:
-    """Fine-tune LLaMA with LoRA on Connections puzzles using SFT.
+    """Fine-tune LLaMA with LoRA (or QLoRA when use_4bit=True) on Connections puzzles.
 
     Returns (model, tokenizer, stats).
     """
@@ -197,8 +234,9 @@ def finetune_llama_lora(
         else "mps" if torch.backends.mps.is_available()
         else "cpu"
     )
+    quant_label = "4-bit QLoRA" if (use_4bit and device.type == "cuda") else "LoRA fp16"
     if verbose:
-        print(f"Starting LLaMA LoRA SFT on {device} for {epochs} epochs...")
+        print(f"Starting LLaMA {quant_label} SFT on {device} for {epochs} epochs...")
 
     model, tokenizer = _build_llama_lora_model(
         model_name=model_name,
@@ -206,6 +244,7 @@ def finetune_llama_lora(
         r=lora_r,
         alpha=lora_alpha,
         dropout=lora_dropout,
+        use_4bit=use_4bit,
     )
 
     dataset = ConnectionsSFTDataset(puzzles=puzzles, seed=seed)
@@ -222,16 +261,29 @@ def finetune_llama_lora(
         lr=learning_rate,
     )
 
+    # With device_map="auto" (4-bit), tensors must go to the model's first device
+    batch_device = next(model.parameters()).device
+
+    try:
+        from tqdm.auto import tqdm
+        has_tqdm = True
+    except ImportError:
+        has_tqdm = False
+
     model.train()
     step_count = 0
     average_losses: list[float] = []
+    batch_losses: list[float] = []
 
     for epoch in range(epochs):
         running_loss = 0.0
         batch_count = 0
 
-        for batch in loader:
-            batch = {k: v.to(device) for k, v in batch.items()}
+        # Wrap loader in tqdm if verbose and tqdm is available
+        loop_iterable = tqdm(loader, desc=f"Epoch {epoch + 1}/{epochs}") if verbose and has_tqdm else loader
+
+        for batch in loop_iterable:
+            batch = {k: v.to(batch_device) for k, v in batch.items()}
             outputs = model(**batch)
             loss = outputs.loss
 
@@ -239,25 +291,35 @@ def finetune_llama_lora(
             loss.backward()
             optimizer.step()
 
-            running_loss += loss.item()
+            batch_loss = loss.item()
+            running_loss += batch_loss
+            batch_losses.append(batch_loss)
             batch_count += 1
             step_count += 1
+            
+            # Update progress bar with the current loss
+            if verbose and has_tqdm:
+                loop_iterable.set_postfix(loss=f"{batch_loss:.4f}")
 
         epoch_avg_loss = running_loss / max(1, batch_count)
         average_losses.append(epoch_avg_loss)
         if verbose:
             print(f"Epoch {epoch + 1}/{epochs} | Average Loss: {epoch_avg_loss:.4f}")
 
+    model.eval()
+    stats = LlamaFineTuneStats(epochs=epochs, steps=step_count, average_losses=average_losses, batch_losses=batch_losses)
+
     if adapter_output_dir is not None:
         out_path = Path(adapter_output_dir)
         out_path.mkdir(parents=True, exist_ok=True)
         model.save_pretrained(str(out_path))
         tokenizer.save_pretrained(str(out_path))
+        stats_path = out_path / "training_stats.json"
+        stats.save(stats_path)
         if verbose:
             print(f"Adapter saved to {out_path}")
+            print(f"Training stats saved to {stats_path}")
 
-    model.eval()
-    stats = LlamaFineTuneStats(epochs=epochs, steps=step_count, average_losses=average_losses)
     return model, tokenizer, stats
 
 
@@ -268,6 +330,7 @@ def finetune_llama_lora(
 def load_llama_lora(
     adapter_dir: str | Path,
     base_model_name: str = DEFAULT_MODEL_NAME,
+    use_4bit: bool = True,
 ) -> tuple[Any, Any]:
     """Load a fine-tuned LLaMA LoRA adapter. Returns (model, tokenizer)."""
     if PeftModel is None:
@@ -283,11 +346,29 @@ def load_llama_lora(
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    base_model = AutoModelForCausalLM.from_pretrained(
-        base_model_name,
-        torch_dtype=torch.float16 if device.type == "cuda" else torch.float32,
-    )
+    if use_4bit and device.type == "cuda":
+        if not _BNB_AVAILABLE or BitsAndBytesConfig is None:
+            raise ImportError(
+                "bitsandbytes is required for 4-bit loading. Install with `pip install bitsandbytes`."
+            )
+        bnb_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.float16,
+        )
+        base_model = AutoModelForCausalLM.from_pretrained(
+            base_model_name,
+            quantization_config=bnb_config,
+            device_map="auto",
+        )
+    else:
+        base_model = AutoModelForCausalLM.from_pretrained(
+            base_model_name,
+            torch_dtype=torch.float16 if device.type == "cuda" else torch.float32,
+        )
+        base_model.to(device)
+
     model = PeftModel.from_pretrained(base_model, adapter_path)
-    model.to(device)
     model.eval()
     return model, tokenizer
