@@ -2,22 +2,52 @@ from itertools import permutations
 
 from data_loader import gold_groups_from_row
 
+SWAP_MAX_VALUE = 12
 
 def _norm(g: list) -> frozenset:
-    return frozenset(w.strip() for w in g)
+    return frozenset(w.strip().upper() for w in g)
 
+def _is_valid_prediction(pred_groups: list[list[str]], gold_groups: list[list[str]]) -> bool:
+    if not isinstance(pred_groups, list) or len(pred_groups) != 4 or len(gold_groups) != 4:
+        return False
+    if any(not isinstance(g, list) or len(g) != 4 for g in pred_groups):
+        return False
+    all_words_pred = set(word.strip().upper() for group in pred_groups for word in group)
+    all_words_gold = set(word.strip().upper() for group in gold_groups for word in group)
+    return all_words_pred == all_words_gold
 
 def accuracy_zero_one(pred_groups: list[list[str]], gold_groups: list[list[str]]) -> float:
-    if len(pred_groups) != 4 or len(gold_groups) != 4:
+    # If the output does not match the 4-group structure (or the correct subset of words),
+    # punish by assigning 0 accuracy.
+    if not isinstance(pred_groups, list) or len(pred_groups) != 4 or len(gold_groups) != 4:
         return 0.0
+    if any(not isinstance(g, list) or len(g) != 4 for g in pred_groups):
+        return 0.0
+        
+    all_words_pred = set(word.strip().upper() for group in pred_groups for word in group)
+    all_words_gold = set(word.strip().upper() for group in gold_groups for word in group)
+    if all_words_pred != all_words_gold:
+        return 0.0
+        
     pred_sets = {_norm(g) for g in pred_groups}
     gold_sets = {_norm(g) for g in gold_groups}
     return 1.0 if pred_sets == gold_sets else 0.0
 
 
 def accuracy_min_swaps(pred_groups: list[list[str]], gold_groups: list[list[str]]) -> float:
-    if len(pred_groups) != 4 or len(gold_groups) != 4:
-        return float("inf")
+    # If the output does not match the 4-group structure (or the correct subset of words),
+    # punish by assigning the max possible swaps.
+    if not isinstance(pred_groups, list) or len(pred_groups) != 4 or len(gold_groups) != 4:
+        return float(SWAP_MAX_VALUE)
+    if any(not isinstance(g, list) or len(g) != 4 for g in pred_groups):
+        return float(SWAP_MAX_VALUE)
+    
+    # Also check if it's the correct subset of words (hallucinations)
+    all_words_pred = set(word.strip().upper() for group in pred_groups for word in group)
+    all_words_gold = set(word.strip().upper() for group in gold_groups for word in group)
+    if all_words_pred != all_words_gold:
+        return float(SWAP_MAX_VALUE)
+        
     pred_sets = [_norm(g) for g in pred_groups]
     gold_sets = [_norm(g) for g in gold_groups]
     best_misplaced = 16
@@ -49,6 +79,7 @@ def evaluate(
         metric_fns = {fn.__name__: fn for fn in metric_fns}
     if gold_from_row is None:
         gold_from_row = gold_groups_from_row
+    
     scores = {name: [] for name in metric_fns.keys()}
     n = len(split) if max_samples is None else min(max_samples, len(split))
     for i in range(n):
@@ -61,12 +92,12 @@ def evaluate(
             continue
         pred = solver_fn(words16)
 
-        #Skip if invalid predictions format (stems from LLM hallucinations)
-        all_words = set(word for group in pred for word in group)
-        if len(pred) != 4 or any(len(g) != 4 for g in pred) or all_words != set(words16):
+        if not _is_valid_prediction(pred, gold):
             if verbose:
                 print(f"WARNING: Invalid or hallucinated output for puzzle {i+1}: {pred}")
-            continue
+                print(f"EXPECTED: {gold}")
+                if hasattr(solver_fn, "__self__") and hasattr(solver_fn.__self__, "last_raw_response"):
+                    print(f"--- RAW LLM OUTPUT ---\n{solver_fn.__self__.last_raw_response}\n----------------------")
         
         for name, fn in metric_fns.items():
             scores[name].append(fn(pred, gold))
