@@ -163,6 +163,7 @@ def _collate_sft(
 # Logit masking: CE only over allowed tokens (strict, efficient)
 # ---------------------------------------------------------------------------
 
+# NOTE: Performance worsened with hallucination penalties
 _FORMAT_STRINGS = [
     "GROUP", " GROUP", "1", "2", "3", "4", " 1", " 2", " 3", " 4",
     ":", " :", ": ", ",", ", ", "\n", " ",
