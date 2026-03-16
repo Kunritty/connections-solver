@@ -5,7 +5,13 @@ from conn.fine_tuning import (
     finetune_deberta_lora,
     load_lora_encoder,
 )
-from conn.metrics import accuracy_min_swaps, accuracy_zero_one, evaluate
+from conn.metrics import (
+    accuracy_min_swaps,
+    accuracy_zero_one,
+    correct_word_count,
+    evaluate,
+    n_correct_groups,
+)
 from conn.search import greedy_group_search
 from conn.solvers import (
     BaseSolver,
@@ -35,5 +41,7 @@ __all__ = [
     "FineTuneStats",
     "accuracy_zero_one",
     "accuracy_min_swaps",
+    "correct_word_count",
     "evaluate",
+    "n_correct_groups",
 ]

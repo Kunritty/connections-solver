@@ -35,6 +35,34 @@ def accuracy_zero_one(pred_groups: list[list[str]], gold_groups: list[list[str]]
     return 1.0 if pred_sets == gold_sets else 0.0
 
 
+def n_correct_groups(pred_groups: list[list[str]], gold_groups: list[list[str]]) -> int:
+    """Number of predicted groups that exactly match some gold group (best permutation)."""
+    if not pred_groups or len(pred_groups) != 4 or len(gold_groups) != 4:
+        return 0
+    if any(len(g) != 4 for g in pred_groups) or any(len(g) != 4 for g in gold_groups):
+        return 0
+    pred_sets = [_norm(g) for g in pred_groups]
+    gold_sets = [_norm(g) for g in gold_groups]
+    return max(
+        sum(1 for j in range(4) if pred_sets[j] == gold_sets[pi[j]])
+        for pi in permutations(range(4))
+    )
+
+
+def correct_word_count(pred_groups: list[list[str]], gold_groups: list[list[str]]) -> int:
+    """Max number of words in correct position over all 4! alignments of pred to gold."""
+    if not pred_groups or len(pred_groups) != 4 or len(gold_groups) != 4:
+        return 0
+    if any(len(g) != 4 for g in pred_groups) or any(len(g) != 4 for g in gold_groups):
+        return 0
+    pred_sets = [_norm(g) for g in pred_groups]
+    gold_sets = [_norm(g) for g in gold_groups]
+    return max(
+        sum(len(pred_sets[j] & gold_sets[pi[j]]) for j in range(4))
+        for pi in permutations(range(4))
+    )
+
+
 def accuracy_min_swaps(pred_groups: list[list[str]], gold_groups: list[list[str]]) -> float:
     # If the output does not match the 4-group structure (or the correct subset of words),
     # punish by assigning the max possible swaps.

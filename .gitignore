@@ -7,3 +7,4 @@ envs/
 # Model run outputs
 adapters/
 .ipynb_checkpoints/
+results/

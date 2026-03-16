@@ -55,6 +55,11 @@ class SupConLoss(torch.nn.Module):
         """
         device = features.device
         n = features.size(0)
+        if labels.dim() != 1 or labels.size(0) != n:
+            raise RuntimeError(
+                f"SupConLoss: features.size(0)={n} must match labels.size(0)={labels.size(0)} (labels.dim()={labels.dim()}). "
+                "Ensure flat_vecs and flat_labels have the same length in the training loop."
+            )
 
         sim_matrix = features @ features.T / self.temperature
 
@@ -129,6 +134,8 @@ class ConnectionsBoardDataset(Dataset):
             for group_idx, group in enumerate(groups):
                 words.extend(group)
                 labels.extend([group_idx] * len(group))
+            if len(words) != 16:
+                continue
             boards.append((words, labels))
         return boards
 
@@ -141,6 +148,13 @@ class ConnectionsBoardDataset(Dataset):
         self._rng.shuffle(combined)
         shuffled_words, shuffled_labels = zip(*combined)
         return list(shuffled_words), list(shuffled_labels)
+
+
+def _collate_boards(batch: list[tuple[list[str], list[int]]]) -> tuple[list[list[str]], list[list[int]]]:
+    """Collate so batch_words[i] = i-th board's 16 words; avoid default_collate transposing."""
+    words_list = [item[0] for item in batch]
+    labels_list = [item[1] for item in batch]
+    return words_list, labels_list
 
 
 # ---------------------------------------------------------------------------
@@ -284,7 +298,13 @@ def finetune_deberta_lora(
     )
 
     dataset = ConnectionsBoardDataset(puzzles=puzzles, seed=seed)
-    loader = DataLoader(dataset, batch_size=batch_size, shuffle=True, drop_last=False)
+    loader = DataLoader(
+        dataset,
+        batch_size=batch_size,
+        shuffle=True,
+        drop_last=False,
+        collate_fn=_collate_boards,
+    )
 
     optimizer = torch.optim.AdamW(
         (p for p in model.parameters() if p.requires_grad),
@@ -301,21 +321,32 @@ def finetune_deberta_lora(
         batch_count = 0
 
         for batch_words, batch_labels in loader:
-            # batch_words: list of 16-word lists
-            # batch_labels: list of 16-int label lists
+            # batch_words: list of 16-word lists; batch_labels: list of 16-int lists or tensor (bs, 16)
+            bs = len(batch_words)
             vecs = _extract_word_embeddings(
                 model, tokenizer, batch_words, device, max_length=max_length,
             )
-
-            bs = vecs.size(0)
+            if vecs.size(0) != bs or vecs.size(1) != 16:
+                raise RuntimeError(
+                    f"Expected embeddings shape ({bs}, 16, -) for {bs} boards, got {vecs.shape}. "
+                    "Tokenizer/model batch size must match len(batch_words)."
+                )
             flat_vecs = vecs.view(bs * 16, -1)
 
             # Offset labels so each board's groups are globally unique
             global_labels: list[torch.Tensor] = []
             for b_idx in range(bs):
-                board_labels = torch.tensor(batch_labels[b_idx], dtype=torch.long, device=device)
-                global_labels.append(board_labels + b_idx * 4)
+                bl = batch_labels[b_idx]
+                board_labels = bl if isinstance(bl, torch.Tensor) else torch.tensor(bl, dtype=torch.long, device=device)
+                if board_labels.dim() == 0:
+                    board_labels = board_labels.unsqueeze(0)
+                global_labels.append(board_labels.to(device).long() + b_idx * 4)
             flat_labels = torch.cat(global_labels, dim=0)
+            if flat_labels.size(0) != flat_vecs.size(0):
+                raise RuntimeError(
+                    f"flat_vecs.size(0)={flat_vecs.size(0)} != flat_labels.size(0)={flat_labels.size(0)}. "
+                    f"bs={bs}, len(batch_labels)={len(batch_labels) if hasattr(batch_labels, '__len__') else 'N/A'}."
+                )
 
             loss = loss_fn(flat_vecs, flat_labels)
             optimizer.zero_grad()
