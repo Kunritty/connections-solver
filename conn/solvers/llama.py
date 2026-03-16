@@ -6,7 +6,7 @@ import time
 from typing import TYPE_CHECKING, Any
 import torch
 
-from conn.solvers.base import BaseSolver, ExampleGroupsLike, example_words
+from conn.solvers.base import BaseSolver, example_words
 
 if TYPE_CHECKING:
     from transformers import PreTrainedModel, PreTrainedTokenizerBase
@@ -142,6 +142,13 @@ class LlamaSolver(BaseSolver):
         self.retry_temperature_step = retry_temperature_step
         self.device = device
 
+        if hasattr(self.model, "config"):
+            try:
+                self.model.config.use_cache = True  # type: ignore[attr-defined]
+                print("Enabled KV cache at the model level")
+            except Exception:
+                pass
+
         if use_fp16 and device.type == "cuda":
             dtype = getattr(torch, "bfloat16", torch.float16)
             self.model = self.model.to(dtype)
@@ -186,6 +193,7 @@ class LlamaSolver(BaseSolver):
         return SYSTEM_PROMPT + "\n" + user_prompt
 
     def _generate(self, prompt: str, temperature_override: float | None = None) -> tuple[str, float]:
+        print("Generating.")
         forced_prefix = "\nGROUP 1:"
         inputs = self.tokenizer(prompt + forced_prefix, return_tensors="pt").to(self.device)
         prompt_len = inputs["input_ids"].shape[-1]
@@ -196,17 +204,21 @@ class LlamaSolver(BaseSolver):
             do_sample=temp > 0,
             pad_token_id=self.tokenizer.pad_token_id,
         )
+        
+        # Always use KV cache during generation for speed.
+        gen_kwargs["use_cache"] = True
+        print("Using KV cache.")
         if temp > 0:
             gen_kwargs["temperature"] = temp
             gen_kwargs["top_p"] = 0.9
-        if self._use_static_cache:
-            gen_kwargs["cache_implementation"] = "static"
-
+        # if self._use_static_cache:
+        #     gen_kwargs["cache_implementation"] = "static"
+        print("Gen kwargs: ", gen_kwargs)
         t0 = time.perf_counter()
-        with torch.inference_mode():
+        with torch.no_grad():
             output_ids = self.model.generate(**inputs, **gen_kwargs)
         gen_seconds = time.perf_counter() - t0
-
+        print("Generated in ", gen_seconds, " seconds.")
         new_tokens = output_ids[0][prompt_len:]
         raw_output = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
         response = "GROUP 1:" + raw_output
