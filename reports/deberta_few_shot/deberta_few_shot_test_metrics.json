@@ -1,0 +1,10 @@
+{
+  "split": "test",
+  "zero_one_accuracy": 0.0,
+  "mean_min_swaps": 3.7709923664122136,
+  "mean_n_correct_groups": 0.16030534351145037,
+  "mean_correct_word_count": 8.946564885496183,
+  "mean_inference_time_sec": 0.1532794780153499,
+  "total_inference_time_sec": 20.079611620010837,
+  "n_eval": 131
+}

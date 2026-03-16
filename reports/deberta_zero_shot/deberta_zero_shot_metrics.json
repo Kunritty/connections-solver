@@ -1,0 +1,10 @@
+{
+  "split": "train",
+  "zero_one_accuracy": 0.0019193857965451055,
+  "mean_min_swaps": 3.867562380038388,
+  "mean_n_correct_groups": 0.16698656429942418,
+  "mean_correct_word_count": 8.767754318618042,
+  "mean_inference_time_sec": 0.13854403702880483,
+  "total_inference_time_sec": 72.18144329200732,
+  "n_eval": 521
+}
