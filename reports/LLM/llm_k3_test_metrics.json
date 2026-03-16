@@ -1,0 +1,12 @@
+{
+  "k": 3,
+  "model": "llama3.1-8b",
+  "split": "test",
+  "zero_one_accuracy": 0.8307692307692308,
+  "mean_min_swaps": 0.34615384615384615,
+  "mean_n_correct_groups": 3.5384615384615383,
+  "mean_correct_word_count": 15.346153846153847,
+  "mean_inference_time_sec": 2.3314676184650476,
+  "total_inference_time_sec": 303.09079040045617,
+  "n_eval": 130
+}

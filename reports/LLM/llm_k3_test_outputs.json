@@ -1,0 +1,10532 @@
+[
+  {
+    "index": 0,
+    "words16": [
+      "DENMARK",
+      "GREECE",
+      "POLAND",
+      "PORTUGAL",
+      "COPY",
+      "ECHO",
+      "MIMIC",
+      "PARROT",
+      "CRUISE",
+      "HOLLAND",
+      "PETTY",
+      "WAITS",
+      "DILL",
+      "LIVID",
+      "MILD",
+      "MIX"
+    ],
+    "pred_groups": [
+      [
+        "DENMARK",
+        "GREECE",
+        "POLAND",
+        "PORTUGAL"
+      ],
+      [
+        "COPY",
+        "ECHO",
+        "MIMIC",
+        "PARROT"
+      ],
+      [
+        "CRUISE",
+        "HOLLAND",
+        "PETTY",
+        "WAITS"
+      ],
+      [
+        "DILL",
+        "LIVID",
+        "MILD",
+        "MIX"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "DENMARK",
+        "GREECE",
+        "POLAND",
+        "PORTUGAL"
+      ],
+      [
+        "COPY",
+        "ECHO",
+        "MIMIC",
+        "PARROT"
+      ],
+      [
+        "CRUISE",
+        "HOLLAND",
+        "PETTY",
+        "WAITS"
+      ],
+      [
+        "DILL",
+        "LIVID",
+        "MILD",
+        "MIX"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-07-07 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 7.698338799993508,
+    "is_valid": true
+  },
+  {
+    "index": 1,
+    "words16": [
+      "CONVEY",
+      "EXPRESS",
+      "MEAN",
+      "SPELL",
+      "BACK",
+      "EXTENSIONS",
+      "FORWARD",
+      "REFRESH",
+      "DIVIDER",
+      "LANE",
+      "MEDIAN",
+      "SHOULDER",
+      "CARTE",
+      "KING",
+      "MODE",
+      "PLANCHA"
+    ],
+    "pred_groups": [
+      [
+        "CONVEY",
+        "EXPRESS",
+        "FORWARD",
+        "REFRESH"
+      ],
+      [
+        "BACK",
+        "EXTENSIONS",
+        "LANE",
+        "MEDIAN"
+      ],
+      [
+        "DIVIDER",
+        "MEAN",
+        "SHOULDER",
+        "SPELL"
+      ],
+      [
+        "CARTE",
+        "KING",
+        "MODE",
+        "PLANCHA"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CONVEY",
+        "EXPRESS",
+        "MEAN",
+        "SPELL"
+      ],
+      [
+        "BACK",
+        "EXTENSIONS",
+        "FORWARD",
+        "REFRESH"
+      ],
+      [
+        "DIVIDER",
+        "LANE",
+        "MEDIAN",
+        "SHOULDER"
+      ],
+      [
+        "CARTE",
+        "KING",
+        "MODE",
+        "PLANCHA"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 3,
+    "date": "2025-03-19 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 10,
+    "inference_time_sec": 1.8526568000088446,
+    "is_valid": true
+  },
+  {
+    "index": 2,
+    "words16": [
+      "CLEAN",
+      "NEAT",
+      "TIDY",
+      "TRIM",
+      "HYPER",
+      "SUPER",
+      "UBER",
+      "ULTRA",
+      "BALLOON",
+      "MUSHROOM",
+      "SNOWBALL",
+      "SWELL",
+      "DOMINO",
+      "JACK",
+      "MARBLE",
+      "STICK"
+    ],
+    "pred_groups": [
+      [
+        "CLEAN",
+        "NEAT",
+        "TIDY",
+        "TRIM"
+      ],
+      [
+        "HYPER",
+        "SUPER",
+        "UBER",
+        "ULTRA"
+      ],
+      [
+        "BALLOON",
+        "MUSHROOM",
+        "SNOWBALL",
+        "SWELL"
+      ],
+      [
+        "DOMINO",
+        "JACK",
+        "MARBLE",
+        "STICK"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CLEAN",
+        "NEAT",
+        "TIDY",
+        "TRIM"
+      ],
+      [
+        "HYPER",
+        "SUPER",
+        "UBER",
+        "ULTRA"
+      ],
+      [
+        "BALLOON",
+        "MUSHROOM",
+        "SNOWBALL",
+        "SWELL"
+      ],
+      [
+        "DOMINO",
+        "JACK",
+        "MARBLE",
+        "STICK"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-04-12 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.5702236000215635,
+    "is_valid": true
+  },
+  {
+    "index": 3,
+    "words16": [
+      "BARTENDER",
+      "CHEF",
+      "HOST",
+      "SERVER",
+      "BUS",
+      "CAR",
+      "MOTORCYCLE",
+      "TRUCK",
+      "ANIMAL",
+      "BEAKER",
+      "GONZO",
+      "SCOOTER",
+      "DIGIT",
+      "DOG",
+      "MITT",
+      "PIGGY"
+    ],
+    "pred_groups": [
+      [
+        "BARTENDER",
+        "CHEF",
+        "HOST",
+        "SERVER"
+      ],
+      [
+        "BUS",
+        "CAR",
+        "MOTORCYCLE",
+        "TRUCK"
+      ],
+      [
+        "ANIMAL",
+        "BEAKER",
+        "GONZO",
+        "DIGIT"
+      ],
+      [
+        "DOG",
+        "MITT",
+        "PIGGY",
+        "SCOOTER"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BARTENDER",
+        "CHEF",
+        "HOST",
+        "SERVER"
+      ],
+      [
+        "BUS",
+        "CAR",
+        "MOTORCYCLE",
+        "TRUCK"
+      ],
+      [
+        "ANIMAL",
+        "BEAKER",
+        "GONZO",
+        "SCOOTER"
+      ],
+      [
+        "DIGIT",
+        "DOG",
+        "MITT",
+        "PIGGY"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 1,
+    "date": "2023-09-21 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 14,
+    "inference_time_sec": 3.1271313999895938,
+    "is_valid": true
+  },
+  {
+    "index": 4,
+    "words16": [
+      "AM",
+      "HAM",
+      "SATELLITE",
+      "WALKIE-TALKIE",
+      "FOOD",
+      "PILLOW",
+      "SNOWBALL",
+      "WATER BALLOON",
+      "DEVIL DOG",
+      "DING DONG",
+      "HOHO",
+      "YODEL",
+      "BAR",
+      "CHICKEN",
+      "KNOCK-KNOCK",
+      "LIGHT BULB"
+    ],
+    "pred_groups": [
+      [
+        "AM",
+        "HAM",
+        "FOOD",
+        "PILLOW"
+      ],
+      [
+        "SATELLITE",
+        "WALKIE-TALKIE",
+        "WATER BALLOON",
+        "DING DONG"
+      ],
+      [
+        "SNOWBALL",
+        "DEVIL DOG",
+        "HOHO",
+        "YODEL"
+      ],
+      [
+        "BAR",
+        "CHICKEN",
+        "KNOCK-KNOCK",
+        "LIGHT BULB"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "AM",
+        "HAM",
+        "SATELLITE",
+        "WALKIE-TALKIE"
+      ],
+      [
+        "FOOD",
+        "PILLOW",
+        "SNOWBALL",
+        "WATER BALLOON"
+      ],
+      [
+        "DEVIL DOG",
+        "DING DONG",
+        "HOHO",
+        "YODEL"
+      ],
+      [
+        "BAR",
+        "CHICKEN",
+        "KNOCK-KNOCK",
+        "LIGHT BULB"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 3,
+    "date": "2024-12-16 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 11,
+    "inference_time_sec": 0.272663600044325,
+    "is_valid": true
+  },
+  {
+    "index": 5,
+    "words16": [
+      "BAT",
+      "COBWEB",
+      "PUMPKIN",
+      "TOMBSTONE",
+      "24",
+      "BONES",
+      "FIREFLY",
+      "WEEDS",
+      "7",
+      "BAR",
+      "BELL",
+      "CHERRY",
+      "22",
+      "451",
+      "2001",
+      "20,000"
+    ],
+    "pred_groups": [
+      [
+        "BAT",
+        "COBWEB",
+        "PUMPKIN",
+        "TOMBSTONE"
+      ],
+      [
+        "24",
+        "BONES",
+        "7",
+        "22"
+      ],
+      [
+        "FIREFLY",
+        "WEEDS",
+        "BAR",
+        "BELL"
+      ],
+      [
+        "CHERRY",
+        "451",
+        "2001",
+        "20,000"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BAT",
+        "COBWEB",
+        "PUMPKIN",
+        "TOMBSTONE"
+      ],
+      [
+        "24",
+        "BONES",
+        "FIREFLY",
+        "WEEDS"
+      ],
+      [
+        "7",
+        "BAR",
+        "BELL",
+        "CHERRY"
+      ],
+      [
+        "22",
+        "451",
+        "2001",
+        "20,000"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 3,
+    "date": "2023-09-11 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 11,
+    "inference_time_sec": 5.181522600003518,
+    "is_valid": true
+  },
+  {
+    "index": 6,
+    "words16": [
+      "MEAN",
+      "MEDIAN",
+      "MODE",
+      "RANGE",
+      "BASE",
+      "BOND",
+      "ELEMENT",
+      "SOLUTION",
+      "AWFUL",
+      "PRETTY",
+      "RATHER",
+      "REAL",
+      "GLASS",
+      "GROSS",
+      "KING",
+      "STERN"
+    ],
+    "pred_groups": [
+      [
+        "MEAN",
+        "MEDIAN",
+        "MODE",
+        "RANGE"
+      ],
+      [
+        "BASE",
+        "BOND",
+        "ELEMENT",
+        "SOLUTION"
+      ],
+      [
+        "AWFUL",
+        "PRETTY",
+        "RATHER",
+        "REAL"
+      ],
+      [
+        "GLASS",
+        "GROSS",
+        "KING",
+        "STERN"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "MEAN",
+        "MEDIAN",
+        "MODE",
+        "RANGE"
+      ],
+      [
+        "BASE",
+        "BOND",
+        "ELEMENT",
+        "SOLUTION"
+      ],
+      [
+        "AWFUL",
+        "PRETTY",
+        "RATHER",
+        "REAL"
+      ],
+      [
+        "GLASS",
+        "GROSS",
+        "KING",
+        "STERN"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-01-17 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.5993834999972023,
+    "is_valid": true
+  },
+  {
+    "index": 7,
+    "words16": [
+      "BROOM",
+      "MOP",
+      "RAG",
+      "SPONGE",
+      "SALT",
+      "FAT",
+      "ACID",
+      "HEAT",
+      "DUST",
+      "PEPPER",
+      "POLLEN",
+      "SMOKE",
+      "MAGNUM",
+      "MONK",
+      "SHAFT",
+      "TRACY"
+    ],
+    "pred_groups": [
+      [
+        "BROOM",
+        "MOP",
+        "RAG",
+        "SPONGE"
+      ],
+      [
+        "SALT",
+        "FAT",
+        "ACID",
+        "HEAT"
+      ],
+      [
+        "DUST",
+        "PEPPER",
+        "POLLEN",
+        "SMOKE"
+      ],
+      [
+        "MAGNUM",
+        "MONK",
+        "SHAFT",
+        "TRACY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BROOM",
+        "MOP",
+        "RAG",
+        "SPONGE"
+      ],
+      [
+        "SALT",
+        "FAT",
+        "ACID",
+        "HEAT"
+      ],
+      [
+        "DUST",
+        "PEPPER",
+        "POLLEN",
+        "SMOKE"
+      ],
+      [
+        "MAGNUM",
+        "MONK",
+        "SHAFT",
+        "TRACY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-01-09 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.905948299972806,
+    "is_valid": true
+  },
+  {
+    "index": 8,
+    "words16": [
+      "BOAT",
+      "CAR",
+      "PLANE",
+      "TRAIN",
+      "KING",
+      "MAGIC",
+      "SUN",
+      "THUNDER",
+      "CHECKERS",
+      "OUTBACK",
+      "SONIC",
+      "SUBWAY",
+      "DAY",
+      "FLOYD",
+      "SABBATH",
+      "STRIPES"
+    ],
+    "pred_groups": [
+      [
+        "BOAT",
+        "CAR",
+        "PLANE",
+        "TRAIN"
+      ],
+      [
+        "KING",
+        "MAGIC",
+        "SUN",
+        "THUNDER"
+      ],
+      [
+        "CHECKERS",
+        "OUTBACK",
+        "SONIC",
+        "SUBWAY"
+      ],
+      [
+        "DAY",
+        "FLOYD",
+        "SABBATH",
+        "STRIPES"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BOAT",
+        "CAR",
+        "PLANE",
+        "TRAIN"
+      ],
+      [
+        "KING",
+        "MAGIC",
+        "SUN",
+        "THUNDER"
+      ],
+      [
+        "CHECKERS",
+        "OUTBACK",
+        "SONIC",
+        "SUBWAY"
+      ],
+      [
+        "DAY",
+        "FLOYD",
+        "SABBATH",
+        "STRIPES"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-07-26 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.255097699991893,
+    "is_valid": true
+  },
+  {
+    "index": 9,
+    "words16": [
+      "ACT",
+      "BILL",
+      "MEASURE",
+      "RESOLUTION",
+      "MEADOW",
+      "PLAIN",
+      "PRAIRIE",
+      "SAVANNA",
+      "DIRECT",
+      "FRANK",
+      "OPEN",
+      "STRAIGHT",
+      "AURA",
+      "BUCK",
+      "DOGE",
+      "HODA"
+    ],
+    "pred_groups": [
+      [
+        "ACT",
+        "BILL",
+        "MEASURE",
+        "RESOLUTION"
+      ],
+      [
+        "MEADOW",
+        "PLAIN",
+        "PRAIRIE",
+        "SAVANNA"
+      ],
+      [
+        "DIRECT",
+        "FRANK",
+        "OPEN",
+        "STRAIGHT"
+      ],
+      [
+        "AURA",
+        "BUCK",
+        "DOGE",
+        "HODA"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ACT",
+        "BILL",
+        "MEASURE",
+        "RESOLUTION"
+      ],
+      [
+        "MEADOW",
+        "PLAIN",
+        "PRAIRIE",
+        "SAVANNA"
+      ],
+      [
+        "DIRECT",
+        "FRANK",
+        "OPEN",
+        "STRAIGHT"
+      ],
+      [
+        "AURA",
+        "BUCK",
+        "DOGE",
+        "HODA"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-05-15 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 4.267524599970784,
+    "is_valid": true
+  },
+  {
+    "index": 10,
+    "words16": [
+      "ANISE",
+      "DILL",
+      "NUTMEG",
+      "SAGE",
+      "BRIGHT",
+      "QUICK",
+      "SHARP",
+      "SMART",
+      "AXE",
+      "DEGREE",
+      "OLD SPICE",
+      "SECRET",
+      "CLUB",
+      "MACE",
+      "SPEAR",
+      "SWORD"
+    ],
+    "pred_groups": [
+      [
+        "ANISE",
+        "DILL",
+        "NUTMEG",
+        "SAGE"
+      ],
+      [
+        "BRIGHT",
+        "QUICK",
+        "SHARP",
+        "SMART"
+      ],
+      [
+        "AXE",
+        "DEGREE",
+        "MACE",
+        "SPEAR"
+      ],
+      [
+        "CLUB",
+        "OLD SPICE",
+        "SECRET",
+        "SWORD"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ANISE",
+        "DILL",
+        "NUTMEG",
+        "SAGE"
+      ],
+      [
+        "BRIGHT",
+        "QUICK",
+        "SHARP",
+        "SMART"
+      ],
+      [
+        "AXE",
+        "DEGREE",
+        "OLD SPICE",
+        "SECRET"
+      ],
+      [
+        "CLUB",
+        "MACE",
+        "SPEAR",
+        "SWORD"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 2,
+    "date": "2023-11-10 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 12,
+    "inference_time_sec": 2.77255650004372,
+    "is_valid": true
+  },
+  {
+    "index": 11,
+    "words16": [
+      "GENESIS",
+      "GERM",
+      "SEED",
+      "SOURCE",
+      "ACTS",
+      "JOB",
+      "KINGS",
+      "MARK",
+      "FLAMES",
+      "KRAKEN",
+      "STARS",
+      "WILD",
+      "NAP",
+      "PLANT",
+      "RANGER",
+      "TRIP"
+    ],
+    "pred_groups": [
+      [
+        "GENESIS",
+        "GERM",
+        "SEED",
+        "SOURCE"
+      ],
+      [
+        "ACTS",
+        "JOB",
+        "KINGS",
+        "MARK"
+      ],
+      [
+        "FLAMES",
+        "KRAKEN",
+        "STARS",
+        "WILD"
+      ],
+      [
+        "NAP",
+        "PLANT",
+        "RANGER",
+        "TRIP"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "GENESIS",
+        "GERM",
+        "SEED",
+        "SOURCE"
+      ],
+      [
+        "ACTS",
+        "JOB",
+        "KINGS",
+        "MARK"
+      ],
+      [
+        "FLAMES",
+        "KRAKEN",
+        "STARS",
+        "WILD"
+      ],
+      [
+        "NAP",
+        "PLANT",
+        "RANGER",
+        "TRIP"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-10-10 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 6.022818199999165,
+    "is_valid": true
+  },
+  {
+    "index": 12,
+    "words16": [
+      "ATOM",
+      "CELL",
+      "MOLECULE",
+      "PROTEIN",
+      "BOTTLE",
+      "CRIB",
+      "MOBILE",
+      "RATTLE",
+      "JUG",
+      "SAW",
+      "SPOONS",
+      "WASHBOARD",
+      "DOG",
+      "FREEZE",
+      "PHONE",
+      "PRICE"
+    ],
+    "pred_groups": [
+      [
+        "ATOM",
+        "CELL",
+        "MOLECULE",
+        "PROTEIN"
+      ],
+      [
+        "BOTTLE",
+        "CRIB",
+        "MOBILE",
+        "RATTLE"
+      ],
+      [
+        "JUG",
+        "SAW",
+        "SPOONS",
+        "WASHBOARD"
+      ],
+      [
+        "DOG",
+        "FREEZE",
+        "PHONE",
+        "PRICE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ATOM",
+        "CELL",
+        "MOLECULE",
+        "PROTEIN"
+      ],
+      [
+        "BOTTLE",
+        "CRIB",
+        "MOBILE",
+        "RATTLE"
+      ],
+      [
+        "JUG",
+        "SAW",
+        "SPOONS",
+        "WASHBOARD"
+      ],
+      [
+        "DOG",
+        "FREEZE",
+        "PHONE",
+        "PRICE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-07-06 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.3264824000070803,
+    "is_valid": true
+  },
+  {
+    "index": 13,
+    "words16": [
+      "HI",
+      "LA",
+      "MA",
+      "OK",
+      "BET",
+      "E",
+      "HALLMARK",
+      "USA",
+      "ALFA",
+      "BRAVO",
+      "ROMEO",
+      "TANGO",
+      "BOO",
+      "POM",
+      "TOM",
+      "YO"
+    ],
+    "pred_groups": [
+      [
+        "HI",
+        "LA",
+        "MA",
+        "OK"
+      ],
+      [
+        "BET",
+        "E",
+        "HALLMARK",
+        "USA"
+      ],
+      [
+        "ALFA",
+        "BRAVO",
+        "ROMEO",
+        "TANGO"
+      ],
+      [
+        "BOO",
+        "POM",
+        "TOM",
+        "YO"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "HI",
+        "LA",
+        "MA",
+        "OK"
+      ],
+      [
+        "BET",
+        "E",
+        "HALLMARK",
+        "USA"
+      ],
+      [
+        "ALFA",
+        "BRAVO",
+        "ROMEO",
+        "TANGO"
+      ],
+      [
+        "BOO",
+        "POM",
+        "TOM",
+        "YO"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-12-07 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 5.891490900015924,
+    "is_valid": true
+  },
+  {
+    "index": 14,
+    "words16": [
+      "CONDENSE",
+      "FREEZE",
+      "MELT",
+      "VAPORIZE",
+      "ALTERNATE",
+      "BACKUP",
+      "COVER",
+      "SUB",
+      "COPPER",
+      "HACK",
+      "SHRINK",
+      "SUIT",
+      "FANTASY",
+      "HERO",
+      "HONEY",
+      "SOMEDAY"
+    ],
+    "pred_groups": [
+      [
+        "CONDENSE",
+        "FREEZE",
+        "MELT",
+        "VAPORIZE"
+      ],
+      [
+        "ALTERNATE",
+        "BACKUP",
+        "COVER",
+        "SUB"
+      ],
+      [
+        "COPPER",
+        "HACK",
+        "SHRINK",
+        "SUIT"
+      ],
+      [
+        "FANTASY",
+        "HERO",
+        "HONEY",
+        "SOMEDAY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CONDENSE",
+        "FREEZE",
+        "MELT",
+        "VAPORIZE"
+      ],
+      [
+        "ALTERNATE",
+        "BACKUP",
+        "COVER",
+        "SUB"
+      ],
+      [
+        "COPPER",
+        "HACK",
+        "SHRINK",
+        "SUIT"
+      ],
+      [
+        "FANTASY",
+        "HERO",
+        "HONEY",
+        "SOMEDAY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-07-07 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.5440720999613404,
+    "is_valid": true
+  },
+  {
+    "index": 15,
+    "words16": [
+      "CHEEK",
+      "EYE",
+      "MOUTH",
+      "NOSE",
+      "CHOW",
+      "GOBBLE",
+      "SCARF",
+      "WOLF",
+      "LAB",
+      "PEKE",
+      "PIT",
+      "POM",
+      "AMIGO",
+      "KING",
+      "STOOGE",
+      "TENOR"
+    ],
+    "pred_groups": [
+      [
+        "CHEEK",
+        "EYE",
+        "MOUTH",
+        "NOSE"
+      ],
+      [
+        "CHOW",
+        "GOBBLE",
+        "SCARF",
+        "WOLF"
+      ],
+      [
+        "LAB",
+        "PEKE",
+        "PIT",
+        "POM"
+      ],
+      [
+        "AMIGO",
+        "KING",
+        "STOOGE",
+        "TENOR"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHEEK",
+        "EYE",
+        "MOUTH",
+        "NOSE"
+      ],
+      [
+        "CHOW",
+        "GOBBLE",
+        "SCARF",
+        "WOLF"
+      ],
+      [
+        "LAB",
+        "PEKE",
+        "PIT",
+        "POM"
+      ],
+      [
+        "AMIGO",
+        "KING",
+        "STOOGE",
+        "TENOR"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-06-14 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 4.337164299970027,
+    "is_valid": true
+  },
+  {
+    "index": 16,
+    "words16": [
+      "AFGHAN",
+      "ALPACA",
+      "ANGORA",
+      "YAK",
+      "BLATHER",
+      "CHAT",
+      "JABBER",
+      "GAB",
+      "CONVERSE",
+      "JORDAN",
+      "PUMA",
+      "VANS",
+      "LEAD",
+      "SPEECH",
+      "TRIAL",
+      "WATER"
+    ],
+    "pred_groups": [
+      [
+        "AFGHAN",
+        "ALPACA",
+        "ANGORA",
+        "YAK"
+      ],
+      [
+        "BLATHER",
+        "CHAT",
+        "JABBER",
+        "GAB"
+      ],
+      [
+        "CONVERSE",
+        "JORDAN",
+        "PUMA",
+        "VANS"
+      ],
+      [
+        "LEAD",
+        "SPEECH",
+        "TRIAL",
+        "WATER"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "AFGHAN",
+        "ALPACA",
+        "ANGORA",
+        "YAK"
+      ],
+      [
+        "BLATHER",
+        "CHAT",
+        "JABBER",
+        "GAB"
+      ],
+      [
+        "CONVERSE",
+        "JORDAN",
+        "PUMA",
+        "VANS"
+      ],
+      [
+        "LEAD",
+        "SPEECH",
+        "TRIAL",
+        "WATER"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-10-03 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.354695999994874,
+    "is_valid": true
+  },
+  {
+    "index": 17,
+    "words16": [
+      "GRANDSTAND",
+      "PEACOCK",
+      "POSTURE",
+      "STRUT",
+      "MAIN",
+      "PARAMOUNT",
+      "PRIME",
+      "SUPREME",
+      "BLUE",
+      "GREEN",
+      "WHITE",
+      "YELLOW",
+      "CHAIN",
+      "COVER",
+      "LOVE",
+      "SCARLET"
+    ],
+    "pred_groups": [
+      [
+        "GRANDSTAND",
+        "PEACOCK",
+        "POSTURE",
+        "STRUT"
+      ],
+      [
+        "MAIN",
+        "PARAMOUNT",
+        "PRIME",
+        "SUPREME"
+      ],
+      [
+        "BLUE",
+        "GREEN",
+        "WHITE",
+        "YELLOW"
+      ],
+      [
+        "CHAIN",
+        "COVER",
+        "LOVE",
+        "SCARLET"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "GRANDSTAND",
+        "PEACOCK",
+        "POSTURE",
+        "STRUT"
+      ],
+      [
+        "MAIN",
+        "PARAMOUNT",
+        "PRIME",
+        "SUPREME"
+      ],
+      [
+        "BLUE",
+        "GREEN",
+        "WHITE",
+        "YELLOW"
+      ],
+      [
+        "CHAIN",
+        "COVER",
+        "LOVE",
+        "SCARLET"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-01-18 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.38353340001776814,
+    "is_valid": true
+  },
+  {
+    "index": 18,
+    "words16": [
+      "HAT TRICK",
+      "THREEPEAT",
+      "TRIFECTA",
+      "TRIPLE CROWN",
+      "DROP CLOTH",
+      "PAINT",
+      "ROLLER",
+      "TAPE",
+      "BROIL",
+      "CHEESESTEAK",
+      "SPROUTS",
+      "WINGS",
+      "DEMOLITION",
+      "HOME RUN",
+      "KENTUCKY",
+      "SOAP BOX"
+    ],
+    "pred_groups": [
+      [
+        "HAT TRICK",
+        "THREEPEAT",
+        "TRIFECTA",
+        "TRIPLE CROWN"
+      ],
+      [
+        "DROP CLOTH",
+        "PAINT",
+        "ROLLER",
+        "TAPE"
+      ],
+      [
+        "BROIL",
+        "CHEESESTEAK",
+        "SPROUTS",
+        "WINGS"
+      ],
+      [
+        "DEMOLITION",
+        "HOME RUN",
+        "KENTUCKY",
+        "SOAP BOX"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "HAT TRICK",
+        "THREEPEAT",
+        "TRIFECTA",
+        "TRIPLE CROWN"
+      ],
+      [
+        "DROP CLOTH",
+        "PAINT",
+        "ROLLER",
+        "TAPE"
+      ],
+      [
+        "BROIL",
+        "CHEESESTEAK",
+        "SPROUTS",
+        "WINGS"
+      ],
+      [
+        "DEMOLITION",
+        "HOME RUN",
+        "KENTUCKY",
+        "SOAP BOX"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-09-25 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 5.547720800037496,
+    "is_valid": true
+  },
+  {
+    "index": 19,
+    "words16": [
+      "CAB",
+      "JACKET",
+      "JOURNALISM",
+      "PAGES",
+      "BERET",
+      "GOBLIN",
+      "SALAD",
+      "THUMB",
+      "JAY",
+      "JEANS",
+      "MOON",
+      "WHALE",
+      "HAZE",
+      "HEART",
+      "PROSE",
+      "RAIN"
+    ],
+    "pred_groups": [
+      [
+        "CAB",
+        "JACKET",
+        "BERET",
+        "JEANS"
+      ],
+      [
+        "JOURNALISM",
+        "PAGES",
+        "PROSE",
+        "SALAD"
+      ],
+      [
+        "GOBLIN",
+        "MOON",
+        "WHALE",
+        "THUMB"
+      ],
+      [
+        "JAY",
+        "HAZE",
+        "HEART",
+        "RAIN"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CAB",
+        "JACKET",
+        "JOURNALISM",
+        "PAGES"
+      ],
+      [
+        "BERET",
+        "GOBLIN",
+        "SALAD",
+        "THUMB"
+      ],
+      [
+        "JAY",
+        "JEANS",
+        "MOON",
+        "WHALE"
+      ],
+      [
+        "HAZE",
+        "HEART",
+        "PROSE",
+        "RAIN"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 4,
+    "date": "2024-10-23 00:00:00",
+    "levels": [],
+    "n_correct_groups": 0,
+    "correct_word_count": 8,
+    "inference_time_sec": 2.8388214000151493,
+    "is_valid": true
+  },
+  {
+    "index": 20,
+    "words16": [
+      "COOLER",
+      "LANTERN",
+      "SLEEPING BAG",
+      "TENT",
+      "BARB",
+      "DIG",
+      "DISS",
+      "JAB",
+      "MINUTE",
+      "SLIGHT",
+      "SMALL",
+      "WEE",
+      "CAMPER",
+      "HOUR",
+      "MEAL",
+      "MEDIUM"
+    ],
+    "pred_groups": [
+      [
+        "COOLER",
+        "LANTERN",
+        "SLEEPING BAG",
+        "TENT"
+      ],
+      [
+        "BARB",
+        "DIG",
+        "JAB",
+        "MEAL"
+      ],
+      [
+        "DISS",
+        "HOUR",
+        "MINUTE",
+        "SLIGHT"
+      ],
+      [
+        "CAMPER",
+        "MEDIUM",
+        "SMALL",
+        "WEE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "COOLER",
+        "LANTERN",
+        "SLEEPING BAG",
+        "TENT"
+      ],
+      [
+        "BARB",
+        "DIG",
+        "DISS",
+        "JAB"
+      ],
+      [
+        "MINUTE",
+        "SLIGHT",
+        "SMALL",
+        "WEE"
+      ],
+      [
+        "CAMPER",
+        "HOUR",
+        "MEAL",
+        "MEDIUM"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 3,
+    "date": "2023-08-20 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 11,
+    "inference_time_sec": 4.450882399978582,
+    "is_valid": true
+  },
+  {
+    "index": 21,
+    "words16": [
+      "HIT",
+      "SMASH",
+      "SUCCESS",
+      "WINNER",
+      "BUMP",
+      "SERVE",
+      "SET",
+      "SPIKE",
+      "MOO",
+      "NEW",
+      "PIE",
+      "ROW",
+      "DADDY",
+      "DAY",
+      "JACKIE",
+      "JELL"
+    ],
+    "pred_groups": [
+      [
+        "HIT",
+        "SMASH",
+        "SUCCESS",
+        "WINNER"
+      ],
+      [
+        "BUMP",
+        "SERVE",
+        "SET",
+        "SPIKE"
+      ],
+      [
+        "MOO",
+        "NEW",
+        "PIE",
+        "ROW"
+      ],
+      [
+        "DADDY",
+        "DAY",
+        "JACKIE",
+        "JELL"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "HIT",
+        "SMASH",
+        "SUCCESS",
+        "WINNER"
+      ],
+      [
+        "BUMP",
+        "SERVE",
+        "SET",
+        "SPIKE"
+      ],
+      [
+        "MOO",
+        "NEW",
+        "PIE",
+        "ROW"
+      ],
+      [
+        "DADDY",
+        "DAY",
+        "JACKIE",
+        "JELL"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-03-14 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.6608408000320196,
+    "is_valid": true
+  },
+  {
+    "index": 22,
+    "words16": [
+      "BEIGE",
+      "CAMEL",
+      "KHAKI",
+      "TAN",
+      "CUT",
+      "DITCH",
+      "MISS",
+      "SKIP",
+      "BLOWOUT",
+      "ROMP",
+      "ROUT",
+      "SWEEP",
+      "CHEESE",
+      "COLOR",
+      "HAMSTER",
+      "PRAYER"
+    ],
+    "pred_groups": [
+      [
+        "BEIGE",
+        "CAMEL",
+        "KHAKI",
+        "TAN"
+      ],
+      [
+        "CUT",
+        "DITCH",
+        "MISS",
+        "SKIP"
+      ],
+      [
+        "BLOWOUT",
+        "ROMP",
+        "ROUT",
+        "SWEEP"
+      ],
+      [
+        "CHEESE",
+        "COLOR",
+        "HAMSTER",
+        "PRAYER"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BEIGE",
+        "CAMEL",
+        "KHAKI",
+        "TAN"
+      ],
+      [
+        "CUT",
+        "DITCH",
+        "MISS",
+        "SKIP"
+      ],
+      [
+        "BLOWOUT",
+        "ROMP",
+        "ROUT",
+        "SWEEP"
+      ],
+      [
+        "CHEESE",
+        "COLOR",
+        "HAMSTER",
+        "PRAYER"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-03-24 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.494501500041224,
+    "is_valid": true
+  },
+  {
+    "index": 23,
+    "words16": [
+      "DUNK",
+      "FLOATER",
+      "LAYUP",
+      "THREE",
+      "PERCH",
+      "PIKE",
+      "SKATE",
+      "SOLE",
+      "BODY",
+      "BOUNCE",
+      "LIFT",
+      "VOLUME",
+      "FLOWER",
+      "ONLY",
+      "POSTER",
+      "PROBLEM"
+    ],
+    "pred_groups": [
+      [
+        "DUNK",
+        "FLOATER",
+        "LAYUP",
+        "THREE"
+      ],
+      [
+        "PERCH",
+        "PIKE",
+        "SKATE",
+        "SOLE"
+      ],
+      [
+        "BODY",
+        "BOUNCE",
+        "LIFT",
+        "VOLUME"
+      ],
+      [
+        "FLOWER",
+        "ONLY",
+        "POSTER",
+        "PROBLEM"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "DUNK",
+        "FLOATER",
+        "LAYUP",
+        "THREE"
+      ],
+      [
+        "PERCH",
+        "PIKE",
+        "SKATE",
+        "SOLE"
+      ],
+      [
+        "BODY",
+        "BOUNCE",
+        "LIFT",
+        "VOLUME"
+      ],
+      [
+        "FLOWER",
+        "ONLY",
+        "POSTER",
+        "PROBLEM"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-06-15 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.3412980000139214,
+    "is_valid": true
+  },
+  {
+    "index": 24,
+    "words16": [
+      "CHEESECAKE",
+      "FLAN",
+      "MOUSSE",
+      "TIRAMISU",
+      "DARN",
+      "FUDGE",
+      "HECK",
+      "SHOOT",
+      "ELEPHANT",
+      "HIPPO",
+      "NARWHAL",
+      "WARTHOG",
+      "HANDLEBAR",
+      "HORSESHOE",
+      "PENCIL",
+      "WALRUS"
+    ],
+    "pred_groups": [
+      [
+        "CHEESECAKE",
+        "FLAN",
+        "MOUSSE",
+        "TIRAMISU"
+      ],
+      [
+        "DARN",
+        "FUDGE",
+        "HECK",
+        "SHOOT"
+      ],
+      [
+        "ELEPHANT",
+        "HIPPO",
+        "NARWHAL",
+        "WARTHOG"
+      ],
+      [
+        "HANDLEBAR",
+        "HORSESHOE",
+        "PENCIL",
+        "WALRUS"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHEESECAKE",
+        "FLAN",
+        "MOUSSE",
+        "TIRAMISU"
+      ],
+      [
+        "DARN",
+        "FUDGE",
+        "HECK",
+        "SHOOT"
+      ],
+      [
+        "ELEPHANT",
+        "HIPPO",
+        "NARWHAL",
+        "WARTHOG"
+      ],
+      [
+        "HANDLEBAR",
+        "HORSESHOE",
+        "PENCIL",
+        "WALRUS"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-07-06 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.5355771000031382,
+    "is_valid": true
+  },
+  {
+    "index": 25,
+    "words16": [
+      "TEA",
+      "TEE (GOLF)",
+      "TEE (SHIRT)",
+      "TI (MUSICAL NOTE)",
+      "COMB",
+      "GEAR",
+      "SAW",
+      "ZIPPER",
+      "FUDGE",
+      "GEEZ",
+      "NUTS",
+      "RATS",
+      "BANK",
+      "BED",
+      "DELTA",
+      "MOUTH"
+    ],
+    "pred_groups": [
+      [
+        "TEA",
+        "TEE (GOLF)",
+        "TEE (SHIRT)",
+        "TI (MUSICAL NOTE)"
+      ],
+      [
+        "COMB",
+        "GEAR",
+        "SAW",
+        "ZIPPER"
+      ],
+      [
+        "FUDGE",
+        "GEEZ",
+        "NUTS",
+        "RATS"
+      ],
+      [
+        "BANK",
+        "BED",
+        "DELTA",
+        "MOUTH"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "TEA",
+        "TEE (GOLF)",
+        "TEE (SHIRT)",
+        "TI (MUSICAL NOTE)"
+      ],
+      [
+        "COMB",
+        "GEAR",
+        "SAW",
+        "ZIPPER"
+      ],
+      [
+        "FUDGE",
+        "GEEZ",
+        "NUTS",
+        "RATS"
+      ],
+      [
+        "BANK",
+        "BED",
+        "DELTA",
+        "MOUTH"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-12-12 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.0252022000495344,
+    "is_valid": true
+  },
+  {
+    "index": 26,
+    "words16": [
+      "BROOD",
+      "MUSE",
+      "PONDER",
+      "REFLECT",
+      "INTERRUPT",
+      "LITTER",
+      "POINT",
+      "STARE",
+      "CRAFT",
+      "LINE",
+      "TRADE",
+      "WORK",
+      "CABBAGE",
+      "NICOTINE",
+      "ROUGH",
+      "SOUL"
+    ],
+    "pred_groups": [
+      [
+        "BROOD",
+        "MUSE",
+        "PONDER",
+        "REFLECT"
+      ],
+      [
+        "INTERRUPT",
+        "LITTER",
+        "POINT",
+        "STARE"
+      ],
+      [
+        "CRAFT",
+        "LINE",
+        "TRADE",
+        "WORK"
+      ],
+      [
+        "CABBAGE",
+        "NICOTINE",
+        "ROUGH",
+        "SOUL"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BROOD",
+        "MUSE",
+        "PONDER",
+        "REFLECT"
+      ],
+      [
+        "INTERRUPT",
+        "LITTER",
+        "POINT",
+        "STARE"
+      ],
+      [
+        "CRAFT",
+        "LINE",
+        "TRADE",
+        "WORK"
+      ],
+      [
+        "CABBAGE",
+        "NICOTINE",
+        "ROUGH",
+        "SOUL"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-01-24 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 4.089832900033798,
+    "is_valid": true
+  },
+  {
+    "index": 27,
+    "words16": [
+      "EWE",
+      "U",
+      "YEW",
+      "YOU",
+      "BOAT",
+      "CREW",
+      "SCOOP",
+      "V",
+      "GRAND",
+      "K",
+      "M",
+      "THOU",
+      "8",
+      "BOWL",
+      "GLUE",
+      "TUESDAY"
+    ],
+    "pred_groups": [
+      [
+        "EWE",
+        "U",
+        "YEW",
+        "YOU"
+      ],
+      [
+        "BOAT",
+        "CREW",
+        "SCOOP",
+        "V"
+      ],
+      [
+        "GRAND",
+        "K",
+        "M",
+        "THOU"
+      ],
+      [
+        "8",
+        "BOWL",
+        "GLUE",
+        "TUESDAY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "EWE",
+        "U",
+        "YEW",
+        "YOU"
+      ],
+      [
+        "BOAT",
+        "CREW",
+        "SCOOP",
+        "V"
+      ],
+      [
+        "GRAND",
+        "K",
+        "M",
+        "THOU"
+      ],
+      [
+        "8",
+        "BOWL",
+        "GLUE",
+        "TUESDAY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-12-23 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.255662299983669,
+    "is_valid": true
+  },
+  {
+    "index": 28,
+    "words16": [
+      "BREAK",
+      "HOLIDAY",
+      "LEAVE",
+      "RECESS",
+      "BUCKLE",
+      "HOLE",
+      "LOOP",
+      "STRAP",
+      "HOLEY",
+      "HOLI",
+      "HOLY",
+      "WHOLLY",
+      "DOG",
+      "DRIFT",
+      "HOLLY",
+      "SANDAL"
+    ],
+    "pred_groups": [
+      [
+        "BREAK",
+        "LEAVE",
+        "RECESS",
+        "HOLIDAY"
+      ],
+      [
+        "BUCKLE",
+        "HOLE",
+        "LOOP",
+        "STRAP"
+      ],
+      [
+        "HOLEY",
+        "HOLI",
+        "HOLY",
+        "WHOLLY"
+      ],
+      [
+        "DOG",
+        "DRIFT",
+        "HOLLY",
+        "SANDAL"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BREAK",
+        "HOLIDAY",
+        "LEAVE",
+        "RECESS"
+      ],
+      [
+        "BUCKLE",
+        "HOLE",
+        "LOOP",
+        "STRAP"
+      ],
+      [
+        "HOLEY",
+        "HOLI",
+        "HOLY",
+        "WHOLLY"
+      ],
+      [
+        "DOG",
+        "DRIFT",
+        "HOLLY",
+        "SANDAL"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-02-02 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.112760900054127,
+    "is_valid": true
+  },
+  {
+    "index": 29,
+    "words16": [
+      "KID",
+      "NEEDLE",
+      "RIB",
+      "TEASE",
+      "CHUCK",
+      "FLANK",
+      "LOIN",
+      "ROUND",
+      "MIA",
+      "OMG",
+      "PIN",
+      "RAM",
+      "LIBRE",
+      "MAMA",
+      "MULE",
+      "SLING"
+    ],
+    "pred_groups": [
+      [
+        "KID",
+        "MIA",
+        "MAMA",
+        "MULE"
+      ],
+      [
+        "NEEDLE",
+        "PIN",
+        "LIBRE",
+        "RIB"
+      ],
+      [
+        "CHUCK",
+        "FLANK",
+        "LOIN",
+        "ROUND"
+      ],
+      [
+        "TEASE",
+        "OMG",
+        "RAM",
+        "SLING"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "KID",
+        "NEEDLE",
+        "RIB",
+        "TEASE"
+      ],
+      [
+        "CHUCK",
+        "FLANK",
+        "LOIN",
+        "ROUND"
+      ],
+      [
+        "MIA",
+        "OMG",
+        "PIN",
+        "RAM"
+      ],
+      [
+        "LIBRE",
+        "MAMA",
+        "MULE",
+        "SLING"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 3,
+    "date": "2024-05-12 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 10,
+    "inference_time_sec": 0.326055700017605,
+    "is_valid": true
+  },
+  {
+    "index": 30,
+    "words16": [
+      "JAZZ",
+      "POP",
+      "PUNK",
+      "RAP",
+      "CHROME",
+      "EDGE",
+      "OPERA",
+      "SAFARI",
+      "AMY",
+      "BETH",
+      "JO",
+      "MEG",
+      "BABY",
+      "JON",
+      "KIM",
+      "WAYNE"
+    ],
+    "pred_groups": [
+      [
+        "JAZZ",
+        "POP",
+        "PUNK",
+        "RAP"
+      ],
+      [
+        "CHROME",
+        "EDGE",
+        "OPERA",
+        "SAFARI"
+      ],
+      [
+        "AMY",
+        "BETH",
+        "JO",
+        "MEG"
+      ],
+      [
+        "BABY",
+        "JON",
+        "KIM",
+        "WAYNE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "JAZZ",
+        "POP",
+        "PUNK",
+        "RAP"
+      ],
+      [
+        "CHROME",
+        "EDGE",
+        "OPERA",
+        "SAFARI"
+      ],
+      [
+        "AMY",
+        "BETH",
+        "JO",
+        "MEG"
+      ],
+      [
+        "BABY",
+        "JON",
+        "KIM",
+        "WAYNE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-07-02 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.6284792000078596,
+    "is_valid": true
+  },
+  {
+    "index": 31,
+    "words16": [
+      "BASS",
+      "BASSOON",
+      "HARP",
+      "RECORDER",
+      "BLOOM",
+      "BUD",
+      "SHOOT",
+      "SPROUT",
+      "FOSTER",
+      "NURSE",
+      "RAISE",
+      "REAR",
+      "CORONA",
+      "FLARE",
+      "LIGHT",
+      "RADIATION"
+    ],
+    "pred_groups": [
+      [
+        "BASS",
+        "BASSOON",
+        "HARP",
+        "RECORDER"
+      ],
+      [
+        "BLOOM",
+        "BUD",
+        "SHOOT",
+        "SPROUT"
+      ],
+      [
+        "FOSTER",
+        "NURSE",
+        "RAISE",
+        "REAR"
+      ],
+      [
+        "CORONA",
+        "FLARE",
+        "LIGHT",
+        "RADIATION"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BASS",
+        "BASSOON",
+        "HARP",
+        "RECORDER"
+      ],
+      [
+        "BLOOM",
+        "BUD",
+        "SHOOT",
+        "SPROUT"
+      ],
+      [
+        "FOSTER",
+        "NURSE",
+        "RAISE",
+        "REAR"
+      ],
+      [
+        "CORONA",
+        "FLARE",
+        "LIGHT",
+        "RADIATION"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-03-26 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.3533402999746613,
+    "is_valid": true
+  },
+  {
+    "index": 32,
+    "words16": [
+      "BOND",
+      "CD",
+      "OPTION",
+      "STOCK",
+      "LP",
+      "PLATTER",
+      "VINYL",
+      "WAX",
+      "BOUILLON",
+      "DIE",
+      "ICE",
+      "SUGAR",
+      "FUNNY",
+      "HERRING",
+      "SOUP",
+      "WISH"
+    ],
+    "pred_groups": [
+      [
+        "BOND",
+        "CD",
+        "OPTION",
+        "STOCK"
+      ],
+      [
+        "LP",
+        "PLATTER",
+        "VINYL",
+        "WAX"
+      ],
+      [
+        "BOUILLON",
+        "DIE",
+        "ICE",
+        "SUGAR"
+      ],
+      [
+        "FUNNY",
+        "HERRING",
+        "SOUP",
+        "WISH"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BOND",
+        "CD",
+        "OPTION",
+        "STOCK"
+      ],
+      [
+        "LP",
+        "PLATTER",
+        "VINYL",
+        "WAX"
+      ],
+      [
+        "BOUILLON",
+        "DIE",
+        "ICE",
+        "SUGAR"
+      ],
+      [
+        "FUNNY",
+        "HERRING",
+        "SOUP",
+        "WISH"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-11-06 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.24742159998277202,
+    "is_valid": true
+  },
+  {
+    "index": 33,
+    "words16": [
+      "FLOAT",
+      "MALT",
+      "SHAKE",
+      "SUNDAE",
+      "CONCRETE",
+      "FIRM",
+      "SOLID",
+      "TANGIBLE",
+      "GLASS",
+      "OLD",
+      "SIGNS",
+      "SPLIT",
+      "DASH",
+      "HOVER",
+      "KEY",
+      "STAR"
+    ],
+    "pred_groups": [
+      [
+        "FLOAT",
+        "HOVER",
+        "SHAKE",
+        "SUNDAE"
+      ],
+      [
+        "CONCRETE",
+        "FIRM",
+        "SOLID",
+        "TANGIBLE"
+      ],
+      [
+        "GLASS",
+        "OLD",
+        "SIGNS",
+        "SPLIT"
+      ],
+      [
+        "DASH",
+        "KEY",
+        "MALT",
+        "STAR"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "FLOAT",
+        "MALT",
+        "SHAKE",
+        "SUNDAE"
+      ],
+      [
+        "CONCRETE",
+        "FIRM",
+        "SOLID",
+        "TANGIBLE"
+      ],
+      [
+        "GLASS",
+        "OLD",
+        "SIGNS",
+        "SPLIT"
+      ],
+      [
+        "DASH",
+        "HOVER",
+        "KEY",
+        "STAR"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 1,
+    "date": "2023-09-22 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 14,
+    "inference_time_sec": 4.148884500027634,
+    "is_valid": true
+  },
+  {
+    "index": 34,
+    "words16": [
+      "ATTENTION",
+      "COVERAGE",
+      "EXPOSURE",
+      "PRESS",
+      "ANGLE",
+      "LENS",
+      "PERSPECTIVE",
+      "POSITION",
+      "MEET",
+      "SLACK",
+      "TEAMS",
+      "ZOOM",
+      "FANTASY",
+      "LOVE",
+      "SHUTTER",
+      "TREASURE"
+    ],
+    "pred_groups": [
+      [
+        "ATTENTION",
+        "COVERAGE",
+        "EXPOSURE",
+        "PRESS"
+      ],
+      [
+        "ANGLE",
+        "LENS",
+        "PERSPECTIVE",
+        "POSITION"
+      ],
+      [
+        "MEET",
+        "SLACK",
+        "TEAMS",
+        "ZOOM"
+      ],
+      [
+        "FANTASY",
+        "LOVE",
+        "SHUTTER",
+        "TREASURE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ATTENTION",
+        "COVERAGE",
+        "EXPOSURE",
+        "PRESS"
+      ],
+      [
+        "ANGLE",
+        "LENS",
+        "PERSPECTIVE",
+        "POSITION"
+      ],
+      [
+        "MEET",
+        "SLACK",
+        "TEAMS",
+        "ZOOM"
+      ],
+      [
+        "FANTASY",
+        "LOVE",
+        "SHUTTER",
+        "TREASURE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-11-22 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.4245005000266246,
+    "is_valid": true
+  },
+  {
+    "index": 35,
+    "words16": [
+      "CHILL",
+      "LOAF",
+      "LOUNGE",
+      "REST",
+      "BAR",
+      "COIN",
+      "LEAF",
+      "NUGGET",
+      "BOLT",
+      "REEL",
+      "ROLL",
+      "SCROLL",
+      "BONE",
+      "CLUB",
+      "DINOSAUR",
+      "RUBBLE"
+    ],
+    "pred_groups": [
+      [
+        "CHILL",
+        "LOAF",
+        "LOUNGE",
+        "REST"
+      ],
+      [
+        "BAR",
+        "COIN",
+        "NUGGET",
+        "BOLT"
+      ],
+      [
+        "LEAF",
+        "ROLL",
+        "SCROLL",
+        "RUBBLE"
+      ],
+      [
+        "BONE",
+        "CLUB",
+        "DINOSAUR",
+        "REEL"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHILL",
+        "LOAF",
+        "LOUNGE",
+        "REST"
+      ],
+      [
+        "BAR",
+        "COIN",
+        "LEAF",
+        "NUGGET"
+      ],
+      [
+        "BOLT",
+        "REEL",
+        "ROLL",
+        "SCROLL"
+      ],
+      [
+        "BONE",
+        "CLUB",
+        "DINOSAUR",
+        "RUBBLE"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 2,
+    "date": "2025-03-03 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 12,
+    "inference_time_sec": 0.2599759000004269,
+    "is_valid": true
+  },
+  {
+    "index": 36,
+    "words16": [
+      "DRILL",
+      "PRACTICE",
+      "STUDY",
+      "TRAIN",
+      "HOSE",
+      "PIPE",
+      "STRAW",
+      "TUBE",
+      "CANDLESTICK",
+      "KNIFE",
+      "ROPE",
+      "WRENCH",
+      "CIGARETTE",
+      "BIKE",
+      "TICKET",
+      "SPORTS"
+    ],
+    "pred_groups": [
+      [
+        "DRILL",
+        "PRACTICE",
+        "STUDY",
+        "TRAIN"
+      ],
+      [
+        "HOSE",
+        "PIPE",
+        "STRAW",
+        "TUBE"
+      ],
+      [
+        "CANDLESTICK",
+        "KNIFE",
+        "ROPE",
+        "WRENCH"
+      ],
+      [
+        "BIKE",
+        "CIGARETTE",
+        "TICKET",
+        "SPORTS"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "DRILL",
+        "PRACTICE",
+        "STUDY",
+        "TRAIN"
+      ],
+      [
+        "HOSE",
+        "PIPE",
+        "STRAW",
+        "TUBE"
+      ],
+      [
+        "CANDLESTICK",
+        "KNIFE",
+        "ROPE",
+        "WRENCH"
+      ],
+      [
+        "CIGARETTE",
+        "BIKE",
+        "TICKET",
+        "SPORTS"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-11-04 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2358659000019543,
+    "is_valid": true
+  },
+  {
+    "index": 37,
+    "words16": [
+      "BORE",
+      "HAD",
+      "HELD",
+      "POSSESSED",
+      "DREAM",
+      "DROOL",
+      "SNORE",
+      "TALK",
+      "ALIEN",
+      "GLADIATOR",
+      "VENOM",
+      "WICKED",
+      "FULL",
+      "GINGERBREAD",
+      "HAUNTED",
+      "WHITE"
+    ],
+    "pred_groups": [
+      [
+        "BORE",
+        "DREAM",
+        "SNORE",
+        "TALK"
+      ],
+      [
+        "ALIEN",
+        "GLADIATOR",
+        "VENOM",
+        "WICKED"
+      ],
+      [
+        "DROOL",
+        "FULL",
+        "HELD",
+        "POSSESSED"
+      ],
+      [
+        "GINGERBREAD",
+        "HAUNTED",
+        "HAD",
+        "WHITE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BORE",
+        "HAD",
+        "HELD",
+        "POSSESSED"
+      ],
+      [
+        "DREAM",
+        "DROOL",
+        "SNORE",
+        "TALK"
+      ],
+      [
+        "ALIEN",
+        "GLADIATOR",
+        "VENOM",
+        "WICKED"
+      ],
+      [
+        "FULL",
+        "GINGERBREAD",
+        "HAUNTED",
+        "WHITE"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 2,
+    "date": "2025-01-29 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 12,
+    "inference_time_sec": 0.25367559998994693,
+    "is_valid": true
+  },
+  {
+    "index": 38,
+    "words16": [
+      "BRIDGE",
+      "CRUNCH",
+      "DIP",
+      "SQUAT",
+      "BOUNTY",
+      "COWBOY",
+      "DUEL",
+      "SALOON",
+      "CARTER",
+      "GORE",
+      "KING",
+      "TUTU",
+      "BUSY",
+      "HONEY",
+      "QUEEN",
+      "SPELLING"
+    ],
+    "pred_groups": [
+      [
+        "BRIDGE",
+        "CRUNCH",
+        "DIP",
+        "SQUAT"
+      ],
+      [
+        "BOUNTY",
+        "COWBOY",
+        "DUEL",
+        "SALOON"
+      ],
+      [
+        "CARTER",
+        "GORE",
+        "KING",
+        "QUEEN"
+      ],
+      [
+        "BUSY",
+        "HONEY",
+        "TUTU",
+        "SPELLING"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BRIDGE",
+        "CRUNCH",
+        "DIP",
+        "SQUAT"
+      ],
+      [
+        "BOUNTY",
+        "COWBOY",
+        "DUEL",
+        "SALOON"
+      ],
+      [
+        "CARTER",
+        "GORE",
+        "KING",
+        "TUTU"
+      ],
+      [
+        "BUSY",
+        "HONEY",
+        "QUEEN",
+        "SPELLING"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 1,
+    "date": "2024-04-29 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 14,
+    "inference_time_sec": 0.38524239999242127,
+    "is_valid": true
+  },
+  {
+    "index": 39,
+    "words16": [
+      "DEWY",
+      "FRESH",
+      "GLOWING",
+      "SMOOTH",
+      "MAT",
+      "MOP",
+      "TANGLE",
+      "THATCH",
+      "BUCKET",
+      "PIP",
+      "SCROOGE",
+      "TWIST",
+      "DAISY",
+      "FOOD",
+      "MOUNTAIN",
+      "SUPPLY"
+    ],
+    "pred_groups": [
+      [
+        "DEWY",
+        "FRESH",
+        "GLOWING",
+        "SMOOTH"
+      ],
+      [
+        "MAT",
+        "MOP",
+        "TANGLE",
+        "THATCH"
+      ],
+      [
+        "BUCKET",
+        "PIP",
+        "SCROOGE",
+        "TWIST"
+      ],
+      [
+        "DAISY",
+        "FOOD",
+        "MOUNTAIN",
+        "SUPPLY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "DEWY",
+        "FRESH",
+        "GLOWING",
+        "SMOOTH"
+      ],
+      [
+        "MAT",
+        "MOP",
+        "TANGLE",
+        "THATCH"
+      ],
+      [
+        "BUCKET",
+        "PIP",
+        "SCROOGE",
+        "TWIST"
+      ],
+      [
+        "DAISY",
+        "FOOD",
+        "MOUNTAIN",
+        "SUPPLY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-03-04 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.588871099986136,
+    "is_valid": true
+  },
+  {
+    "index": 40,
+    "words16": [
+      "KEYBOARD",
+      "MONITOR",
+      "MOUSE",
+      "SPEAKER",
+      "GERBIL",
+      "HAMSTER",
+      "RAT",
+      "VOLE",
+      "HARP",
+      "HORN",
+      "ORGAN",
+      "TRIANGLE",
+      "CARP",
+      "GRIPE",
+      "GROUSE",
+      "MOAN"
+    ],
+    "pred_groups": [
+      [
+        "KEYBOARD",
+        "MONITOR",
+        "MOUSE",
+        "SPEAKER"
+      ],
+      [
+        "GERBIL",
+        "HAMSTER",
+        "RAT",
+        "VOLE"
+      ],
+      [
+        "HARP",
+        "HORN",
+        "ORGAN",
+        "TRIANGLE"
+      ],
+      [
+        "CARP",
+        "GRIPE",
+        "GROUSE",
+        "MOAN"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "KEYBOARD",
+        "MONITOR",
+        "MOUSE",
+        "SPEAKER"
+      ],
+      [
+        "GERBIL",
+        "HAMSTER",
+        "RAT",
+        "VOLE"
+      ],
+      [
+        "HARP",
+        "HORN",
+        "ORGAN",
+        "TRIANGLE"
+      ],
+      [
+        "CARP",
+        "GRIPE",
+        "GROUSE",
+        "MOAN"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-08-02 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.5689315000199713,
+    "is_valid": true
+  },
+  {
+    "index": 41,
+    "words16": [
+      "EXTRA",
+      "HYPER",
+      "OVER",
+      "SUPER",
+      "BIRTHDAY",
+      "COCKTAIL",
+      "DINNER",
+      "SURPRISE",
+      "FRONTLINE",
+      "NATURE",
+      "NOVA",
+      "MASTERPIECE",
+      "ANGERS",
+      "CHAMPAGNE",
+      "NICE",
+      "REUNION"
+    ],
+    "pred_groups": [
+      [
+        "EXTRA",
+        "HYPER",
+        "OVER",
+        "SUPER"
+      ],
+      [
+        "BIRTHDAY",
+        "COCKTAIL",
+        "DINNER",
+        "SURPRISE"
+      ],
+      [
+        "FRONTLINE",
+        "NATURE",
+        "NOVA",
+        "MASTERPIECE"
+      ],
+      [
+        "ANGERS",
+        "CHAMPAGNE",
+        "NICE",
+        "REUNION"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "EXTRA",
+        "HYPER",
+        "OVER",
+        "SUPER"
+      ],
+      [
+        "BIRTHDAY",
+        "COCKTAIL",
+        "DINNER",
+        "SURPRISE"
+      ],
+      [
+        "FRONTLINE",
+        "NATURE",
+        "NOVA",
+        "MASTERPIECE"
+      ],
+      [
+        "ANGERS",
+        "CHAMPAGNE",
+        "NICE",
+        "REUNION"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-09-19 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.5892820000299253,
+    "is_valid": true
+  },
+  {
+    "index": 42,
+    "words16": [
+      "BEAK",
+      "FEATHER",
+      "TALON",
+      "WING",
+      "FLASH",
+      "HEARTBEAT",
+      "SECOND",
+      "WINK",
+      "BAMBOO",
+      "DRAGON",
+      "SEASON",
+      "WIND",
+      "BELLY",
+      "HOT",
+      "PANIC",
+      "SNOOZE"
+    ],
+    "pred_groups": [
+      [
+        "BEAK",
+        "FEATHER",
+        "TALON",
+        "WING"
+      ],
+      [
+        "FLASH",
+        "HEARTBEAT",
+        "SECOND",
+        "WINK"
+      ],
+      [
+        "BAMBOO",
+        "DRAGON",
+        "SEASON",
+        "WIND"
+      ],
+      [
+        "BELLY",
+        "HOT",
+        "PANIC",
+        "SNOOZE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BEAK",
+        "FEATHER",
+        "TALON",
+        "WING"
+      ],
+      [
+        "FLASH",
+        "HEARTBEAT",
+        "SECOND",
+        "WINK"
+      ],
+      [
+        "BAMBOO",
+        "DRAGON",
+        "SEASON",
+        "WIND"
+      ],
+      [
+        "BELLY",
+        "HOT",
+        "PANIC",
+        "SNOOZE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-10-30 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 4.5627120999852195,
+    "is_valid": true
+  },
+  {
+    "index": 43,
+    "words16": [
+      "BROTHER",
+      "LORD",
+      "PLEASE",
+      "SHEESH",
+      "BISHOP",
+      "CARDINAL",
+      "PASTOR",
+      "PRIOR",
+      "HEART",
+      "MADONNA",
+      "PRINCE",
+      "QUEEN",
+      "DELI",
+      "NIECE",
+      "ROAM",
+      "SOUL"
+    ],
+    "pred_groups": [
+      [
+        "BROTHER",
+        "LORD",
+        "PLEASE",
+        "SHEESH"
+      ],
+      [
+        "BISHOP",
+        "CARDINAL",
+        "PASTOR",
+        "PRIOR"
+      ],
+      [
+        "HEART",
+        "MADONNA",
+        "PRINCE",
+        "QUEEN"
+      ],
+      [
+        "DELI",
+        "NIECE",
+        "ROAM",
+        "SOUL"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BROTHER",
+        "LORD",
+        "PLEASE",
+        "SHEESH"
+      ],
+      [
+        "BISHOP",
+        "CARDINAL",
+        "PASTOR",
+        "PRIOR"
+      ],
+      [
+        "HEART",
+        "MADONNA",
+        "PRINCE",
+        "QUEEN"
+      ],
+      [
+        "DELI",
+        "NIECE",
+        "ROAM",
+        "SOUL"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-02-05 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.23154449998401105,
+    "is_valid": true
+  },
+  {
+    "index": 44,
+    "words16": [
+      "BOARDWALK",
+      "CHANCE",
+      "GO",
+      "JAIL",
+      "BABY",
+      "MIDNIGHT",
+      "POWDER",
+      "ROYAL",
+      "COMMON",
+      "FUTURE",
+      "ICE CUBE",
+      "Q-TIP",
+      "SEA",
+      "SIN",
+      "SISTER",
+      "WONDER"
+    ],
+    "pred_groups": [
+      [
+        "BOARDWALK",
+        "CHANCE",
+        "GO",
+        "JAIL"
+      ],
+      [
+        "BABY",
+        "MIDNIGHT",
+        "POWDER",
+        "ROYAL"
+      ],
+      [
+        "COMMON",
+        "FUTURE",
+        "ICE CUBE",
+        "Q-TIP"
+      ],
+      [
+        "SEA",
+        "SIN",
+        "SISTER",
+        "WONDER"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BOARDWALK",
+        "CHANCE",
+        "GO",
+        "JAIL"
+      ],
+      [
+        "BABY",
+        "MIDNIGHT",
+        "POWDER",
+        "ROYAL"
+      ],
+      [
+        "COMMON",
+        "FUTURE",
+        "ICE CUBE",
+        "Q-TIP"
+      ],
+      [
+        "SEA",
+        "SIN",
+        "SISTER",
+        "WONDER"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-06-17 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.23569570004474372,
+    "is_valid": true
+  },
+  {
+    "index": 45,
+    "words16": [
+      "BEARS",
+      "LIONS",
+      "OH MY",
+      "TIGERS",
+      "CLOSE",
+      "DEAR",
+      "INTIMATE",
+      "TIGHT",
+      "BEES",
+      "EASE",
+      "JAYS",
+      "USE",
+      "BILLS",
+      "BYE",
+      "GIMME",
+      "PLEASE"
+    ],
+    "pred_groups": [
+      [
+        "BEARS",
+        "LIONS",
+        "TIGERS",
+        "OH MY"
+      ],
+      [
+        "CLOSE",
+        "DEAR",
+        "INTIMATE",
+        "TIGHT"
+      ],
+      [
+        "BEES",
+        "EASE",
+        "JAYS",
+        "USE"
+      ],
+      [
+        "BILLS",
+        "BYE",
+        "GIMME",
+        "PLEASE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BEARS",
+        "LIONS",
+        "OH MY",
+        "TIGERS"
+      ],
+      [
+        "CLOSE",
+        "DEAR",
+        "INTIMATE",
+        "TIGHT"
+      ],
+      [
+        "BEES",
+        "EASE",
+        "JAYS",
+        "USE"
+      ],
+      [
+        "BILLS",
+        "BYE",
+        "GIMME",
+        "PLEASE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-12-24 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.24397789995418862,
+    "is_valid": true
+  },
+  {
+    "index": 46,
+    "words16": [
+      "BOOKMARK",
+      "FAVORITE",
+      "LIKE",
+      "SAVE",
+      "ADVANTAGE",
+      "BENEFIT",
+      "INTEREST",
+      "SAKE",
+      "BIRD",
+      "CURRY",
+      "KOBE",
+      "MAGIC",
+      "BIOTA",
+      "FETA",
+      "MOCHI",
+      "PEPSI"
+    ],
+    "pred_groups": [
+      [
+        "BOOKMARK",
+        "FAVORITE",
+        "LIKE",
+        "SAVE"
+      ],
+      [
+        "ADVANTAGE",
+        "BENEFIT",
+        "INTEREST",
+        "SAKE"
+      ],
+      [
+        "BIRD",
+        "CURRY",
+        "KOBE",
+        "MAGIC"
+      ],
+      [
+        "BIOTA",
+        "FETA",
+        "MOCHI",
+        "PEPSI"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BOOKMARK",
+        "FAVORITE",
+        "LIKE",
+        "SAVE"
+      ],
+      [
+        "ADVANTAGE",
+        "BENEFIT",
+        "INTEREST",
+        "SAKE"
+      ],
+      [
+        "BIRD",
+        "CURRY",
+        "KOBE",
+        "MAGIC"
+      ],
+      [
+        "BIOTA",
+        "FETA",
+        "MOCHI",
+        "PEPSI"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-09-12 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.561639700026717,
+    "is_valid": true
+  },
+  {
+    "index": 47,
+    "words16": [
+      "DRAIN",
+      "EMPTY",
+      "EXHAUST",
+      "SAP",
+      "GROOVE",
+      "JAM",
+      "ROCK",
+      "SHRED",
+      "TAX",
+      "TIP",
+      "TOTAL",
+      "SIGNATURE",
+      "CUBE",
+      "GRAIN",
+      "POWDER",
+      "SYRUP"
+    ],
+    "pred_groups": [
+      [
+        "DRAIN",
+        "EMPTY",
+        "EXHAUST",
+        "SAP"
+      ],
+      [
+        "GROOVE",
+        "JAM",
+        "ROCK",
+        "SHRED"
+      ],
+      [
+        "TAX",
+        "TIP",
+        "TOTAL",
+        "SIGNATURE"
+      ],
+      [
+        "CUBE",
+        "GRAIN",
+        "POWDER",
+        "SYRUP"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "DRAIN",
+        "EMPTY",
+        "EXHAUST",
+        "SAP"
+      ],
+      [
+        "GROOVE",
+        "JAM",
+        "ROCK",
+        "SHRED"
+      ],
+      [
+        "TAX",
+        "TIP",
+        "TOTAL",
+        "SIGNATURE"
+      ],
+      [
+        "CUBE",
+        "GRAIN",
+        "POWDER",
+        "SYRUP"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-11-14 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2614257999812253,
+    "is_valid": true
+  },
+  {
+    "index": 48,
+    "words16": [
+      "AIRPLANE",
+      "DO NOT DISTURB",
+      "RING",
+      "VIBRATE",
+      "DODGE",
+      "ESCAPE",
+      "LOSE",
+      "SHAKE",
+      "TUNGSTEN",
+      "WATT",
+      "WEST",
+      "WIN",
+      "DRAW",
+      "HAM",
+      "HEART",
+      "SHOE"
+    ],
+    "pred_groups": [
+      [
+        "AIRPLANE",
+        "RING",
+        "TUNGSTEN",
+        "WATT"
+      ],
+      [
+        "DO NOT DISTURB",
+        "DODGE",
+        "ESCAPE",
+        "LOSE"
+      ],
+      [
+        "SHAKE",
+        "WEST",
+        "WIN",
+        "DRAW"
+      ],
+      [
+        "HAM",
+        "HEART",
+        "SHOE",
+        "VIBRATE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "AIRPLANE",
+        "DO NOT DISTURB",
+        "RING",
+        "VIBRATE"
+      ],
+      [
+        "DODGE",
+        "ESCAPE",
+        "LOSE",
+        "SHAKE"
+      ],
+      [
+        "TUNGSTEN",
+        "WATT",
+        "WEST",
+        "WIN"
+      ],
+      [
+        "DRAW",
+        "HAM",
+        "HEART",
+        "SHOE"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 3,
+    "date": "2025-03-02 00:00:00",
+    "levels": [],
+    "n_correct_groups": 0,
+    "correct_word_count": 10,
+    "inference_time_sec": 0.6396051000338048,
+    "is_valid": true
+  },
+  {
+    "index": 49,
+    "words16": [
+      "ANSWER",
+      "FIX",
+      "REMEDY",
+      "SOLUTION",
+      "GATHER",
+      "HARVEST",
+      "PICK",
+      "REAP",
+      "ERASER",
+      "EYEDROPPER",
+      "LASSO",
+      "MAGIC WAND",
+      "BASEBALL GLOVE",
+      "CAN OPENER",
+      "GOLF CLUB",
+      "GUITAR"
+    ],
+    "pred_groups": [
+      [
+        "ANSWER",
+        "FIX",
+        "REMEDY",
+        "SOLUTION"
+      ],
+      [
+        "GATHER",
+        "HARVEST",
+        "PICK",
+        "REAP"
+      ],
+      [
+        "ERASER",
+        "EYEDROPPER",
+        "LASSO",
+        "MAGIC WAND"
+      ],
+      [
+        "BASEBALL GLOVE",
+        "CAN OPENER",
+        "GOLF CLUB",
+        "GUITAR"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ANSWER",
+        "FIX",
+        "REMEDY",
+        "SOLUTION"
+      ],
+      [
+        "GATHER",
+        "HARVEST",
+        "PICK",
+        "REAP"
+      ],
+      [
+        "ERASER",
+        "EYEDROPPER",
+        "LASSO",
+        "MAGIC WAND"
+      ],
+      [
+        "BASEBALL GLOVE",
+        "CAN OPENER",
+        "GOLF CLUB",
+        "GUITAR"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-02-21 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.569820999982767,
+    "is_valid": true
+  },
+  {
+    "index": 50,
+    "words16": [
+      "ACTION",
+      "CAMERA",
+      "CUT",
+      "LIGHTS",
+      "CAN",
+      "COULD",
+      "MAY",
+      "MIGHT",
+      "HEAD",
+      "LEAD",
+      "PRIME",
+      "TOP",
+      "BUTCHER",
+      "SCRAP",
+      "TOILET",
+      "WAX"
+    ],
+    "pred_groups": [
+      [
+        "ACTION",
+        "CAMERA",
+        "CUT",
+        "LIGHTS"
+      ],
+      [
+        "CAN",
+        "COULD",
+        "MAY",
+        "MIGHT"
+      ],
+      [
+        "HEAD",
+        "LEAD",
+        "PRIME",
+        "TOP"
+      ],
+      [
+        "BUTCHER",
+        "SCRAP",
+        "TOILET",
+        "WAX"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ACTION",
+        "CAMERA",
+        "CUT",
+        "LIGHTS"
+      ],
+      [
+        "CAN",
+        "COULD",
+        "MAY",
+        "MIGHT"
+      ],
+      [
+        "HEAD",
+        "LEAD",
+        "PRIME",
+        "TOP"
+      ],
+      [
+        "BUTCHER",
+        "SCRAP",
+        "TOILET",
+        "WAX"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-10-11 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.5172244000132196,
+    "is_valid": true
+  },
+  {
+    "index": 51,
+    "words16": [
+      "BASKET",
+      "BIN",
+      "CHEST",
+      "HAMPER",
+      "BAND",
+      "CIRCLE",
+      "HOOP",
+      "RING",
+      "CAP",
+      "CHECK",
+      "CURB",
+      "LIMIT",
+      "NBA",
+      "PAPER",
+      "PEARL",
+      "TRAFFIC"
+    ],
+    "pred_groups": [
+      [
+        "BASKET",
+        "BIN",
+        "CHEST",
+        "HAMPER"
+      ],
+      [
+        "BAND",
+        "CIRCLE",
+        "HOOP",
+        "RING"
+      ],
+      [
+        "CAP",
+        "CHECK",
+        "CURB",
+        "LIMIT"
+      ],
+      [
+        "NBA",
+        "PAPER",
+        "PEARL",
+        "TRAFFIC"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BASKET",
+        "BIN",
+        "CHEST",
+        "HAMPER"
+      ],
+      [
+        "BAND",
+        "CIRCLE",
+        "HOOP",
+        "RING"
+      ],
+      [
+        "CAP",
+        "CHECK",
+        "CURB",
+        "LIMIT"
+      ],
+      [
+        "NBA",
+        "PAPER",
+        "PEARL",
+        "TRAFFIC"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-12-02 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.277492200024426,
+    "is_valid": true
+  },
+  {
+    "index": 52,
+    "words16": [
+      "KIDNEY",
+      "MUNG",
+      "NAVY",
+      "PINTO",
+      "DRAW",
+      "GRAB",
+      "HOOK",
+      "PULL",
+      "DRIVE",
+      "LOW",
+      "NEUTRAL",
+      "REVERSE",
+      "CAR",
+      "DEAD",
+      "LIVER",
+      "WHIRL"
+    ],
+    "pred_groups": [
+      [
+        "KIDNEY",
+        "LIVER",
+        "MUNG",
+        "PINTO"
+      ],
+      [
+        "CAR",
+        "DRIVE",
+        "NEUTRAL",
+        "REVERSE"
+      ],
+      [
+        "DRAW",
+        "GRAB",
+        "HOOK",
+        "PULL"
+      ],
+      [
+        "DEAD",
+        "LOW",
+        "NAVY",
+        "WHIRL"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "KIDNEY",
+        "MUNG",
+        "NAVY",
+        "PINTO"
+      ],
+      [
+        "DRAW",
+        "GRAB",
+        "HOOK",
+        "PULL"
+      ],
+      [
+        "DRIVE",
+        "LOW",
+        "NEUTRAL",
+        "REVERSE"
+      ],
+      [
+        "CAR",
+        "DEAD",
+        "LIVER",
+        "WHIRL"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 2,
+    "date": "2024-10-21 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 12,
+    "inference_time_sec": 0.38420559995574877,
+    "is_valid": true
+  },
+  {
+    "index": 53,
+    "words16": [
+      "FLEE",
+      "LEAVE",
+      "RETREAT",
+      "WITHDRAW",
+      "KNEAD",
+      "PURR",
+      "SCRATCH",
+      "SHED",
+      "ABOUT",
+      "CONTACT",
+      "HOME",
+      "LOGIN",
+      "COTTAGE",
+      "CREAM",
+      "GOAT",
+      "STRING"
+    ],
+    "pred_groups": [
+      [
+        "FLEE",
+        "LEAVE",
+        "RETREAT",
+        "WITHDRAW"
+      ],
+      [
+        "KNEAD",
+        "PURR",
+        "SCRATCH",
+        "SHED"
+      ],
+      [
+        "ABOUT",
+        "CONTACT",
+        "HOME",
+        "LOGIN"
+      ],
+      [
+        "COTTAGE",
+        "CREAM",
+        "GOAT",
+        "STRING"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "FLEE",
+        "LEAVE",
+        "RETREAT",
+        "WITHDRAW"
+      ],
+      [
+        "KNEAD",
+        "PURR",
+        "SCRATCH",
+        "SHED"
+      ],
+      [
+        "ABOUT",
+        "CONTACT",
+        "HOME",
+        "LOGIN"
+      ],
+      [
+        "COTTAGE",
+        "CREAM",
+        "GOAT",
+        "STRING"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-10-06 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2565549000282772,
+    "is_valid": true
+  },
+  {
+    "index": 54,
+    "words16": [
+      "ABSENT",
+      "ELSEWHERE",
+      "GONE",
+      "MIA",
+      "ADVOCATE",
+      "CHAMPION",
+      "CHEERLEADER",
+      "EXPONENT",
+      "GLAM",
+      "GOTH",
+      "METAL",
+      "PUNK",
+      "HORROR",
+      "JOCK",
+      "VALUE",
+      "WAVE"
+    ],
+    "pred_groups": [
+      [
+        "ABSENT",
+        "ELSEWHERE",
+        "GONE",
+        "MIA"
+      ],
+      [
+        "ADVOCATE",
+        "CHAMPION",
+        "CHEERLEADER",
+        "JOCK"
+      ],
+      [
+        "EXPONENT",
+        "GLAM",
+        "HORROR",
+        "PUNK"
+      ],
+      [
+        "GOTH",
+        "METAL",
+        "VALUE",
+        "WAVE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ABSENT",
+        "ELSEWHERE",
+        "GONE",
+        "MIA"
+      ],
+      [
+        "ADVOCATE",
+        "CHAMPION",
+        "CHEERLEADER",
+        "EXPONENT"
+      ],
+      [
+        "GLAM",
+        "GOTH",
+        "METAL",
+        "PUNK"
+      ],
+      [
+        "HORROR",
+        "JOCK",
+        "VALUE",
+        "WAVE"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 3,
+    "date": "2024-08-09 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 11,
+    "inference_time_sec": 0.561130799993407,
+    "is_valid": true
+  },
+  {
+    "index": 55,
+    "words16": [
+      "BRICK",
+      "CHERRY",
+      "MAROON",
+      "RUBY",
+      "DATE",
+      "DURATION",
+      "LOCATION",
+      "TIME",
+      "HEAD",
+      "LOCK",
+      "STRAND",
+      "WISP",
+      "BEACH",
+      "FUR",
+      "PAIR",
+      "YOU"
+    ],
+    "pred_groups": [
+      [
+        "BRICK",
+        "CHERRY",
+        "MAROON",
+        "RUBY"
+      ],
+      [
+        "DATE",
+        "DURATION",
+        "LOCATION",
+        "TIME"
+      ],
+      [
+        "HEAD",
+        "LOCK",
+        "STRAND",
+        "WISP"
+      ],
+      [
+        "BEACH",
+        "FUR",
+        "PAIR",
+        "YOU"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BRICK",
+        "CHERRY",
+        "MAROON",
+        "RUBY"
+      ],
+      [
+        "DATE",
+        "DURATION",
+        "LOCATION",
+        "TIME"
+      ],
+      [
+        "HEAD",
+        "LOCK",
+        "STRAND",
+        "WISP"
+      ],
+      [
+        "BEACH",
+        "FUR",
+        "PAIR",
+        "YOU"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-12-29 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.585110599990003,
+    "is_valid": true
+  },
+  {
+    "index": 56,
+    "words16": [
+      "CARAVAN",
+      "FLEET",
+      "PARADE",
+      "TRAIN",
+      "OLIVE",
+      "FOREST",
+      "LIME",
+      "MINT",
+      "DEMOCRATIC",
+      "EROTIC",
+      "NOBLE",
+      "SAD",
+      "BOOK",
+      "CACTUS",
+      "HEDGEHOG",
+      "SKELETON"
+    ],
+    "pred_groups": [
+      [
+        "CARAVAN",
+        "FLEET",
+        "PARADE",
+        "TRAIN"
+      ],
+      [
+        "OLIVE",
+        "FOREST",
+        "LIME",
+        "MINT"
+      ],
+      [
+        "DEMOCRATIC",
+        "EROTIC",
+        "NOBLE",
+        "SAD"
+      ],
+      [
+        "BOOK",
+        "CACTUS",
+        "HEDGEHOG",
+        "SKELETON"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CARAVAN",
+        "FLEET",
+        "PARADE",
+        "TRAIN"
+      ],
+      [
+        "OLIVE",
+        "FOREST",
+        "LIME",
+        "MINT"
+      ],
+      [
+        "DEMOCRATIC",
+        "EROTIC",
+        "NOBLE",
+        "SAD"
+      ],
+      [
+        "BOOK",
+        "CACTUS",
+        "HEDGEHOG",
+        "SKELETON"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-02-23 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.9755738000385463,
+    "is_valid": true
+  },
+  {
+    "index": 57,
+    "words16": [
+      "HORSESHOE",
+      "LADYBUG",
+      "PENNY",
+      "SHAMROCK",
+      "TOLLBOOTH",
+      "TOMBOY",
+      "TOOLBOX",
+      "TOWBOAT",
+      "FIDDLER",
+      "MERRILY",
+      "PHANTOM",
+      "SUNSET",
+      "DRUGSTORE",
+      "MIDNIGHT",
+      "RHINESTONE",
+      "SPACE"
+    ],
+    "pred_groups": [
+      [
+        "HORSESHOE",
+        "LADYBUG",
+        "PENNY",
+        "SHAMROCK"
+      ],
+      [
+        "TOLLBOOTH",
+        "TOMBOY",
+        "TOOLBOX",
+        "TOWBOAT"
+      ],
+      [
+        "FIDDLER",
+        "MERRILY",
+        "PHANTOM",
+        "SUNSET"
+      ],
+      [
+        "DRUGSTORE",
+        "MIDNIGHT",
+        "RHINESTONE",
+        "SPACE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "HORSESHOE",
+        "LADYBUG",
+        "PENNY",
+        "SHAMROCK"
+      ],
+      [
+        "TOLLBOOTH",
+        "TOMBOY",
+        "TOOLBOX",
+        "TOWBOAT"
+      ],
+      [
+        "FIDDLER",
+        "MERRILY",
+        "PHANTOM",
+        "SUNSET"
+      ],
+      [
+        "DRUGSTORE",
+        "MIDNIGHT",
+        "RHINESTONE",
+        "SPACE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-03-01 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.7650049999938346,
+    "is_valid": true
+  },
+  {
+    "index": 58,
+    "words16": [
+      "POINT",
+      "PRONG",
+      "TINE",
+      "TIP",
+      "FAIR",
+      "FINE",
+      "GOOD",
+      "MINT",
+      "BUSINESS",
+      "FIELD",
+      "LINE",
+      "TRADE",
+      "BRAZIL",
+      "BUTTER",
+      "DOUGH",
+      "PINE"
+    ],
+    "pred_groups": [
+      [
+        "POINT",
+        "PRONG",
+        "TINE",
+        "TIP"
+      ],
+      [
+        "FAIR",
+        "FINE",
+        "GOOD",
+        "MINT"
+      ],
+      [
+        "BUSINESS",
+        "FIELD",
+        "LINE",
+        "TRADE"
+      ],
+      [
+        "BRAZIL",
+        "BUTTER",
+        "DOUGH",
+        "PINE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "POINT",
+        "PRONG",
+        "TINE",
+        "TIP"
+      ],
+      [
+        "FAIR",
+        "FINE",
+        "GOOD",
+        "MINT"
+      ],
+      [
+        "BUSINESS",
+        "FIELD",
+        "LINE",
+        "TRADE"
+      ],
+      [
+        "BRAZIL",
+        "BUTTER",
+        "DOUGH",
+        "PINE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-07-14 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.0145542999962345,
+    "is_valid": true
+  },
+  {
+    "index": 59,
+    "words16": [
+      "CHERRY",
+      "FUDGE",
+      "NUTS",
+      "SPRINKLES",
+      "DESERT",
+      "DITCH",
+      "MAROON",
+      "STRAND",
+      "CURSES",
+      "DARN",
+      "RATS",
+      "SHOOT",
+      "FUZZY",
+      "PEPPERS",
+      "SEASHELLS",
+      "WOODCHUCK"
+    ],
+    "pred_groups": [
+      [
+        "CHERRY",
+        "FUDGE",
+        "NUTS",
+        "SPRINKLES"
+      ],
+      [
+        "DESERT",
+        "DITCH",
+        "MAROON",
+        "STRAND"
+      ],
+      [
+        "CURSES",
+        "DARN",
+        "RATS",
+        "SHOOT"
+      ],
+      [
+        "FUZZY",
+        "PEPPERS",
+        "SEASHELLS",
+        "WOODCHUCK"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHERRY",
+        "FUDGE",
+        "NUTS",
+        "SPRINKLES"
+      ],
+      [
+        "DESERT",
+        "DITCH",
+        "MAROON",
+        "STRAND"
+      ],
+      [
+        "CURSES",
+        "DARN",
+        "RATS",
+        "SHOOT"
+      ],
+      [
+        "FUZZY",
+        "PEPPERS",
+        "SEASHELLS",
+        "WOODCHUCK"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-01-19 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2896294000092894,
+    "is_valid": true
+  },
+  {
+    "index": 60,
+    "words16": [
+      "ASIDE",
+      "DETOUR",
+      "DIGRESSION",
+      "TANGENT",
+      "BEAR",
+      "GENERATE",
+      "PRODUCE",
+      "YIELD",
+      "BABE",
+      "FOX",
+      "SNACK",
+      "TEN",
+      "ARE",
+      "RADIUS",
+      "REVERSE",
+      "RIGHT"
+    ],
+    "pred_groups": [
+      [
+        "ASIDE",
+        "DETOUR",
+        "DIGRESSION",
+        "TANGENT"
+      ],
+      [
+        "BEAR",
+        "GENERATE",
+        "PRODUCE",
+        "YIELD"
+      ],
+      [
+        "BABE",
+        "FOX",
+        "SNACK",
+        "TEN"
+      ],
+      [
+        "ARE",
+        "RADIUS",
+        "REVERSE",
+        "RIGHT"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ASIDE",
+        "DETOUR",
+        "DIGRESSION",
+        "TANGENT"
+      ],
+      [
+        "BEAR",
+        "GENERATE",
+        "PRODUCE",
+        "YIELD"
+      ],
+      [
+        "BABE",
+        "FOX",
+        "SNACK",
+        "TEN"
+      ],
+      [
+        "ARE",
+        "RADIUS",
+        "REVERSE",
+        "RIGHT"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-07-27 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2738530999631621,
+    "is_valid": true
+  },
+  {
+    "index": 61,
+    "words16": [
+      "BABY",
+      "MOTHER",
+      "PAMPER",
+      "SPOIL",
+      "BOOTY",
+      "BUM",
+      "CAN",
+      "REAR",
+      "ROBE",
+      "SLIPPERS",
+      "TOWEL",
+      "WASHCLOTH",
+      "CRADLE",
+      "EYE",
+      "MEOW",
+      "PAJAMAS"
+    ],
+    "pred_groups": [
+      [
+        "BABY",
+        "MOTHER",
+        "PAMPER",
+        "SPOIL"
+      ],
+      [
+        "BOOTY",
+        "BUM",
+        "CAN",
+        "REAR"
+      ],
+      [
+        "ROBE",
+        "SLIPPERS",
+        "TOWEL",
+        "WASHCLOTH"
+      ],
+      [
+        "CRADLE",
+        "EYE",
+        "MEOW",
+        "PAJAMAS"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BABY",
+        "MOTHER",
+        "PAMPER",
+        "SPOIL"
+      ],
+      [
+        "BOOTY",
+        "BUM",
+        "CAN",
+        "REAR"
+      ],
+      [
+        "ROBE",
+        "SLIPPERS",
+        "TOWEL",
+        "WASHCLOTH"
+      ],
+      [
+        "CRADLE",
+        "EYE",
+        "MEOW",
+        "PAJAMAS"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-03-11 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.25825180002721027,
+    "is_valid": true
+  },
+  {
+    "index": 62,
+    "words16": [
+      "CUP",
+      "LID",
+      "STIRRER",
+      "STRAW",
+      "BAT",
+      "MOTH",
+      "OWL",
+      "WOLF",
+      "BEET",
+      "BRICK",
+      "CARDINAL",
+      "POPPY",
+      "ACTION",
+      "BALLPARK",
+      "GO",
+      "STICK"
+    ],
+    "pred_groups": [
+      [
+        "CUP",
+        "LID",
+        "STIRRER",
+        "STRAW"
+      ],
+      [
+        "BAT",
+        "MOTH",
+        "OWL",
+        "WOLF"
+      ],
+      [
+        "BEET",
+        "BRICK",
+        "CARDINAL",
+        "POPPY"
+      ],
+      [
+        "ACTION",
+        "BALLPARK",
+        "GO",
+        "STICK"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CUP",
+        "LID",
+        "STIRRER",
+        "STRAW"
+      ],
+      [
+        "BAT",
+        "MOTH",
+        "OWL",
+        "WOLF"
+      ],
+      [
+        "BEET",
+        "BRICK",
+        "CARDINAL",
+        "POPPY"
+      ],
+      [
+        "ACTION",
+        "BALLPARK",
+        "GO",
+        "STICK"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-10-01 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2370885000564158,
+    "is_valid": true
+  },
+  {
+    "index": 63,
+    "words16": [
+      "HAVEN",
+      "PORT",
+      "RETREAT",
+      "SHELTER",
+      "CLEATS",
+      "HELMET",
+      "JERSEY",
+      "PADS",
+      "CHARMS",
+      "KINDER",
+      "WONKA",
+      "YORK",
+      "BIRD",
+      "FALLIN\u2019",
+      "SOLO",
+      "WILLY"
+    ],
+    "pred_groups": [
+      [
+        "HAVEN",
+        "PORT",
+        "RETREAT",
+        "SHELTER"
+      ],
+      [
+        "CLEATS",
+        "HELMET",
+        "JERSEY",
+        "PADS"
+      ],
+      [
+        "CHARMS",
+        "KINDER",
+        "WONKA",
+        "YORK"
+      ],
+      [
+        "BIRD",
+        "FALLIN\u2019",
+        "SOLO",
+        "WILLY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "HAVEN",
+        "PORT",
+        "RETREAT",
+        "SHELTER"
+      ],
+      [
+        "CLEATS",
+        "HELMET",
+        "JERSEY",
+        "PADS"
+      ],
+      [
+        "CHARMS",
+        "KINDER",
+        "WONKA",
+        "YORK"
+      ],
+      [
+        "BIRD",
+        "FALLIN\u2019",
+        "SOLO",
+        "WILLY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-12-01 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.8390459999791346,
+    "is_valid": true
+  },
+  {
+    "index": 64,
+    "words16": [
+      "FAZE",
+      "RATTLE",
+      "RUFFLE",
+      "THROW",
+      "CHAIN",
+      "CHAT",
+      "CONVERSATION",
+      "THREAD",
+      "CRADLE",
+      "HAMMOCK",
+      "ROCKER",
+      "SWING",
+      "CAN",
+      "ROLLER",
+      "SILO",
+      "SPOOL"
+    ],
+    "pred_groups": [
+      [
+        "FAZE",
+        "RATTLE",
+        "RUFFLE",
+        "THROW"
+      ],
+      [
+        "CHAIN",
+        "CHAT",
+        "CONVERSATION",
+        "THREAD"
+      ],
+      [
+        "CRADLE",
+        "HAMMOCK",
+        "ROCKER",
+        "SWING"
+      ],
+      [
+        "CAN",
+        "ROLLER",
+        "SILO",
+        "SPOOL"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "FAZE",
+        "RATTLE",
+        "RUFFLE",
+        "THROW"
+      ],
+      [
+        "CHAIN",
+        "CHAT",
+        "CONVERSATION",
+        "THREAD"
+      ],
+      [
+        "CRADLE",
+        "HAMMOCK",
+        "ROCKER",
+        "SWING"
+      ],
+      [
+        "CAN",
+        "ROLLER",
+        "SILO",
+        "SPOOL"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-10-26 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.329291900037788,
+    "is_valid": true
+  },
+  {
+    "index": 65,
+    "words16": [
+      "ACHE",
+      "BURN",
+      "SMART",
+      "STING",
+      "GUARD",
+      "MIND",
+      "TEND",
+      "WATCH",
+      "BRAIN",
+      "COURAGE",
+      "HEART",
+      "HOME",
+      "ANSWER",
+      "TWO",
+      "WRIST",
+      "WRONG"
+    ],
+    "pred_groups": [
+      [
+        "ACHE",
+        "BURN",
+        "SMART",
+        "STING"
+      ],
+      [
+        "GUARD",
+        "MIND",
+        "TEND",
+        "WATCH"
+      ],
+      [
+        "BRAIN",
+        "COURAGE",
+        "HEART",
+        "HOME"
+      ],
+      [
+        "ANSWER",
+        "TWO",
+        "WRIST",
+        "WRONG"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ACHE",
+        "BURN",
+        "SMART",
+        "STING"
+      ],
+      [
+        "GUARD",
+        "MIND",
+        "TEND",
+        "WATCH"
+      ],
+      [
+        "BRAIN",
+        "COURAGE",
+        "HEART",
+        "HOME"
+      ],
+      [
+        "ANSWER",
+        "TWO",
+        "WRIST",
+        "WRONG"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-01-27 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2889763999846764,
+    "is_valid": true
+  },
+  {
+    "index": 66,
+    "words16": [
+      "CANADIEN",
+      "CELTIC",
+      "PACKER",
+      "YANKEE",
+      "CRIMP",
+      "CURL",
+      "FEATHER",
+      "TEASE",
+      "GLITTER",
+      "GLUE",
+      "MACARONI",
+      "PAPER",
+      "DOODLE",
+      "GOOSE",
+      "PARACHUTE",
+      "ROD"
+    ],
+    "pred_groups": [
+      [
+        "CANADIEN",
+        "CELTIC",
+        "PACKER",
+        "YANKEE"
+      ],
+      [
+        "CRIMP",
+        "CURL",
+        "FEATHER",
+        "TEASE"
+      ],
+      [
+        "GLITTER",
+        "GLUE",
+        "MACARONI",
+        "PAPER"
+      ],
+      [
+        "DOODLE",
+        "GOOSE",
+        "PARACHUTE",
+        "ROD"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CANADIEN",
+        "CELTIC",
+        "PACKER",
+        "YANKEE"
+      ],
+      [
+        "CRIMP",
+        "CURL",
+        "FEATHER",
+        "TEASE"
+      ],
+      [
+        "GLITTER",
+        "GLUE",
+        "MACARONI",
+        "PAPER"
+      ],
+      [
+        "DOODLE",
+        "GOOSE",
+        "PARACHUTE",
+        "ROD"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-02-22 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2371976000140421,
+    "is_valid": true
+  },
+  {
+    "index": 67,
+    "words16": [
+      "FOOT",
+      "INCH",
+      "MILE",
+      "YARD",
+      "ACRYLIC",
+      "OIL",
+      "TEMPERA",
+      "WATERCOLOR",
+      "FALAFEL",
+      "KATSU",
+      "SAMOSA",
+      "SCHNITZEL",
+      "DIM",
+      "NICK",
+      "PEN",
+      "QUART"
+    ],
+    "pred_groups": [
+      [
+        "FOOT",
+        "INCH",
+        "MILE",
+        "YARD"
+      ],
+      [
+        "ACRYLIC",
+        "OIL",
+        "TEMPERA",
+        "WATERCOLOR"
+      ],
+      [
+        "FALAFEL",
+        "KATSU",
+        "SAMOSA",
+        "SCHNITZEL"
+      ],
+      [
+        "DIM",
+        "NICK",
+        "PEN",
+        "QUART"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "FOOT",
+        "INCH",
+        "MILE",
+        "YARD"
+      ],
+      [
+        "ACRYLIC",
+        "OIL",
+        "TEMPERA",
+        "WATERCOLOR"
+      ],
+      [
+        "FALAFEL",
+        "KATSU",
+        "SAMOSA",
+        "SCHNITZEL"
+      ],
+      [
+        "DIM",
+        "NICK",
+        "PEN",
+        "QUART"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-07-31 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 4.3474985000211746,
+    "is_valid": true
+  },
+  {
+    "index": 68,
+    "words16": [
+      "AFFILIATE",
+      "ASSOCIATE",
+      "EQUATE",
+      "RELATE",
+      "BAIT",
+      "CHUM",
+      "FLY",
+      "LURE",
+      "LIBERTY",
+      "STORM",
+      "SUN",
+      "WINGS",
+      "BOW",
+      "FELLOW",
+      "HORN",
+      "LEGS"
+    ],
+    "pred_groups": [
+      [
+        "AFFILIATE",
+        "ASSOCIATE",
+        "EQUATE",
+        "RELATE"
+      ],
+      [
+        "BAIT",
+        "CHUM",
+        "FLY",
+        "LURE"
+      ],
+      [
+        "LIBERTY",
+        "STORM",
+        "SUN",
+        "WINGS"
+      ],
+      [
+        "BOW",
+        "FELLOW",
+        "HORN",
+        "LEGS"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "AFFILIATE",
+        "ASSOCIATE",
+        "EQUATE",
+        "RELATE"
+      ],
+      [
+        "BAIT",
+        "CHUM",
+        "FLY",
+        "LURE"
+      ],
+      [
+        "LIBERTY",
+        "STORM",
+        "SUN",
+        "WINGS"
+      ],
+      [
+        "BOW",
+        "FELLOW",
+        "HORN",
+        "LEGS"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-12-07 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.26446460001170635,
+    "is_valid": true
+  },
+  {
+    "index": 69,
+    "words16": [
+      "CENTER",
+      "GUARD",
+      "QUARTERBACK",
+      "SAFETY",
+      "DISCOVERY",
+      "HISTORY",
+      "NICKELODEON",
+      "OXYGEN",
+      "HOMEY",
+      "JOKER",
+      "PENNYWISE",
+      "RONALD",
+      "DEFENSE",
+      "DEMOCRAT",
+      "DIMENSIONAL",
+      "DRIVE"
+    ],
+    "pred_groups": [
+      [
+        "CENTER",
+        "GUARD",
+        "QUARTERBACK",
+        "SAFETY"
+      ],
+      [
+        "DISCOVERY",
+        "HISTORY",
+        "NICKELODEON",
+        "OXYGEN"
+      ],
+      [
+        "HOMEY",
+        "JOKER",
+        "PENNYWISE",
+        "RONALD"
+      ],
+      [
+        "DEFENSE",
+        "DEMOCRAT",
+        "DIMENSIONAL",
+        "DRIVE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CENTER",
+        "GUARD",
+        "QUARTERBACK",
+        "SAFETY"
+      ],
+      [
+        "DISCOVERY",
+        "HISTORY",
+        "NICKELODEON",
+        "OXYGEN"
+      ],
+      [
+        "HOMEY",
+        "JOKER",
+        "PENNYWISE",
+        "RONALD"
+      ],
+      [
+        "DEFENSE",
+        "DEMOCRAT",
+        "DIMENSIONAL",
+        "DRIVE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-10-15 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.8237613000092097,
+    "is_valid": true
+  },
+  {
+    "index": 70,
+    "words16": [
+      "BASHFUL",
+      "DOC",
+      "GRUMPY",
+      "HAPPY",
+      "GIF",
+      "PDF",
+      "TIFF",
+      "ZIP",
+      "EMU",
+      "KIWI",
+      "OSTRICH",
+      "PENGUIN",
+      "BANANA",
+      "COCONUT",
+      "MANGO",
+      "PINEAPPLE"
+    ],
+    "pred_groups": [
+      [
+        "BASHFUL",
+        "DOC",
+        "GRUMPY",
+        "HAPPY"
+      ],
+      [
+        "GIF",
+        "PDF",
+        "TIFF",
+        "ZIP"
+      ],
+      [
+        "EMU",
+        "KIWI",
+        "OSTRICH",
+        "PENGUIN"
+      ],
+      [
+        "BANANA",
+        "COCONUT",
+        "MANGO",
+        "PINEAPPLE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BASHFUL",
+        "DOC",
+        "GRUMPY",
+        "HAPPY"
+      ],
+      [
+        "GIF",
+        "PDF",
+        "TIFF",
+        "ZIP"
+      ],
+      [
+        "EMU",
+        "KIWI",
+        "OSTRICH",
+        "PENGUIN"
+      ],
+      [
+        "BANANA",
+        "COCONUT",
+        "MANGO",
+        "PINEAPPLE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-07-09 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.1326294000027701,
+    "is_valid": true
+  },
+  {
+    "index": 71,
+    "words16": [
+      "ATTRACTION",
+      "CHEMISTRY",
+      "FIREWORKS",
+      "SPARKS",
+      "CACHE",
+      "COOKIES",
+      "DATA",
+      "HISTORY",
+      "CYCLE",
+      "LAP",
+      "TURN",
+      "REVOLUTION",
+      "BAR",
+      "DINNER",
+      "LIBERTY",
+      "TINKER"
+    ],
+    "pred_groups": [
+      [
+        "ATTRACTION",
+        "CHEMISTRY",
+        "FIREWORKS",
+        "SPARKS"
+      ],
+      [
+        "CACHE",
+        "COOKIES",
+        "DATA",
+        "HISTORY"
+      ],
+      [
+        "CYCLE",
+        "LAP",
+        "TURN",
+        "REVOLUTION"
+      ],
+      [
+        "BAR",
+        "DINNER",
+        "LIBERTY",
+        "TINKER"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ATTRACTION",
+        "CHEMISTRY",
+        "FIREWORKS",
+        "SPARKS"
+      ],
+      [
+        "CACHE",
+        "COOKIES",
+        "DATA",
+        "HISTORY"
+      ],
+      [
+        "CYCLE",
+        "LAP",
+        "TURN",
+        "REVOLUTION"
+      ],
+      [
+        "BAR",
+        "DINNER",
+        "LIBERTY",
+        "TINKER"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-07-04 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.28702859999611974,
+    "is_valid": true
+  },
+  {
+    "index": 72,
+    "words16": [
+      "BREAK",
+      "LEAVE",
+      "REST",
+      "VACATION",
+      "CURVE",
+      "SNAKE",
+      "WEAVE",
+      "WIND",
+      "DOUBLE",
+      "SPARE",
+      "STRIKE",
+      "TURKEY",
+      "BLOW",
+      "CAT",
+      "GOLD",
+      "SWORD"
+    ],
+    "pred_groups": [
+      [
+        "BREAK",
+        "LEAVE",
+        "REST",
+        "VACATION"
+      ],
+      [
+        "CURVE",
+        "SNAKE",
+        "WEAVE",
+        "WIND"
+      ],
+      [
+        "DOUBLE",
+        "SPARE",
+        "STRIKE",
+        "TURKEY"
+      ],
+      [
+        "BLOW",
+        "CAT",
+        "GOLD",
+        "SWORD"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BREAK",
+        "LEAVE",
+        "REST",
+        "VACATION"
+      ],
+      [
+        "CURVE",
+        "SNAKE",
+        "WEAVE",
+        "WIND"
+      ],
+      [
+        "DOUBLE",
+        "SPARE",
+        "STRIKE",
+        "TURKEY"
+      ],
+      [
+        "BLOW",
+        "CAT",
+        "GOLD",
+        "SWORD"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-02-17 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.49796670000068843,
+    "is_valid": true
+  },
+  {
+    "index": 73,
+    "words16": [
+      "LABEL",
+      "MARK",
+      "SEAL",
+      "STAMP",
+      "BROWN",
+      "CASH",
+      "DYLAN",
+      "MERCURY",
+      "BUFFALO",
+      "HELENA",
+      "IRVING",
+      "PHOENIX",
+      "AMPLE",
+      "DOTE",
+      "LUMON",
+      "POACH"
+    ],
+    "pred_groups": [
+      [
+        "LABEL",
+        "MARK",
+        "SEAL",
+        "STAMP"
+      ],
+      [
+        "BROWN",
+        "CASH",
+        "DYLAN",
+        "MERCURY"
+      ],
+      [
+        "BUFFALO",
+        "HELENA",
+        "IRVING",
+        "PHOENIX"
+      ],
+      [
+        "AMPLE",
+        "DOTE",
+        "LUMON",
+        "POACH"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "LABEL",
+        "MARK",
+        "SEAL",
+        "STAMP"
+      ],
+      [
+        "BROWN",
+        "CASH",
+        "DYLAN",
+        "MERCURY"
+      ],
+      [
+        "BUFFALO",
+        "HELENA",
+        "IRVING",
+        "PHOENIX"
+      ],
+      [
+        "AMPLE",
+        "DOTE",
+        "LUMON",
+        "POACH"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-03-07 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.735256300016772,
+    "is_valid": true
+  },
+  {
+    "index": 74,
+    "words16": [
+      "GIANT",
+      "MAMMOTH",
+      "MONSTER",
+      "TITANIC",
+      "AVATAR",
+      "CHARACTER",
+      "FIGURE",
+      "PERSONA",
+      "APPEAR",
+      "LOOK",
+      "SEEM",
+      "SOUND",
+      "CASTLE",
+      "HUSTLE",
+      "LISTEN",
+      "WITCH"
+    ],
+    "pred_groups": [
+      [
+        "GIANT",
+        "MAMMOTH",
+        "MONSTER",
+        "TITANIC"
+      ],
+      [
+        "AVATAR",
+        "CHARACTER",
+        "FIGURE",
+        "PERSONA"
+      ],
+      [
+        "APPEAR",
+        "LOOK",
+        "SEEM",
+        "SOUND"
+      ],
+      [
+        "CASTLE",
+        "HUSTLE",
+        "LISTEN",
+        "WITCH"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "GIANT",
+        "MAMMOTH",
+        "MONSTER",
+        "TITANIC"
+      ],
+      [
+        "AVATAR",
+        "CHARACTER",
+        "FIGURE",
+        "PERSONA"
+      ],
+      [
+        "APPEAR",
+        "LOOK",
+        "SEEM",
+        "SOUND"
+      ],
+      [
+        "CASTLE",
+        "HUSTLE",
+        "LISTEN",
+        "WITCH"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-07-13 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.5770886999671347,
+    "is_valid": true
+  },
+  {
+    "index": 75,
+    "words16": [
+      "CO",
+      "MA",
+      "ME",
+      "PA",
+      "DO",
+      "FA",
+      "LA",
+      "TI",
+      "MU",
+      "NU",
+      "PI",
+      "XI",
+      "FE",
+      "HE",
+      "NA",
+      "NI"
+    ],
+    "pred_groups": [
+      [
+        "CO",
+        "MA",
+        "ME",
+        "PA"
+      ],
+      [
+        "DO",
+        "FA",
+        "LA",
+        "TI"
+      ],
+      [
+        "MU",
+        "NU",
+        "PI",
+        "XI"
+      ],
+      [
+        "FE",
+        "HE",
+        "NA",
+        "NI"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CO",
+        "MA",
+        "ME",
+        "PA"
+      ],
+      [
+        "DO",
+        "FA",
+        "LA",
+        "TI"
+      ],
+      [
+        "MU",
+        "NU",
+        "PI",
+        "XI"
+      ],
+      [
+        "FE",
+        "HE",
+        "NA",
+        "NI"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-08-12 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2755120000219904,
+    "is_valid": true
+  },
+  {
+    "index": 76,
+    "words16": [
+      "BACON",
+      "GRITS",
+      "HASH",
+      "TOAST",
+      "CLICKS",
+      "HITS",
+      "PRESSES",
+      "TAPS",
+      "AFRICA",
+      "BUGLER",
+      "CAR",
+      "UNICORN",
+      "BRIDGES",
+      "IRONS",
+      "PHOENIX",
+      "WASHINGTON"
+    ],
+    "pred_groups": [
+      [
+        "BACON",
+        "GRITS",
+        "HASH",
+        "TOAST"
+      ],
+      [
+        "CLICKS",
+        "HITS",
+        "PRESSES",
+        "TAPS"
+      ],
+      [
+        "AFRICA",
+        "BUGLER",
+        "CAR",
+        "UNICORN"
+      ],
+      [
+        "BRIDGES",
+        "IRONS",
+        "PHOENIX",
+        "WASHINGTON"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BACON",
+        "GRITS",
+        "HASH",
+        "TOAST"
+      ],
+      [
+        "CLICKS",
+        "HITS",
+        "PRESSES",
+        "TAPS"
+      ],
+      [
+        "AFRICA",
+        "BUGLER",
+        "CAR",
+        "UNICORN"
+      ],
+      [
+        "BRIDGES",
+        "IRONS",
+        "PHOENIX",
+        "WASHINGTON"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-12-27 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.3081165000330657,
+    "is_valid": true
+  },
+  {
+    "index": 77,
+    "words16": [
+      "LUMBER",
+      "PLOD",
+      "STOMP",
+      "TRUDGE",
+      "ELASTIC",
+      "LIMBER",
+      "PLASTIC",
+      "SUPPLE",
+      "FOIL",
+      "GLOVE",
+      "JACKET",
+      "MASK",
+      "BASSINET",
+      "CELLOPHANE",
+      "HARPOON",
+      "ORGANISM"
+    ],
+    "pred_groups": [
+      [
+        "LUMBER",
+        "PLOD",
+        "STOMP",
+        "TRUDGE"
+      ],
+      [
+        "ELASTIC",
+        "LIMBER",
+        "PLASTIC",
+        "SUPPLE"
+      ],
+      [
+        "FOIL",
+        "GLOVE",
+        "JACKET",
+        "MASK"
+      ],
+      [
+        "BASSINET",
+        "CELLOPHANE",
+        "HARPOON",
+        "ORGANISM"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "LUMBER",
+        "PLOD",
+        "STOMP",
+        "TRUDGE"
+      ],
+      [
+        "ELASTIC",
+        "LIMBER",
+        "PLASTIC",
+        "SUPPLE"
+      ],
+      [
+        "FOIL",
+        "GLOVE",
+        "JACKET",
+        "MASK"
+      ],
+      [
+        "BASSINET",
+        "CELLOPHANE",
+        "HARPOON",
+        "ORGANISM"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-02-25 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.327923099976033,
+    "is_valid": true
+  },
+  {
+    "index": 78,
+    "words16": [
+      "CASK",
+      "CYLINDER",
+      "DRUM",
+      "TANK",
+      "PILOT",
+      "USHER",
+      "SHEPHERD",
+      "STEER",
+      "COWBOY",
+      "JET",
+      "RAM",
+      "RAVEN",
+      "GOLFER",
+      "PENDULUM",
+      "SALOON DOORS",
+      "SWING"
+    ],
+    "pred_groups": [
+      [
+        "CASK",
+        "CYLINDER",
+        "DRUM",
+        "TANK"
+      ],
+      [
+        "PILOT",
+        "USHER",
+        "SHEPHERD",
+        "STEER"
+      ],
+      [
+        "COWBOY",
+        "JET",
+        "RAM",
+        "RAVEN"
+      ],
+      [
+        "GOLFER",
+        "PENDULUM",
+        "SALOON DOORS",
+        "SWING"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CASK",
+        "CYLINDER",
+        "DRUM",
+        "TANK"
+      ],
+      [
+        "PILOT",
+        "USHER",
+        "SHEPHERD",
+        "STEER"
+      ],
+      [
+        "COWBOY",
+        "JET",
+        "RAM",
+        "RAVEN"
+      ],
+      [
+        "GOLFER",
+        "PENDULUM",
+        "SALOON DOORS",
+        "SWING"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-11-10 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.0806343000149354,
+    "is_valid": true
+  },
+  {
+    "index": 79,
+    "words16": [
+      "BALL",
+      "BONE",
+      "FRISBEE",
+      "STICK",
+      "BLOCK",
+      "COVER",
+      "HIDE",
+      "OBSCURE",
+      "COMMAND",
+      "CONTROL",
+      "OPTION",
+      "SHIFT",
+      "BLANK",
+      "FLAKE",
+      "FORGET",
+      "SPACE"
+    ],
+    "pred_groups": [
+      [
+        "BALL",
+        "FRISBEE",
+        "STICK",
+        "BLOCK"
+      ],
+      [
+        "COVER",
+        "HIDE",
+        "OBSCURE",
+        "BLANK"
+      ],
+      [
+        "COMMAND",
+        "CONTROL",
+        "OPTION",
+        "SHIFT"
+      ],
+      [
+        "BONE",
+        "FLAKE",
+        "FORGET",
+        "SPACE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BALL",
+        "BONE",
+        "FRISBEE",
+        "STICK"
+      ],
+      [
+        "BLOCK",
+        "COVER",
+        "HIDE",
+        "OBSCURE"
+      ],
+      [
+        "COMMAND",
+        "CONTROL",
+        "OPTION",
+        "SHIFT"
+      ],
+      [
+        "BLANK",
+        "FLAKE",
+        "FORGET",
+        "SPACE"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 2,
+    "date": "2024-03-10 00:00:00",
+    "levels": [],
+    "n_correct_groups": 1,
+    "correct_word_count": 13,
+    "inference_time_sec": 0.2437256000121124,
+    "is_valid": true
+  },
+  {
+    "index": 80,
+    "words16": [
+      "ELEGANCE",
+      "GRACE",
+      "STYLE",
+      "TASTE",
+      "BAKE",
+      "BASK",
+      "SUN",
+      "TAN",
+      "AFFECT",
+      "IMPACT",
+      "MOVE",
+      "TOUCH",
+      "SEN",
+      "SIGHT",
+      "SINE",
+      "SOUR"
+    ],
+    "pred_groups": [
+      [
+        "ELEGANCE",
+        "GRACE",
+        "STYLE",
+        "TASTE"
+      ],
+      [
+        "BAKE",
+        "BASK",
+        "SUN",
+        "TAN"
+      ],
+      [
+        "AFFECT",
+        "IMPACT",
+        "MOVE",
+        "TOUCH"
+      ],
+      [
+        "SEN",
+        "SIGHT",
+        "SINE",
+        "SOUR"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ELEGANCE",
+        "GRACE",
+        "STYLE",
+        "TASTE"
+      ],
+      [
+        "BAKE",
+        "BASK",
+        "SUN",
+        "TAN"
+      ],
+      [
+        "AFFECT",
+        "IMPACT",
+        "MOVE",
+        "TOUCH"
+      ],
+      [
+        "SEN",
+        "SIGHT",
+        "SINE",
+        "SOUR"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-04-26 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.43214490002719685,
+    "is_valid": true
+  },
+  {
+    "index": 81,
+    "words16": [
+      "BASH",
+      "BLOWOUT",
+      "PARTY",
+      "SHINDIG",
+      "CRICKET",
+      "PUPPET",
+      "WHALE",
+      "WOODCARVER",
+      "COUNTER",
+      "MIXER",
+      "RANGE",
+      "SINK",
+      "BUNNY",
+      "EGG",
+      "ISLAND",
+      "SUNDAY"
+    ],
+    "pred_groups": [
+      [
+        "BASH",
+        "BLOWOUT",
+        "PARTY",
+        "SHINDIG"
+      ],
+      [
+        "CRICKET",
+        "PUPPET",
+        "WHALE",
+        "WOODCARVER"
+      ],
+      [
+        "COUNTER",
+        "MIXER",
+        "RANGE",
+        "SINK"
+      ],
+      [
+        "BUNNY",
+        "EGG",
+        "ISLAND",
+        "SUNDAY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BASH",
+        "BLOWOUT",
+        "PARTY",
+        "SHINDIG"
+      ],
+      [
+        "CRICKET",
+        "PUPPET",
+        "WHALE",
+        "WOODCARVER"
+      ],
+      [
+        "COUNTER",
+        "MIXER",
+        "RANGE",
+        "SINK"
+      ],
+      [
+        "BUNNY",
+        "EGG",
+        "ISLAND",
+        "SUNDAY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-08-25 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.983219099987764,
+    "is_valid": true
+  },
+  {
+    "index": 82,
+    "words16": [
+      "CARDAMOM",
+      "CLOVE",
+      "CORIANDER",
+      "CUMIN",
+      "BOO",
+      "HONEY",
+      "SUGAR",
+      "SWEETIE",
+      "AIRPLANE",
+      "ANGEL",
+      "BIRD",
+      "PEGASUS",
+      "BABY",
+      "GINGER",
+      "POSH",
+      "SCARY"
+    ],
+    "pred_groups": [
+      [
+        "CARDAMOM",
+        "CLOVE",
+        "CORIANDER",
+        "CUMIN"
+      ],
+      [
+        "BOO",
+        "HONEY",
+        "SUGAR",
+        "SWEETIE"
+      ],
+      [
+        "AIRPLANE",
+        "ANGEL",
+        "BIRD",
+        "PEGASUS"
+      ],
+      [
+        "BABY",
+        "GINGER",
+        "POSH",
+        "SCARY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CARDAMOM",
+        "CLOVE",
+        "CORIANDER",
+        "CUMIN"
+      ],
+      [
+        "BOO",
+        "HONEY",
+        "SUGAR",
+        "SWEETIE"
+      ],
+      [
+        "AIRPLANE",
+        "ANGEL",
+        "BIRD",
+        "PEGASUS"
+      ],
+      [
+        "BABY",
+        "GINGER",
+        "POSH",
+        "SCARY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-06-22 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.29635650001000613,
+    "is_valid": true
+  },
+  {
+    "index": 83,
+    "words16": [
+      "ABOUT",
+      "AROUND",
+      "LIKE",
+      "ROUGHLY",
+      "ELDER",
+      "PALM",
+      "PINE",
+      "SPRUCE",
+      "HANDSOME",
+      "HEALTHY",
+      "RESPECTABLE",
+      "TIDY",
+      "ALA",
+      "ARK",
+      "MISS",
+      "ORE"
+    ],
+    "pred_groups": [
+      [
+        "ABOUT",
+        "AROUND",
+        "LIKE",
+        "ROUGHLY"
+      ],
+      [
+        "ELDER",
+        "PALM",
+        "PINE",
+        "SPRUCE"
+      ],
+      [
+        "HANDSOME",
+        "HEALTHY",
+        "RESPECTABLE",
+        "TIDY"
+      ],
+      [
+        "ALA",
+        "ARK",
+        "MISS",
+        "ORE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ABOUT",
+        "AROUND",
+        "LIKE",
+        "ROUGHLY"
+      ],
+      [
+        "ELDER",
+        "PALM",
+        "PINE",
+        "SPRUCE"
+      ],
+      [
+        "HANDSOME",
+        "HEALTHY",
+        "RESPECTABLE",
+        "TIDY"
+      ],
+      [
+        "ALA",
+        "ARK",
+        "MISS",
+        "ORE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-12-26 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 60.319960799999535,
+    "is_valid": true
+  },
+  {
+    "index": 84,
+    "words16": [
+      "GRATER",
+      "LADLE",
+      "PEELER",
+      "WHISK",
+      "BIRD",
+      "FISH",
+      "MAMMAL",
+      "REPTILE",
+      "DINOSAUR",
+      "MUSHROOM",
+      "PLUMBER",
+      "PRINCESS",
+      "BUNKER",
+      "CLEAVER",
+      "PARTRIDGE",
+      "TANNER"
+    ],
+    "pred_groups": [
+      [
+        "GRATER",
+        "LADLE",
+        "PEELER",
+        "WHISK"
+      ],
+      [
+        "BIRD",
+        "FISH",
+        "MAMMAL",
+        "REPTILE"
+      ],
+      [
+        "DINOSAUR",
+        "MUSHROOM",
+        "PLUMBER",
+        "TANNER"
+      ],
+      [
+        "BUNKER",
+        "CLEAVER",
+        "PARTRIDGE",
+        "PRINCESS"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "GRATER",
+        "LADLE",
+        "PEELER",
+        "WHISK"
+      ],
+      [
+        "BIRD",
+        "FISH",
+        "MAMMAL",
+        "REPTILE"
+      ],
+      [
+        "DINOSAUR",
+        "MUSHROOM",
+        "PLUMBER",
+        "PRINCESS"
+      ],
+      [
+        "BUNKER",
+        "CLEAVER",
+        "PARTRIDGE",
+        "TANNER"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 1,
+    "date": "2023-09-24 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 14,
+    "inference_time_sec": 0.27182470000116155,
+    "is_valid": true
+  },
+  {
+    "index": 85,
+    "words16": [
+      "DROP",
+      "ECHO",
+      "FREEZE",
+      "LAG",
+      "MIME",
+      "PRISONER",
+      "REFEREE",
+      "SAILOR",
+      "GENIE",
+      "MONKEY",
+      "PARROT",
+      "PRINCESS",
+      "APOLLO",
+      "CANDLES",
+      "FANTASTIC",
+      "SAMURAI"
+    ],
+    "pred_groups": [
+      [
+        "DROP",
+        "ECHO",
+        "FREEZE",
+        "LAG"
+      ],
+      [
+        "MIME",
+        "PRISONER",
+        "REFEREE",
+        "SAILOR"
+      ],
+      [
+        "GENIE",
+        "MONKEY",
+        "PARROT",
+        "PRINCESS"
+      ],
+      [
+        "APOLLO",
+        "CANDLES",
+        "FANTASTIC",
+        "SAMURAI"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "DROP",
+        "ECHO",
+        "FREEZE",
+        "LAG"
+      ],
+      [
+        "MIME",
+        "PRISONER",
+        "REFEREE",
+        "SAILOR"
+      ],
+      [
+        "GENIE",
+        "MONKEY",
+        "PARROT",
+        "PRINCESS"
+      ],
+      [
+        "APOLLO",
+        "CANDLES",
+        "FANTASTIC",
+        "SAMURAI"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-02-12 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.6149440999724902,
+    "is_valid": true
+  },
+  {
+    "index": 86,
+    "words16": [
+      "BADGERS",
+      "BUGS",
+      "HOUNDS",
+      "NAGS",
+      "ANNIE",
+      "CABARET",
+      "CATS",
+      "COMPANY",
+      "COMPUTER",
+      "PIANO",
+      "SUPER",
+      "TESTS",
+      "FISH",
+      "HARD KNOCKS",
+      "ROCK",
+      "THOUGHT"
+    ],
+    "pred_groups": [
+      [
+        "BADGERS",
+        "BUGS",
+        "HOUNDS",
+        "NAGS"
+      ],
+      [
+        "ANNIE",
+        "CABARET",
+        "CATS",
+        "COMPANY"
+      ],
+      [
+        "COMPUTER",
+        "PIANO",
+        "ROCK",
+        "SUPER"
+      ],
+      [
+        "FISH",
+        "HARD KNOCKS",
+        "TESTS",
+        "THOUGHT"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BADGERS",
+        "BUGS",
+        "HOUNDS",
+        "NAGS"
+      ],
+      [
+        "ANNIE",
+        "CABARET",
+        "CATS",
+        "COMPANY"
+      ],
+      [
+        "COMPUTER",
+        "PIANO",
+        "SUPER",
+        "TESTS"
+      ],
+      [
+        "FISH",
+        "HARD KNOCKS",
+        "ROCK",
+        "THOUGHT"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 1,
+    "date": "2024-02-21 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 14,
+    "inference_time_sec": 1.5575279999757186,
+    "is_valid": true
+  },
+  {
+    "index": 87,
+    "words16": [
+      "BOUQUET",
+      "RING",
+      "TRAIN",
+      "VEIL",
+      "CAKE",
+      "COAT",
+      "COVER",
+      "CRUST",
+      "BLACK",
+      "FROST",
+      "MA",
+      "SPARROW",
+      "BOOK",
+      "GRAM",
+      "IN",
+      "TUBE"
+    ],
+    "pred_groups": [
+      [
+        "BOUQUET",
+        "RING",
+        "VEIL",
+        "CAKE"
+      ],
+      [
+        "COAT",
+        "COVER",
+        "CRUST",
+        "FROST"
+      ],
+      [
+        "BLACK",
+        "MA",
+        "SPARROW",
+        "BOOK"
+      ],
+      [
+        "GRAM",
+        "IN",
+        "TRAIN",
+        "TUBE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BOUQUET",
+        "RING",
+        "TRAIN",
+        "VEIL"
+      ],
+      [
+        "CAKE",
+        "COAT",
+        "COVER",
+        "CRUST"
+      ],
+      [
+        "BLACK",
+        "FROST",
+        "MA",
+        "SPARROW"
+      ],
+      [
+        "BOOK",
+        "GRAM",
+        "IN",
+        "TUBE"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 2,
+    "date": "2023-09-25 00:00:00",
+    "levels": [],
+    "n_correct_groups": 0,
+    "correct_word_count": 12,
+    "inference_time_sec": 0.33172319998266175,
+    "is_valid": true
+  },
+  {
+    "index": 88,
+    "words16": [
+      "TO",
+      "TOO",
+      "TUE",
+      "TWO",
+      "COUPLE",
+      "TIE",
+      "UNITE",
+      "WED",
+      "LAID",
+      "PLACED",
+      "PUT",
+      "SAT",
+      "MAY",
+      "SUN",
+      "WALL",
+      "WILD"
+    ],
+    "pred_groups": [
+      [
+        "TO",
+        "TOO",
+        "TUE",
+        "TWO"
+      ],
+      [
+        "COUPLE",
+        "TIE",
+        "UNITE",
+        "WED"
+      ],
+      [
+        "LAID",
+        "PLACED",
+        "PUT",
+        "SAT"
+      ],
+      [
+        "MAY",
+        "SUN",
+        "WALL",
+        "WILD"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "TO",
+        "TOO",
+        "TUE",
+        "TWO"
+      ],
+      [
+        "COUPLE",
+        "TIE",
+        "UNITE",
+        "WED"
+      ],
+      [
+        "LAID",
+        "PLACED",
+        "PUT",
+        "SAT"
+      ],
+      [
+        "MAY",
+        "SUN",
+        "WALL",
+        "WILD"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-06-29 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.34164030000101775,
+    "is_valid": true
+  },
+  {
+    "index": 89,
+    "words16": [
+      "CHINATOWN",
+      "DUMBO",
+      "MANHATTAN",
+      "WALL STREET",
+      "BE KIND REWIND",
+      "E.T.",
+      "FRIGHT NIGHT",
+      "KILL BILL",
+      "HEDWIG AND THE ANGRY INCH",
+      "MY LEFT FOOT",
+      "THE GREEN MILE",
+      "THE LONGEST YARD",
+      "BEETLEJUICE",
+      "FOXY BROWN",
+      "DOGMA",
+      "OCTOPUSSY"
+    ],
+    "pred_groups": [
+      [
+        "CHINATOWN",
+        "DUMBO",
+        "MANHATTAN",
+        "WALL STREET"
+      ],
+      [
+        "BE KIND REWIND",
+        "E.T.",
+        "FRIGHT NIGHT",
+        "KILL BILL"
+      ],
+      [
+        "HEDWIG AND THE ANGRY INCH",
+        "MY LEFT FOOT",
+        "THE GREEN MILE",
+        "THE LONGEST YARD"
+      ],
+      [
+        "BEETLEJUICE",
+        "FOXY BROWN",
+        "DOGMA",
+        "OCTOPUSSY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHINATOWN",
+        "DUMBO",
+        "MANHATTAN",
+        "WALL STREET"
+      ],
+      [
+        "BE KIND REWIND",
+        "E.T.",
+        "FRIGHT NIGHT",
+        "KILL BILL"
+      ],
+      [
+        "HEDWIG AND THE ANGRY INCH",
+        "MY LEFT FOOT",
+        "THE GREEN MILE",
+        "THE LONGEST YARD"
+      ],
+      [
+        "BEETLEJUICE",
+        "FOXY BROWN",
+        "DOGMA",
+        "OCTOPUSSY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-06-12 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.276682699972298,
+    "is_valid": true
+  },
+  {
+    "index": 90,
+    "words16": [
+      "BORDER",
+      "FRILL",
+      "FRINGE",
+      "TRIM",
+      "GROW",
+      "MOUNT",
+      "SWELL",
+      "WAX",
+      "DRY",
+      "NEAT",
+      "STRAIGHT",
+      "VIRGIN",
+      "BEAN",
+      "BIKINI",
+      "CHEESE",
+      "THEORY"
+    ],
+    "pred_groups": [
+      [
+        "BORDER",
+        "FRILL",
+        "FRINGE",
+        "TRIM"
+      ],
+      [
+        "GROW",
+        "MOUNT",
+        "SWELL",
+        "WAX"
+      ],
+      [
+        "DRY",
+        "NEAT",
+        "STRAIGHT",
+        "VIRGIN"
+      ],
+      [
+        "BEAN",
+        "BIKINI",
+        "CHEESE",
+        "THEORY"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BORDER",
+        "FRILL",
+        "FRINGE",
+        "TRIM"
+      ],
+      [
+        "GROW",
+        "MOUNT",
+        "SWELL",
+        "WAX"
+      ],
+      [
+        "DRY",
+        "NEAT",
+        "STRAIGHT",
+        "VIRGIN"
+      ],
+      [
+        "BEAN",
+        "BIKINI",
+        "CHEESE",
+        "THEORY"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-09-26 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.25630980002461,
+    "is_valid": true
+  },
+  {
+    "index": 91,
+    "words16": [
+      "BONUS",
+      "EQUITY",
+      "PROMOTION",
+      "RAISE",
+      "DISCOUNT",
+      "FORGET",
+      "IGNORE",
+      "OVERLOOK",
+      "ANIMAL",
+      "CLUB",
+      "GOLDFISH",
+      "RITZ",
+      "ELOISE",
+      "PLAZA",
+      "PUG",
+      "TURTLE"
+    ],
+    "pred_groups": [
+      [
+        "BONUS",
+        "EQUITY",
+        "PROMOTION",
+        "RAISE"
+      ],
+      [
+        "DISCOUNT",
+        "FORGET",
+        "IGNORE",
+        "OVERLOOK"
+      ],
+      [
+        "ANIMAL",
+        "CLUB",
+        "GOLDFISH",
+        "RITZ"
+      ],
+      [
+        "ELOISE",
+        "PLAZA",
+        "PUG",
+        "TURTLE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BONUS",
+        "EQUITY",
+        "PROMOTION",
+        "RAISE"
+      ],
+      [
+        "DISCOUNT",
+        "FORGET",
+        "IGNORE",
+        "OVERLOOK"
+      ],
+      [
+        "ANIMAL",
+        "CLUB",
+        "GOLDFISH",
+        "RITZ"
+      ],
+      [
+        "ELOISE",
+        "PLAZA",
+        "PUG",
+        "TURTLE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-11-26 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.3833257000078447,
+    "is_valid": true
+  },
+  {
+    "index": 92,
+    "words16": [
+      "CANINE",
+      "FANG",
+      "MOLAR",
+      "TUSK",
+      "CHIC",
+      "HIP",
+      "HOT",
+      "IN",
+      "FLOSS",
+      "ROBOT",
+      "VOGUE",
+      "WORM",
+      "LEECH",
+      "STRAW",
+      "VACUUM",
+      "VAMPIRE"
+    ],
+    "pred_groups": [
+      [
+        "CANINE",
+        "FANG",
+        "MOLAR",
+        "TUSK"
+      ],
+      [
+        "CHIC",
+        "HIP",
+        "HOT",
+        "IN"
+      ],
+      [
+        "FLOSS",
+        "ROBOT",
+        "VOGUE",
+        "VACUUM"
+      ],
+      [
+        "WORM",
+        "LEECH",
+        "STRAW",
+        "VAMPIRE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CANINE",
+        "FANG",
+        "MOLAR",
+        "TUSK"
+      ],
+      [
+        "CHIC",
+        "HIP",
+        "HOT",
+        "IN"
+      ],
+      [
+        "FLOSS",
+        "ROBOT",
+        "VOGUE",
+        "WORM"
+      ],
+      [
+        "LEECH",
+        "STRAW",
+        "VACUUM",
+        "VAMPIRE"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 1,
+    "date": "2023-11-21 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 14,
+    "inference_time_sec": 0.4281898000044748,
+    "is_valid": true
+  },
+  {
+    "index": 93,
+    "words16": [
+      "CREATIVE",
+      "FRESH",
+      "NOVEL",
+      "ORIGINAL",
+      "BOOK",
+      "CHARTER",
+      "RESERVE",
+      "SECURE",
+      "BALLOON",
+      "BANNER",
+      "CONFETTI",
+      "GARLAND",
+      "AMBASSADOR",
+      "INFLUENCER",
+      "MODEL",
+      "STREAMER"
+    ],
+    "pred_groups": [
+      [
+        "CREATIVE",
+        "FRESH",
+        "NOVEL",
+        "ORIGINAL"
+      ],
+      [
+        "BOOK",
+        "CHARTER",
+        "RESERVE",
+        "SECURE"
+      ],
+      [
+        "BALLOON",
+        "BANNER",
+        "CONFETTI",
+        "GARLAND"
+      ],
+      [
+        "AMBASSADOR",
+        "INFLUENCER",
+        "MODEL",
+        "STREAMER"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CREATIVE",
+        "FRESH",
+        "NOVEL",
+        "ORIGINAL"
+      ],
+      [
+        "BOOK",
+        "CHARTER",
+        "RESERVE",
+        "SECURE"
+      ],
+      [
+        "BALLOON",
+        "BANNER",
+        "CONFETTI",
+        "GARLAND"
+      ],
+      [
+        "AMBASSADOR",
+        "INFLUENCER",
+        "MODEL",
+        "STREAMER"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-09-24 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2518848999752663,
+    "is_valid": true
+  },
+  {
+    "index": 94,
+    "words16": [
+      "BRICK",
+      "CHERRY",
+      "ROSE",
+      "RUBY",
+      "DROP",
+      "SPLASH",
+      "SPOT",
+      "SPRINKLE",
+      "BEST",
+      "CREAM",
+      "PICK",
+      "TOP",
+      "BIRD",
+      "BUBBLE",
+      "MUD",
+      "SPONGE"
+    ],
+    "pred_groups": [
+      [
+        "BRICK",
+        "CHERRY",
+        "ROSE",
+        "RUBY"
+      ],
+      [
+        "DROP",
+        "SPLASH",
+        "SPOT",
+        "SPRINKLE"
+      ],
+      [
+        "BEST",
+        "CREAM",
+        "PICK",
+        "TOP"
+      ],
+      [
+        "BIRD",
+        "BUBBLE",
+        "MUD",
+        "SPONGE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BRICK",
+        "CHERRY",
+        "ROSE",
+        "RUBY"
+      ],
+      [
+        "DROP",
+        "SPLASH",
+        "SPOT",
+        "SPRINKLE"
+      ],
+      [
+        "BEST",
+        "CREAM",
+        "PICK",
+        "TOP"
+      ],
+      [
+        "BIRD",
+        "BUBBLE",
+        "MUD",
+        "SPONGE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-05-08 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2965867000166327,
+    "is_valid": true
+  },
+  {
+    "index": 95,
+    "words16": [
+      "FLASH",
+      "HEARTBEAT",
+      "JIFF",
+      "WINK",
+      "CLASH",
+      "SCRAP",
+      "TANGLE",
+      "TIFF",
+      "JACK",
+      "LOVE",
+      "SQUAT",
+      "ZIP",
+      "CANE",
+      "MONOCLE",
+      "SPAT",
+      "TOP HAT"
+    ],
+    "pred_groups": [
+      [
+        "FLASH",
+        "HEARTBEAT",
+        "JIFF",
+        "WINK"
+      ],
+      [
+        "CLASH",
+        "SCRAP",
+        "TANGLE",
+        "TIFF"
+      ],
+      [
+        "JACK",
+        "LOVE",
+        "SQUAT",
+        "ZIP"
+      ],
+      [
+        "CANE",
+        "MONOCLE",
+        "SPAT",
+        "TOP HAT"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "FLASH",
+        "HEARTBEAT",
+        "JIFF",
+        "WINK"
+      ],
+      [
+        "CLASH",
+        "SCRAP",
+        "TANGLE",
+        "TIFF"
+      ],
+      [
+        "JACK",
+        "LOVE",
+        "SQUAT",
+        "ZIP"
+      ],
+      [
+        "CANE",
+        "MONOCLE",
+        "SPAT",
+        "TOP HAT"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-04-08 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.23072370002046227,
+    "is_valid": true
+  },
+  {
+    "index": 96,
+    "words16": [
+      "DECK",
+      "PORCH",
+      "STOOP",
+      "YARD",
+      "DISH",
+      "DOPE",
+      "INFO",
+      "SCOOP",
+      "BLOOPER",
+      "DEMO",
+      "HIGHLIGHT",
+      "SIZZLE",
+      "DROOP",
+      "GOOF",
+      "LAD",
+      "SNOOP"
+    ],
+    "pred_groups": [
+      [
+        "DECK",
+        "PORCH",
+        "STOOP",
+        "YARD"
+      ],
+      [
+        "DISH",
+        "DOPE",
+        "INFO",
+        "SCOOP"
+      ],
+      [
+        "BLOOPER",
+        "DEMO",
+        "HIGHLIGHT",
+        "SIZZLE"
+      ],
+      [
+        "DROOP",
+        "GOOF",
+        "LAD",
+        "SNOOP"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "DECK",
+        "PORCH",
+        "STOOP",
+        "YARD"
+      ],
+      [
+        "DISH",
+        "DOPE",
+        "INFO",
+        "SCOOP"
+      ],
+      [
+        "BLOOPER",
+        "DEMO",
+        "HIGHLIGHT",
+        "SIZZLE"
+      ],
+      [
+        "DROOP",
+        "GOOF",
+        "LAD",
+        "SNOOP"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-09-18 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.7775310999713838,
+    "is_valid": true
+  },
+  {
+    "index": 97,
+    "words16": [
+      "JAZZ",
+      "MODERN",
+      "SWING",
+      "TAP",
+      "LIFT",
+      "PALM",
+      "POCKET",
+      "SWIPE",
+      "ACE",
+      "CRUSH",
+      "NAIL",
+      "ROCK",
+      "CURVE",
+      "FAST",
+      "KNUCKLE",
+      "SCREW"
+    ],
+    "pred_groups": [
+      [
+        "JAZZ",
+        "MODERN",
+        "SWING",
+        "TAP"
+      ],
+      [
+        "LIFT",
+        "PALM",
+        "POCKET",
+        "SWIPE"
+      ],
+      [
+        "ACE",
+        "CRUSH",
+        "NAIL",
+        "ROCK"
+      ],
+      [
+        "CURVE",
+        "FAST",
+        "KNUCKLE",
+        "SCREW"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "JAZZ",
+        "MODERN",
+        "SWING",
+        "TAP"
+      ],
+      [
+        "LIFT",
+        "PALM",
+        "POCKET",
+        "SWIPE"
+      ],
+      [
+        "ACE",
+        "CRUSH",
+        "NAIL",
+        "ROCK"
+      ],
+      [
+        "CURVE",
+        "FAST",
+        "KNUCKLE",
+        "SCREW"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-11-30 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2604717999929562,
+    "is_valid": true
+  },
+  {
+    "index": 98,
+    "words16": [
+      "COUPLE",
+      "JOIN",
+      "LINK",
+      "TIE",
+      "BOTHER",
+      "HANDFUL",
+      "PAIN",
+      "PEST",
+      "FEW",
+      "MANY",
+      "SEVERAL",
+      "SOME",
+      "FOOL",
+      "LOVERS",
+      "MAGICIAN",
+      "TOWER"
+    ],
+    "pred_groups": [
+      [
+        "COUPLE",
+        "JOIN",
+        "LINK",
+        "TIE"
+      ],
+      [
+        "BOTHER",
+        "HANDFUL",
+        "PAIN",
+        "PEST"
+      ],
+      [
+        "FEW",
+        "MANY",
+        "SEVERAL",
+        "SOME"
+      ],
+      [
+        "FOOL",
+        "LOVERS",
+        "MAGICIAN",
+        "TOWER"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "COUPLE",
+        "JOIN",
+        "LINK",
+        "TIE"
+      ],
+      [
+        "BOTHER",
+        "HANDFUL",
+        "PAIN",
+        "PEST"
+      ],
+      [
+        "FEW",
+        "MANY",
+        "SEVERAL",
+        "SOME"
+      ],
+      [
+        "FOOL",
+        "LOVERS",
+        "MAGICIAN",
+        "TOWER"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-05-06 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.21554240002296865,
+    "is_valid": true
+  },
+  {
+    "index": 99,
+    "words16": [
+      "CLUB",
+      "DIAMOND",
+      "HEART",
+      "SPADE",
+      "IRON",
+      "PUTTER",
+      "WEDGE",
+      "WOOD",
+      "ACHE",
+      "LONG",
+      "PINE",
+      "THIRST",
+      "LOW",
+      "SHORT",
+      "SHY",
+      "WANTING"
+    ],
+    "pred_groups": [
+      [
+        "CLUB",
+        "DIAMOND",
+        "HEART",
+        "SPADE"
+      ],
+      [
+        "IRON",
+        "PUTTER",
+        "WEDGE",
+        "WOOD"
+      ],
+      [
+        "ACHE",
+        "LONG",
+        "PINE",
+        "THIRST"
+      ],
+      [
+        "LOW",
+        "SHORT",
+        "SHY",
+        "WANTING"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CLUB",
+        "DIAMOND",
+        "HEART",
+        "SPADE"
+      ],
+      [
+        "IRON",
+        "PUTTER",
+        "WEDGE",
+        "WOOD"
+      ],
+      [
+        "ACHE",
+        "LONG",
+        "PINE",
+        "THIRST"
+      ],
+      [
+        "LOW",
+        "SHORT",
+        "SHY",
+        "WANTING"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-09-30 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.26600430003600195,
+    "is_valid": true
+  },
+  {
+    "index": 100,
+    "words16": [
+      "COCOA",
+      "COFFEE",
+      "MATE",
+      "TEA",
+      "BORING",
+      "DULL",
+      "MUNDANE",
+      "VANILLA",
+      "ACT",
+      "BIT",
+      "ROUTINE",
+      "SET",
+      "DIRTY",
+      "DRY",
+      "TWIST",
+      "UP"
+    ],
+    "pred_groups": [
+      [
+        "COCOA",
+        "COFFEE",
+        "MATE",
+        "TEA"
+      ],
+      [
+        "BORING",
+        "DULL",
+        "MUNDANE",
+        "VANILLA"
+      ],
+      [
+        "ACT",
+        "BIT",
+        "ROUTINE",
+        "SET"
+      ],
+      [
+        "DIRTY",
+        "DRY",
+        "TWIST",
+        "UP"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "COCOA",
+        "COFFEE",
+        "MATE",
+        "TEA"
+      ],
+      [
+        "BORING",
+        "DULL",
+        "MUNDANE",
+        "VANILLA"
+      ],
+      [
+        "ACT",
+        "BIT",
+        "ROUTINE",
+        "SET"
+      ],
+      [
+        "DIRTY",
+        "DRY",
+        "TWIST",
+        "UP"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-02-04 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.3910817999858409,
+    "is_valid": true
+  },
+  {
+    "index": 101,
+    "words16": [
+      "BLUE",
+      "DOWN",
+      "HANGDOG",
+      "SORRY",
+      "DUCK",
+      "GROUSE",
+      "HAWK",
+      "SWALLOW",
+      "GRIFFIN",
+      "MUNSTER",
+      "PARTRIDGE",
+      "PICKLES",
+      "MART",
+      "POP",
+      "STREET",
+      "SWISS"
+    ],
+    "pred_groups": [
+      [
+        "BLUE",
+        "DOWN",
+        "SORRY",
+        "HANGDOG"
+      ],
+      [
+        "DUCK",
+        "GROUSE",
+        "HAWK",
+        "SWALLOW"
+      ],
+      [
+        "GRIFFIN",
+        "MUNSTER",
+        "PARTRIDGE",
+        "PICKLES"
+      ],
+      [
+        "MART",
+        "POP",
+        "STREET",
+        "SWISS"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BLUE",
+        "DOWN",
+        "HANGDOG",
+        "SORRY"
+      ],
+      [
+        "DUCK",
+        "GROUSE",
+        "HAWK",
+        "SWALLOW"
+      ],
+      [
+        "GRIFFIN",
+        "MUNSTER",
+        "PARTRIDGE",
+        "PICKLES"
+      ],
+      [
+        "MART",
+        "POP",
+        "STREET",
+        "SWISS"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-02-02 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.4745307000121102,
+    "is_valid": true
+  },
+  {
+    "index": 102,
+    "words16": [
+      "COW",
+      "DOE",
+      "HEN",
+      "MARE",
+      "I",
+      "IT",
+      "THEY",
+      "WE",
+      "D",
+      "L",
+      "M",
+      "V",
+      "EWE",
+      "U",
+      "YEW",
+      "YOU"
+    ],
+    "pred_groups": [
+      [
+        "COW",
+        "DOE",
+        "HEN",
+        "MARE"
+      ],
+      [
+        "I",
+        "IT",
+        "THEY",
+        "WE"
+      ],
+      [
+        "D",
+        "L",
+        "M",
+        "V"
+      ],
+      [
+        "EWE",
+        "U",
+        "YEW",
+        "YOU"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "COW",
+        "DOE",
+        "HEN",
+        "MARE"
+      ],
+      [
+        "I",
+        "IT",
+        "THEY",
+        "WE"
+      ],
+      [
+        "D",
+        "L",
+        "M",
+        "V"
+      ],
+      [
+        "EWE",
+        "U",
+        "YEW",
+        "YOU"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-09-03 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.4770777000230737,
+    "is_valid": true
+  },
+  {
+    "index": 103,
+    "words16": [
+      "DRAIN",
+      "DUCT",
+      "PIPE",
+      "SEWER",
+      "CHEESE",
+      "CORN",
+      "SAP",
+      "SCHMALTZ",
+      "EGG",
+      "KNUCKLES",
+      "SMILE",
+      "WINDOW",
+      "CHUMP",
+      "CLIMATE",
+      "LOOSE",
+      "SEA"
+    ],
+    "pred_groups": [
+      [
+        "DRAIN",
+        "DUCT",
+        "PIPE",
+        "SEWER"
+      ],
+      [
+        "CHEESE",
+        "CORN",
+        "SAP",
+        "SCHMALTZ"
+      ],
+      [
+        "EGG",
+        "KNUCKLES",
+        "SMILE",
+        "WINDOW"
+      ],
+      [
+        "CHUMP",
+        "CLIMATE",
+        "LOOSE",
+        "SEA"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "DRAIN",
+        "DUCT",
+        "PIPE",
+        "SEWER"
+      ],
+      [
+        "CHEESE",
+        "CORN",
+        "SAP",
+        "SCHMALTZ"
+      ],
+      [
+        "EGG",
+        "KNUCKLES",
+        "SMILE",
+        "WINDOW"
+      ],
+      [
+        "CHUMP",
+        "CLIMATE",
+        "LOOSE",
+        "SEA"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-05-24 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.5676971999928355,
+    "is_valid": true
+  },
+  {
+    "index": 104,
+    "words16": [
+      "CHAIR",
+      "CHIEF",
+      "DIRECTOR",
+      "HEAD",
+      "FIELD",
+      "GREEN",
+      "GROUNDS",
+      "LAWN",
+      "CHEST",
+      "COCO",
+      "HAZEL",
+      "PEA",
+      "BROWN",
+      "DOGS",
+      "FICTION",
+      "UNCHAINED"
+    ],
+    "pred_groups": [
+      [
+        "CHAIR",
+        "CHIEF",
+        "DIRECTOR",
+        "HEAD"
+      ],
+      [
+        "FIELD",
+        "GREEN",
+        "GROUNDS",
+        "LAWN"
+      ],
+      [
+        "CHEST",
+        "COCO",
+        "HAZEL",
+        "PEA"
+      ],
+      [
+        "BROWN",
+        "DOGS",
+        "FICTION",
+        "UNCHAINED"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHAIR",
+        "CHIEF",
+        "DIRECTOR",
+        "HEAD"
+      ],
+      [
+        "FIELD",
+        "GREEN",
+        "GROUNDS",
+        "LAWN"
+      ],
+      [
+        "CHEST",
+        "COCO",
+        "HAZEL",
+        "PEA"
+      ],
+      [
+        "BROWN",
+        "DOGS",
+        "FICTION",
+        "UNCHAINED"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-04-10 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.750870100047905,
+    "is_valid": true
+  },
+  {
+    "index": 105,
+    "words16": [
+      "BADGE",
+      "INVITE",
+      "PASS",
+      "TICKET",
+      "CHAIR",
+      "DIRECT",
+      "LEAD",
+      "RUN",
+      "CENTER",
+      "END",
+      "SAFETY",
+      "TACKLE",
+      "HOLD",
+      "PUNT",
+      "STALL",
+      "TABLE"
+    ],
+    "pred_groups": [
+      [
+        "BADGE",
+        "PASS",
+        "TICKET",
+        "INVITE"
+      ],
+      [
+        "CHAIR",
+        "DIRECT",
+        "LEAD",
+        "RUN"
+      ],
+      [
+        "CENTER",
+        "END",
+        "SAFETY",
+        "TACKLE"
+      ],
+      [
+        "HOLD",
+        "PUNT",
+        "STALL",
+        "TABLE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BADGE",
+        "INVITE",
+        "PASS",
+        "TICKET"
+      ],
+      [
+        "CHAIR",
+        "DIRECT",
+        "LEAD",
+        "RUN"
+      ],
+      [
+        "CENTER",
+        "END",
+        "SAFETY",
+        "TACKLE"
+      ],
+      [
+        "HOLD",
+        "PUNT",
+        "STALL",
+        "TABLE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-01-13 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.27026520000072196,
+    "is_valid": true
+  },
+  {
+    "index": 106,
+    "words16": [
+      "BET",
+      "CHANCE",
+      "GAMBLE",
+      "RISK",
+      "CUBE",
+      "DICE",
+      "JULIENNE",
+      "SLICE",
+      "CASINO",
+      "HEAT",
+      "JOKER",
+      "TAXI DRIVER",
+      "OCTOPUS",
+      "SHIVA",
+      "SLOT MACHINE",
+      "VENUS DE MILO"
+    ],
+    "pred_groups": [
+      [
+        "BET",
+        "CHANCE",
+        "GAMBLE",
+        "RISK"
+      ],
+      [
+        "CUBE",
+        "DICE",
+        "JULIENNE",
+        "SLICE"
+      ],
+      [
+        "CASINO",
+        "HEAT",
+        "JOKER",
+        "OCTOPUS"
+      ],
+      [
+        "SHIVA",
+        "SLOT MACHINE",
+        "TAXI DRIVER",
+        "VENUS DE MILO"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BET",
+        "CHANCE",
+        "GAMBLE",
+        "RISK"
+      ],
+      [
+        "CUBE",
+        "DICE",
+        "JULIENNE",
+        "SLICE"
+      ],
+      [
+        "CASINO",
+        "HEAT",
+        "JOKER",
+        "TAXI DRIVER"
+      ],
+      [
+        "OCTOPUS",
+        "SHIVA",
+        "SLOT MACHINE",
+        "VENUS DE MILO"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 1,
+    "date": "2024-10-02 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 14,
+    "inference_time_sec": 0.282692400040105,
+    "is_valid": true
+  },
+  {
+    "index": 107,
+    "words16": [
+      "GET OUT",
+      "GO",
+      "LEAVE",
+      "SCRAM",
+      "ME",
+      "THEM",
+      "US",
+      "YOU",
+      "NOPE",
+      "OPEN",
+      "PEON",
+      "PONE",
+      "BEANIE",
+      "FUR",
+      "NEPO",
+      "SANTA"
+    ],
+    "pred_groups": [
+      [
+        "GET OUT",
+        "GO",
+        "LEAVE",
+        "SCRAM"
+      ],
+      [
+        "ME",
+        "THEM",
+        "US",
+        "YOU"
+      ],
+      [
+        "NOPE",
+        "OPEN",
+        "PEON",
+        "PONE"
+      ],
+      [
+        "BEANIE",
+        "FUR",
+        "NEPO",
+        "SANTA"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "GET OUT",
+        "GO",
+        "LEAVE",
+        "SCRAM"
+      ],
+      [
+        "ME",
+        "THEM",
+        "US",
+        "YOU"
+      ],
+      [
+        "NOPE",
+        "OPEN",
+        "PEON",
+        "PONE"
+      ],
+      [
+        "BEANIE",
+        "FUR",
+        "NEPO",
+        "SANTA"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-09-13 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.230801000026986,
+    "is_valid": true
+  },
+  {
+    "index": 108,
+    "words16": [
+      "FURNISH",
+      "OUTFIT",
+      "PROVISION",
+      "STOCK",
+      "BEING",
+      "CHARACTER",
+      "EGO",
+      "SELF",
+      "CHEST",
+      "CONSOLE",
+      "VANITY",
+      "WARDROBE",
+      "CANT",
+      "ID",
+      "SHELL",
+      "WERE"
+    ],
+    "pred_groups": [
+      [
+        "FURNISH",
+        "OUTFIT",
+        "PROVISION",
+        "STOCK"
+      ],
+      [
+        "BEING",
+        "CHARACTER",
+        "EGO",
+        "SELF"
+      ],
+      [
+        "CHEST",
+        "CONSOLE",
+        "VANITY",
+        "WARDROBE"
+      ],
+      [
+        "CANT",
+        "ID",
+        "SHELL",
+        "WERE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "FURNISH",
+        "OUTFIT",
+        "PROVISION",
+        "STOCK"
+      ],
+      [
+        "BEING",
+        "CHARACTER",
+        "EGO",
+        "SELF"
+      ],
+      [
+        "CHEST",
+        "CONSOLE",
+        "VANITY",
+        "WARDROBE"
+      ],
+      [
+        "CANT",
+        "ID",
+        "SHELL",
+        "WERE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-11-04 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.32539720000931993,
+    "is_valid": true
+  },
+  {
+    "index": 109,
+    "words16": [
+      "BOIL",
+      "FRY",
+      "POACH",
+      "SCRAMBLE",
+      "BUZZ",
+      "KICK",
+      "RUSH",
+      "THRILL",
+      "AXE",
+      "DART",
+      "HORSESHOE",
+      "RING",
+      "BODY",
+      "BUBBLE",
+      "GIFT",
+      "SHRINK"
+    ],
+    "pred_groups": [
+      [
+        "BOIL",
+        "FRY",
+        "POACH",
+        "SCRAMBLE"
+      ],
+      [
+        "BUZZ",
+        "KICK",
+        "RUSH",
+        "THRILL"
+      ],
+      [
+        "AXE",
+        "DART",
+        "HORSESHOE",
+        "RING"
+      ],
+      [
+        "BODY",
+        "BUBBLE",
+        "GIFT",
+        "SHRINK"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BOIL",
+        "FRY",
+        "POACH",
+        "SCRAMBLE"
+      ],
+      [
+        "BUZZ",
+        "KICK",
+        "RUSH",
+        "THRILL"
+      ],
+      [
+        "AXE",
+        "DART",
+        "HORSESHOE",
+        "RING"
+      ],
+      [
+        "BODY",
+        "BUBBLE",
+        "GIFT",
+        "SHRINK"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-04-04 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.8837413000292145,
+    "is_valid": true
+  },
+  {
+    "index": 110,
+    "words16": [
+      "BREAD",
+      "BUTTER",
+      "GARLIC",
+      "PARSLEY",
+      "BET",
+      "GAMBLE",
+      "RISK",
+      "STAKE",
+      "ADVENTURE",
+      "FANTASY",
+      "FRONTIER",
+      "TOMORROW",
+      "BASEBALL",
+      "CRICKET",
+      "FRUIT",
+      "VAMPIRE"
+    ],
+    "pred_groups": [
+      [
+        "BREAD",
+        "BUTTER",
+        "GARLIC",
+        "PARSLEY"
+      ],
+      [
+        "BET",
+        "GAMBLE",
+        "RISK",
+        "STAKE"
+      ],
+      [
+        "ADVENTURE",
+        "FANTASY",
+        "FRONTIER",
+        "TOMORROW"
+      ],
+      [
+        "BASEBALL",
+        "CRICKET",
+        "FRUIT",
+        "VAMPIRE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BREAD",
+        "BUTTER",
+        "GARLIC",
+        "PARSLEY"
+      ],
+      [
+        "BET",
+        "GAMBLE",
+        "RISK",
+        "STAKE"
+      ],
+      [
+        "ADVENTURE",
+        "FANTASY",
+        "FRONTIER",
+        "TOMORROW"
+      ],
+      [
+        "BASEBALL",
+        "CRICKET",
+        "FRUIT",
+        "VAMPIRE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-03-01 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.31194059998961166,
+    "is_valid": true
+  },
+  {
+    "index": 111,
+    "words16": [
+      "BALL",
+      "OUT",
+      "SAFE",
+      "STRIKE",
+      "FORGE",
+      "FURNACE",
+      "KILN",
+      "OVEN",
+      "CARP",
+      "CATFISH",
+      "FLOUNDER",
+      "SMELT",
+      "COLONEL",
+      "SALMON",
+      "WALK",
+      "YOLK"
+    ],
+    "pred_groups": [
+      [
+        "BALL",
+        "OUT",
+        "SAFE",
+        "STRIKE"
+      ],
+      [
+        "FORGE",
+        "FURNACE",
+        "KILN",
+        "OVEN"
+      ],
+      [
+        "CARP",
+        "CATFISH",
+        "FLOUNDER",
+        "SMELT"
+      ],
+      [
+        "COLONEL",
+        "SALMON",
+        "WALK",
+        "YOLK"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BALL",
+        "OUT",
+        "SAFE",
+        "STRIKE"
+      ],
+      [
+        "FORGE",
+        "FURNACE",
+        "KILN",
+        "OVEN"
+      ],
+      [
+        "CARP",
+        "CATFISH",
+        "FLOUNDER",
+        "SMELT"
+      ],
+      [
+        "COLONEL",
+        "SALMON",
+        "WALK",
+        "YOLK"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-09-09 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.920740499976091,
+    "is_valid": true
+  },
+  {
+    "index": 112,
+    "words16": [
+      "CARDINAL",
+      "LAMA",
+      "MONK",
+      "PASTOR",
+      "BABOON",
+      "BONOBO",
+      "GIBBON",
+      "GORILLA",
+      "MANGO",
+      "MINT",
+      "TAMARIND",
+      "TOMATO",
+      "APE",
+      "MIME",
+      "MIRROR",
+      "PARROT"
+    ],
+    "pred_groups": [
+      [
+        "CARDINAL",
+        "LAMA",
+        "MONK",
+        "PASTOR"
+      ],
+      [
+        "BABOON",
+        "BONOBO",
+        "GIBBON",
+        "GORILLA"
+      ],
+      [
+        "MANGO",
+        "MINT",
+        "TAMARIND",
+        "TOMATO"
+      ],
+      [
+        "APE",
+        "MIME",
+        "MIRROR",
+        "PARROT"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CARDINAL",
+        "LAMA",
+        "MONK",
+        "PASTOR"
+      ],
+      [
+        "BABOON",
+        "BONOBO",
+        "GIBBON",
+        "GORILLA"
+      ],
+      [
+        "MANGO",
+        "MINT",
+        "TAMARIND",
+        "TOMATO"
+      ],
+      [
+        "APE",
+        "MIME",
+        "MIRROR",
+        "PARROT"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-11-20 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.25972139998339117,
+    "is_valid": true
+  },
+  {
+    "index": 113,
+    "words16": [
+      "COURT",
+      "PLAZA",
+      "SQUARE",
+      "YARD",
+      "BOUT",
+      "CONTEST",
+      "MATCH",
+      "ROUND",
+      "DAZZLE",
+      "FLASH",
+      "POMP",
+      "RITZ",
+      "FIRE",
+      "HEART",
+      "SKULL",
+      "SPARKLES"
+    ],
+    "pred_groups": [
+      [
+        "COURT",
+        "PLAZA",
+        "SQUARE",
+        "YARD"
+      ],
+      [
+        "BOUT",
+        "CONTEST",
+        "MATCH",
+        "ROUND"
+      ],
+      [
+        "DAZZLE",
+        "FLASH",
+        "POMP",
+        "RITZ"
+      ],
+      [
+        "FIRE",
+        "HEART",
+        "SKULL",
+        "SPARKLES"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "COURT",
+        "PLAZA",
+        "SQUARE",
+        "YARD"
+      ],
+      [
+        "BOUT",
+        "CONTEST",
+        "MATCH",
+        "ROUND"
+      ],
+      [
+        "DAZZLE",
+        "FLASH",
+        "POMP",
+        "RITZ"
+      ],
+      [
+        "FIRE",
+        "HEART",
+        "SKULL",
+        "SPARKLES"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-07-18 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.7824320999789052,
+    "is_valid": true
+  },
+  {
+    "index": 114,
+    "words16": [
+      "CYCLE",
+      "PHASE",
+      "ROUND",
+      "STAGE",
+      "CYGNUS",
+      "GEMINI",
+      "ORION",
+      "PEGASUS",
+      "CYCLONE",
+      "GALAXY",
+      "SNAIL",
+      "SUNFLOWER",
+      "CYCLOPS",
+      "MONOLOGUE",
+      "SOLITAIRE",
+      "UNICYCLE"
+    ],
+    "pred_groups": [
+      [
+        "CYCLE",
+        "PHASE",
+        "ROUND",
+        "STAGE"
+      ],
+      [
+        "CYGNUS",
+        "GEMINI",
+        "ORION",
+        "PEGASUS"
+      ],
+      [
+        "CYCLONE",
+        "GALAXY",
+        "SNAIL",
+        "SUNFLOWER"
+      ],
+      [
+        "CYCLOPS",
+        "MONOLOGUE",
+        "SOLITAIRE",
+        "UNICYCLE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CYCLE",
+        "PHASE",
+        "ROUND",
+        "STAGE"
+      ],
+      [
+        "CYGNUS",
+        "GEMINI",
+        "ORION",
+        "PEGASUS"
+      ],
+      [
+        "CYCLONE",
+        "GALAXY",
+        "SNAIL",
+        "SUNFLOWER"
+      ],
+      [
+        "CYCLOPS",
+        "MONOLOGUE",
+        "SOLITAIRE",
+        "UNICYCLE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-03-18 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.5867643000092357,
+    "is_valid": true
+  },
+  {
+    "index": 116,
+    "words16": [
+      "BRUSH",
+      "GRAZE",
+      "KISS",
+      "SKIM",
+      "ODD",
+      "PERFECT",
+      "PRIME",
+      "WHOLE",
+      "OYSTER",
+      "PLUM",
+      "SOY",
+      "XO",
+      "CLAW",
+      "FRUIT",
+      "HUG",
+      "WITNESS"
+    ],
+    "pred_groups": [
+      [
+        "BRUSH",
+        "GRAZE",
+        "KISS",
+        "SKIM"
+      ],
+      [
+        "ODD",
+        "PERFECT",
+        "PRIME",
+        "WHOLE"
+      ],
+      [
+        "OYSTER",
+        "PLUM",
+        "SOY",
+        "XO"
+      ],
+      [
+        "CLAW",
+        "FRUIT",
+        "HUG",
+        "WITNESS"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BRUSH",
+        "GRAZE",
+        "KISS",
+        "SKIM"
+      ],
+      [
+        "ODD",
+        "PERFECT",
+        "PRIME",
+        "WHOLE"
+      ],
+      [
+        "OYSTER",
+        "PLUM",
+        "SOY",
+        "XO"
+      ],
+      [
+        "CLAW",
+        "FRUIT",
+        "HUG",
+        "WITNESS"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-02-14 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 2.0888421999989077,
+    "is_valid": true
+  },
+  {
+    "index": 117,
+    "words16": [
+      "ACCEPT",
+      "BELIEVE",
+      "BUY",
+      "SWALLOW",
+      "OUTAGE",
+      "SHORT",
+      "SPIKE",
+      "SURGE",
+      "ABSTRACT",
+      "BRIEF",
+      "DIGEST",
+      "OUTLINE",
+      "CURT",
+      "HAIRY",
+      "KNEEL",
+      "WANE"
+    ],
+    "pred_groups": [
+      [
+        "ACCEPT",
+        "BELIEVE",
+        "BUY",
+        "SWALLOW"
+      ],
+      [
+        "ABSTRACT",
+        "BRIEF",
+        "DIGEST",
+        "OUTLINE"
+      ],
+      [
+        "CURT",
+        "HAIRY",
+        "KNEEL",
+        "WANE"
+      ],
+      [
+        "OUTAGE",
+        "SHORT",
+        "SPIKE",
+        "SURGE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "ACCEPT",
+        "BELIEVE",
+        "BUY",
+        "SWALLOW"
+      ],
+      [
+        "OUTAGE",
+        "SHORT",
+        "SPIKE",
+        "SURGE"
+      ],
+      [
+        "ABSTRACT",
+        "BRIEF",
+        "DIGEST",
+        "OUTLINE"
+      ],
+      [
+        "CURT",
+        "HAIRY",
+        "KNEEL",
+        "WANE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-04-27 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.9519978999742307,
+    "is_valid": true
+  },
+  {
+    "index": 118,
+    "words16": [
+      "CATCH",
+      "CLOCK",
+      "NOTICE",
+      "REGISTER",
+      "BEAT",
+      "METER",
+      "RHYTHM",
+      "TIME",
+      "DONUT",
+      "INCH",
+      "JUROR",
+      "MONTH",
+      "DAYS",
+      "PADDLE",
+      "TAG",
+      "TIRED"
+    ],
+    "pred_groups": [
+      [
+        "CATCH",
+        "CLOCK",
+        "NOTICE",
+        "REGISTER"
+      ],
+      [
+        "BEAT",
+        "METER",
+        "RHYTHM",
+        "TIME"
+      ],
+      [
+        "DONUT",
+        "INCH",
+        "JUROR",
+        "MONTH"
+      ],
+      [
+        "DAYS",
+        "PADDLE",
+        "TAG",
+        "TIRED"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CATCH",
+        "CLOCK",
+        "NOTICE",
+        "REGISTER"
+      ],
+      [
+        "BEAT",
+        "METER",
+        "RHYTHM",
+        "TIME"
+      ],
+      [
+        "DONUT",
+        "INCH",
+        "JUROR",
+        "MONTH"
+      ],
+      [
+        "DAYS",
+        "PADDLE",
+        "TAG",
+        "TIRED"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-01-02 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.2015709999832325,
+    "is_valid": true
+  },
+  {
+    "index": 119,
+    "words16": [
+      "CHIME",
+      "DING",
+      "PING",
+      "RING",
+      "RAT",
+      "SING",
+      "SNITCH",
+      "SQUEAL",
+      "CAMP",
+      "DIVISION",
+      "FACTION",
+      "WING",
+      "BING",
+      "EDGE",
+      "SURFACE",
+      "WORD"
+    ],
+    "pred_groups": [
+      [
+        "CHIME",
+        "DING",
+        "PING",
+        "RING"
+      ],
+      [
+        "RAT",
+        "SING",
+        "SNITCH",
+        "SQUEAL"
+      ],
+      [
+        "CAMP",
+        "DIVISION",
+        "FACTION",
+        "WING"
+      ],
+      [
+        "BING",
+        "EDGE",
+        "SURFACE",
+        "WORD"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHIME",
+        "DING",
+        "PING",
+        "RING"
+      ],
+      [
+        "RAT",
+        "SING",
+        "SNITCH",
+        "SQUEAL"
+      ],
+      [
+        "CAMP",
+        "DIVISION",
+        "FACTION",
+        "WING"
+      ],
+      [
+        "BING",
+        "EDGE",
+        "SURFACE",
+        "WORD"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-11-07 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.3864159999648109,
+    "is_valid": true
+  },
+  {
+    "index": 120,
+    "words16": [
+      "MASS",
+      "SEA",
+      "SLEW",
+      "TON",
+      "BUCKLE",
+      "CAVE",
+      "COLLAPSE",
+      "GIVE",
+      "SHOUT",
+      "SNAP",
+      "WAVE",
+      "WHISTLE",
+      "BUTTON",
+      "DANCE",
+      "FLOP",
+      "LAUGH"
+    ],
+    "pred_groups": [
+      [
+        "MASS",
+        "SEA",
+        "SLEW",
+        "TON"
+      ],
+      [
+        "BUCKLE",
+        "CAVE",
+        "COLLAPSE",
+        "GIVE"
+      ],
+      [
+        "SHOUT",
+        "SNAP",
+        "WAVE",
+        "WHISTLE"
+      ],
+      [
+        "BUTTON",
+        "DANCE",
+        "FLOP",
+        "LAUGH"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "MASS",
+        "SEA",
+        "SLEW",
+        "TON"
+      ],
+      [
+        "BUCKLE",
+        "CAVE",
+        "COLLAPSE",
+        "GIVE"
+      ],
+      [
+        "SHOUT",
+        "SNAP",
+        "WAVE",
+        "WHISTLE"
+      ],
+      [
+        "BUTTON",
+        "DANCE",
+        "FLOP",
+        "LAUGH"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-03-03 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 60.28491539997049,
+    "is_valid": true
+  },
+  {
+    "index": 121,
+    "words16": [
+      "BRANCH",
+      "DIVISION",
+      "LIMB",
+      "WING",
+      "BOW",
+      "DRUMSTICK",
+      "MALLET",
+      "PICK",
+      "EAR",
+      "MEMORY",
+      "TRUNK",
+      "TUSK",
+      "BISCUIT",
+      "CORN",
+      "LINCOLN",
+      "STAINED"
+    ],
+    "pred_groups": [
+      [
+        "BRANCH",
+        "DIVISION",
+        "LIMB",
+        "WING"
+      ],
+      [
+        "BOW",
+        "DRUMSTICK",
+        "MALLET",
+        "PICK"
+      ],
+      [
+        "EAR",
+        "MEMORY",
+        "TRUNK",
+        "TUSK"
+      ],
+      [
+        "BISCUIT",
+        "CORN",
+        "LINCOLN",
+        "STAINED"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BRANCH",
+        "DIVISION",
+        "LIMB",
+        "WING"
+      ],
+      [
+        "BOW",
+        "DRUMSTICK",
+        "MALLET",
+        "PICK"
+      ],
+      [
+        "EAR",
+        "MEMORY",
+        "TRUNK",
+        "TUSK"
+      ],
+      [
+        "BISCUIT",
+        "CORN",
+        "LINCOLN",
+        "STAINED"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-01-08 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.9920903000165708,
+    "is_valid": true
+  },
+  {
+    "index": 122,
+    "words16": [
+      "CHARLATAN",
+      "FRAUD",
+      "QUACK",
+      "SHAM",
+      "NOISE",
+      "PEEP",
+      "SOUND",
+      "WORD",
+      "HAM",
+      "HOT DOG",
+      "PEACOCK",
+      "SHOWBOAT",
+      "BUG",
+      "PORK",
+      "SPEED",
+      "TWEET"
+    ],
+    "pred_groups": [
+      [
+        "CHARLATAN",
+        "FRAUD",
+        "QUACK",
+        "SHAM"
+      ],
+      [
+        "NOISE",
+        "PEEP",
+        "SOUND",
+        "WORD"
+      ],
+      [
+        "HAM",
+        "HOT DOG",
+        "PEACOCK",
+        "SHOWBOAT"
+      ],
+      [
+        "BUG",
+        "PORK",
+        "SPEED",
+        "TWEET"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHARLATAN",
+        "FRAUD",
+        "QUACK",
+        "SHAM"
+      ],
+      [
+        "NOISE",
+        "PEEP",
+        "SOUND",
+        "WORD"
+      ],
+      [
+        "HAM",
+        "HOT DOG",
+        "PEACOCK",
+        "SHOWBOAT"
+      ],
+      [
+        "BUG",
+        "PORK",
+        "SPEED",
+        "TWEET"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-07-23 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 3.167975899996236,
+    "is_valid": true
+  },
+  {
+    "index": 123,
+    "words16": [
+      "EXTENT",
+      "RANGE",
+      "REACH",
+      "SCOPE",
+      "COMPLEMENT",
+      "MATCH",
+      "MATE",
+      "PARTNER",
+      "BUD",
+      "NATTY",
+      "SIERRA",
+      "STELLA",
+      "CHECK",
+      "DIRT",
+      "PAL",
+      "PHONE"
+    ],
+    "pred_groups": [
+      [
+        "EXTENT",
+        "RANGE",
+        "REACH",
+        "SCOPE"
+      ],
+      [
+        "COMPLEMENT",
+        "MATCH",
+        "MATE",
+        "PARTNER"
+      ],
+      [
+        "BUD",
+        "NATTY",
+        "SIERRA",
+        "STELLA"
+      ],
+      [
+        "CHECK",
+        "DIRT",
+        "PAL",
+        "PHONE"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "EXTENT",
+        "RANGE",
+        "REACH",
+        "SCOPE"
+      ],
+      [
+        "COMPLEMENT",
+        "MATCH",
+        "MATE",
+        "PARTNER"
+      ],
+      [
+        "BUD",
+        "NATTY",
+        "SIERRA",
+        "STELLA"
+      ],
+      [
+        "CHECK",
+        "DIRT",
+        "PAL",
+        "PHONE"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-08-15 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2826184000005014,
+    "is_valid": true
+  },
+  {
+    "index": 124,
+    "words16": [
+      "CHART",
+      "DIAGRAM",
+      "GRAPH",
+      "MAP",
+      "BONUS",
+      "EXTRA",
+      "ICING",
+      "PERK",
+      "GRAVY",
+      "PIE",
+      "STUFFING",
+      "TURKEY",
+      "I RAN",
+      "ISTANBUL",
+      "MONTERO",
+      "SATISFACTION"
+    ],
+    "pred_groups": [
+      [
+        "CHART",
+        "DIAGRAM",
+        "GRAPH",
+        "MAP"
+      ],
+      [
+        "BONUS",
+        "EXTRA",
+        "ICING",
+        "PERK"
+      ],
+      [
+        "GRAVY",
+        "PIE",
+        "STUFFING",
+        "TURKEY"
+      ],
+      [
+        "I RAN",
+        "ISTANBUL",
+        "MONTERO",
+        "SATISFACTION"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CHART",
+        "DIAGRAM",
+        "GRAPH",
+        "MAP"
+      ],
+      [
+        "BONUS",
+        "EXTRA",
+        "ICING",
+        "PERK"
+      ],
+      [
+        "GRAVY",
+        "PIE",
+        "STUFFING",
+        "TURKEY"
+      ],
+      [
+        "I RAN",
+        "ISTANBUL",
+        "MONTERO",
+        "SATISFACTION"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-09-05 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.24110709998058155,
+    "is_valid": true
+  },
+  {
+    "index": 125,
+    "words16": [
+      "CENTRAL",
+      "CRITICAL",
+      "KEY",
+      "VITAL",
+      "GLASS",
+      "METAL",
+      "PAPER",
+      "PLASTIC",
+      "HENRY",
+      "JENNIFER",
+      "KATE",
+      "ROCK",
+      "ASSIGNMENT",
+      "DEFEAT",
+      "TEMPO",
+      "TIRED"
+    ],
+    "pred_groups": [
+      [
+        "CENTRAL",
+        "CRITICAL",
+        "KEY",
+        "VITAL"
+      ],
+      [
+        "GLASS",
+        "METAL",
+        "PAPER",
+        "PLASTIC"
+      ],
+      [
+        "HENRY",
+        "JENNIFER",
+        "KATE",
+        "ROCK"
+      ],
+      [
+        "ASSIGNMENT",
+        "DEFEAT",
+        "TEMPO",
+        "TIRED"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CENTRAL",
+        "CRITICAL",
+        "KEY",
+        "VITAL"
+      ],
+      [
+        "GLASS",
+        "METAL",
+        "PAPER",
+        "PLASTIC"
+      ],
+      [
+        "HENRY",
+        "JENNIFER",
+        "KATE",
+        "ROCK"
+      ],
+      [
+        "ASSIGNMENT",
+        "DEFEAT",
+        "TEMPO",
+        "TIRED"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-09-29 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 1.08908419997897,
+    "is_valid": true
+  },
+  {
+    "index": 126,
+    "words16": [
+      "BORDER",
+      "EDGE",
+      "FRINGE",
+      "SKIRT",
+      "BITE",
+      "CLIP",
+      "FILE",
+      "PAINT",
+      "ALLERGY",
+      "MELODRAMA",
+      "ONION",
+      "RELIEF",
+      "DODGE",
+      "KICK",
+      "PICKLE",
+      "SOFT"
+    ],
+    "pred_groups": [
+      [
+        "BORDER",
+        "EDGE",
+        "FRINGE",
+        "SKIRT"
+      ],
+      [
+        "BITE",
+        "CLIP",
+        "FILE",
+        "PAINT"
+      ],
+      [
+        "ALLERGY",
+        "MELODRAMA",
+        "ONION",
+        "RELIEF"
+      ],
+      [
+        "DODGE",
+        "KICK",
+        "PICKLE",
+        "SOFT"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BORDER",
+        "EDGE",
+        "FRINGE",
+        "SKIRT"
+      ],
+      [
+        "BITE",
+        "CLIP",
+        "FILE",
+        "PAINT"
+      ],
+      [
+        "ALLERGY",
+        "MELODRAMA",
+        "ONION",
+        "RELIEF"
+      ],
+      [
+        "DODGE",
+        "KICK",
+        "PICKLE",
+        "SOFT"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2025-03-05 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.3078553000232205,
+    "is_valid": true
+  },
+  {
+    "index": 127,
+    "words16": [
+      "CAW",
+      "CHIRP",
+      "CLUCK",
+      "TWEET",
+      "BROWN",
+      "PINK",
+      "TURQUOISE",
+      "VIOLET",
+      "LURE",
+      "REEL",
+      "ROD",
+      "TACKLE",
+      "HOOK",
+      "JONES",
+      "SILVER",
+      "SPARROW"
+    ],
+    "pred_groups": [
+      [
+        "CAW",
+        "CHIRP",
+        "CLUCK",
+        "TWEET"
+      ],
+      [
+        "BROWN",
+        "PINK",
+        "TURQUOISE",
+        "VIOLET"
+      ],
+      [
+        "LURE",
+        "REEL",
+        "ROD",
+        "TACKLE"
+      ],
+      [
+        "HOOK",
+        "JONES",
+        "SILVER",
+        "SPARROW"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "CAW",
+        "CHIRP",
+        "CLUCK",
+        "TWEET"
+      ],
+      [
+        "BROWN",
+        "PINK",
+        "TURQUOISE",
+        "VIOLET"
+      ],
+      [
+        "LURE",
+        "REEL",
+        "ROD",
+        "TACKLE"
+      ],
+      [
+        "HOOK",
+        "JONES",
+        "SILVER",
+        "SPARROW"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2023-06-26 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.2770627000136301,
+    "is_valid": true
+  },
+  {
+    "index": 128,
+    "words16": [
+      "GRAYSCALE",
+      "NEON",
+      "NEUTRAL",
+      "PASTEL",
+      "NEW",
+      "OPEN",
+      "PRINT",
+      "SAVE",
+      "DRAWING",
+      "LOTTERY",
+      "POOL",
+      "RAFFLE",
+      "ALLOY",
+      "SCULPTURE",
+      "SUNTAN",
+      "THIRD"
+    ],
+    "pred_groups": [
+      [
+        "GRAYSCALE",
+        "NEUTRAL",
+        "PASTEL",
+        "NEW"
+      ],
+      [
+        "NEON",
+        "OPEN",
+        "PRINT",
+        "SAVE"
+      ],
+      [
+        "DRAWING",
+        "LOTTERY",
+        "RAFFLE",
+        "POOL"
+      ],
+      [
+        "ALLOY",
+        "SCULPTURE",
+        "SUNTAN",
+        "THIRD"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "GRAYSCALE",
+        "NEON",
+        "NEUTRAL",
+        "PASTEL"
+      ],
+      [
+        "NEW",
+        "OPEN",
+        "PRINT",
+        "SAVE"
+      ],
+      [
+        "DRAWING",
+        "LOTTERY",
+        "POOL",
+        "RAFFLE"
+      ],
+      [
+        "ALLOY",
+        "SCULPTURE",
+        "SUNTAN",
+        "THIRD"
+      ]
+    ],
+    "zero_one": 0.0,
+    "min_swaps": 1,
+    "date": "2024-09-22 00:00:00",
+    "levels": [],
+    "n_correct_groups": 2,
+    "correct_word_count": 14,
+    "inference_time_sec": 2.6073162999819033,
+    "is_valid": true
+  },
+  {
+    "index": 129,
+    "words16": [
+      "BUBBLES",
+      "FIZZ",
+      "FOAM",
+      "FROTH",
+      "BLOSSOM",
+      "DEVELOP",
+      "MATURE",
+      "PROGRESS",
+      "BILLBOARD",
+      "MOJO",
+      "PITCHFORK",
+      "SPIN",
+      "BOILERPLATE",
+      "BUTTERCUP",
+      "JACKKNIFE",
+      "WITHERSPOON"
+    ],
+    "pred_groups": [
+      [
+        "BUBBLES",
+        "FIZZ",
+        "FOAM",
+        "FROTH"
+      ],
+      [
+        "BLOSSOM",
+        "DEVELOP",
+        "MATURE",
+        "PROGRESS"
+      ],
+      [
+        "BILLBOARD",
+        "MOJO",
+        "PITCHFORK",
+        "SPIN"
+      ],
+      [
+        "BOILERPLATE",
+        "BUTTERCUP",
+        "JACKKNIFE",
+        "WITHERSPOON"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BUBBLES",
+        "FIZZ",
+        "FOAM",
+        "FROTH"
+      ],
+      [
+        "BLOSSOM",
+        "DEVELOP",
+        "MATURE",
+        "PROGRESS"
+      ],
+      [
+        "BILLBOARD",
+        "MOJO",
+        "PITCHFORK",
+        "SPIN"
+      ],
+      [
+        "BOILERPLATE",
+        "BUTTERCUP",
+        "JACKKNIFE",
+        "WITHERSPOON"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-10-09 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.5693334999959916,
+    "is_valid": true
+  },
+  {
+    "index": 130,
+    "words16": [
+      "BAKE",
+      "BEAT",
+      "FROST",
+      "PREHEAT",
+      "POUND",
+      "PUMP",
+      "RACE",
+      "THROB",
+      "BISHOP",
+      "PASTOR",
+      "PRIOR",
+      "POPE",
+      "BAD",
+      "BEACH",
+      "HARDY",
+      "PET SHOP"
+    ],
+    "pred_groups": [
+      [
+        "BAKE",
+        "BEAT",
+        "FROST",
+        "PREHEAT"
+      ],
+      [
+        "POUND",
+        "PUMP",
+        "RACE",
+        "THROB"
+      ],
+      [
+        "BISHOP",
+        "PASTOR",
+        "PRIOR",
+        "POPE"
+      ],
+      [
+        "BAD",
+        "BEACH",
+        "HARDY",
+        "PET SHOP"
+      ]
+    ],
+    "gold_groups": [
+      [
+        "BAKE",
+        "BEAT",
+        "FROST",
+        "PREHEAT"
+      ],
+      [
+        "POUND",
+        "PUMP",
+        "RACE",
+        "THROB"
+      ],
+      [
+        "BISHOP",
+        "PASTOR",
+        "PRIOR",
+        "POPE"
+      ],
+      [
+        "BAD",
+        "BEACH",
+        "HARDY",
+        "PET SHOP"
+      ]
+    ],
+    "zero_one": 1.0,
+    "min_swaps": 0,
+    "date": "2024-09-08 00:00:00",
+    "levels": [],
+    "n_correct_groups": 4,
+    "correct_word_count": 16,
+    "inference_time_sec": 0.3091112999827601,
+    "is_valid": true
+  }
+]
