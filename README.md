@@ -94,6 +94,16 @@ python human_test.py
 in a terminal or by running the py file. Run from root directory so files can be read.
 Results will be logged to data/human_measurement.csv
 
+### Random baseline for ridge plot
+
+To generate the random baseline test outputs used by `data_evaluation.ipynb` (ridge plot), run from repo root:
+
+```
+python scripts/generate_random_baseline_outputs.py [seed]
+```
+
+Output is written to `reports/random_baseline/random_baseline_test_outputs.json` (default seed 42).
+
 ## File structure
 
 ```
@@ -114,38 +124,51 @@ connections-solver/
 │       └── random.py               # Random grouping baseline
 ├── data_loader/                    # Data loading and splitting utilities
 │   ├── __init__.py
-│   ├── loader.py                   # Core CSV/JSON loading
+│   ├── loader.py                   # Hugging Face dataset loading
+│   ├── models.py                   # Row models, gold_groups_from_row
 │   ├── dataset_split.py            # Train/test split helpers
 │   └── cross_validation.py         # Cross-validation utilities
 ├── data/                           # Datasets, splits, and human-study artifacts
 │   ├── connections_words.csv       # Word list / puzzle vocabulary
-│   ├── examples.txt                # Example categories (JSONL) for few-shot generation
+│   ├── examples.txt                # Example categories for few-shot generation
 │   ├── word_bank.txt               # Word bank for generation pipeline
 │   ├── train_split_data.csv        # Train split (precomputed)
 │   ├── test_split_data.csv         # Test split (precomputed)
-│   ├── LLM_few_shot_results.csv    # Raw LLM few-shot results
 │   ├── human_measurement.csv       # Human eval log
 │   ├── human_performance_overview.png
 │   ├── human_performance_timeline.png
-│   └── human_rolling_performance.png
+│   ├── human_rolling_performance.png
+│   └── human_time_vs_difficulty.png
 ├── reports/                        # Saved metrics, outputs, and figures
-│   ├── deberta_zero_shot/          # DeBERTa zero-shot test metrics/outputs
-│   ├── deberta_few_shot/           # DeBERTa few-shot test metrics/outputs
-│   ├── deberta_lora/               # DeBERTa LoRA test metrics/outputs
-│   ├── figures/                    # PNG figures for paper/report
+│   ├── LLM/                        # LLM test outputs (llm_k0, k1, k3, k5, k10, k20)
+│   │   ├── llm_k*_test_metrics.json
+│   │   └── llm_k*_test_outputs.json
+│   ├── deberta_zero_shot/          # DeBERTa zero-shot metrics/outputs (train + test)
+│   ├── deberta_few_shot/           # DeBERTa few-shot metrics/outputs (train + test)
+│   ├── deberta_lora/               # DeBERTa LoRA metrics/outputs (train + test)
+│   ├── random_baseline/            # Random baseline test outputs
+│   │   └── random_baseline_test_outputs.json
+│   ├── figures/                    # PNG figures (ridge plot, before/after, etc.)
 │   └── LLM_few_shot_results.csv    # Aggregated LLM results
-├── DeBERTA-model-zero-shot.ipynb   # DeBERTa embedding-based solver (no examples)
+├── scripts/
+│   └── generate_random_baseline_outputs.py   # Generate random baseline JSON for ridge plot
+├── adapters/                       # Saved LoRA adapters (deberta-lora*, llama-lora-connections)
+├── results/                        # Timestamped run outputs (optional; reports/ is canonical)
+├── src/
+│   └── project_notebook_imports_few_shot_LLM.py
+├── DeBERTA-zero-shot.ipynb         # DeBERTa embedding-based solver (no examples)
 ├── DeBERTa-few-shot.ipynb          # DeBERTa solver with example groups
 ├── DeBERTa-lora-final.ipynb        # Final DeBERTa LoRA evaluation
 ├── DeBERTa-lora-experiment.ipynb   # LoRA ablations / experiments
+├── LLaMA-lora-fine-tuning.ipynb    # LLaMA LoRA fine-tuning
 ├── bert-model-zero-shot.ipynb      # BERT-based puzzle solving
 ├── generation-BERT-few-shot.ipynb  # BERT MLM pipeline for generating distractors
 ├── LLM-model-zero-shot.ipynb       # LLM-based puzzle solving (notebook)
 ├── LLM-model-few-shot.ipynb        # LLM few-shot evaluation (notebook)
-├── LLMprompter-zero-shot.py        # Scripted LLM evaluation via API key
+├── LLM-prompter-zero-shot.py       # Scripted LLM evaluation via API key
 ├── random_grouping_baseline.ipynb  # Random grouping baseline
 ├── data_exploration.ipynb          # Data exploration / sanity checks
-├── data_evaluation.ipynb           # DeBERTa evaluation and plots
+├── data_evaluation.ipynb           # DeBERTa + LLM evaluation, ridge plot, before/after by date
 ├── Visualizations.ipynb            # Additional visualizations and statistics
 ├── human_test.py                   # CLI script for human baseline study
 ├── human_test_eval.ipynb           # Analysis of human_test results
